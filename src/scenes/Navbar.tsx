@@ -14,7 +14,7 @@ const Link = ({page, selectedPage, setSelectedPage} : Props) => {
        <AnchorLink
        className={`${selectedPage === lowerCasePage ? "text-yellow" : ""}
        hover:text-yellow transition duration-500`}
-       href={`${lowerCasePage}`}
+       href={`#${lowerCasePage}`}
        onClick={() => setSelectedPage(lowerCasePage)}>
         {page}
        </AnchorLink>
@@ -40,18 +40,18 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage}: any) => {
                </div>) : (
                 <button className="rounded-full bg-red p-2" 
                     onClick={() => setIsMenuToggled(!isMenuToggled)}>
-                    <img alt='menu-icon' src='../assets/menu-icon.svg'/>
+                    <img alt="menu-icon" src="../assets/menu-icon.svg"/>
                 </button>
                )}
            </div>
 
            {/* MOBILE MENU POPUP */}
-           {!isAboveSmallScreen && !isMenuToggled && (
-            <div className="flex flex-col right-0 bottom-0 h-full bg-blue w[300px]">
+           {!isAboveSmallScreen && isMenuToggled && (
+            <div className="fixed flex-col right-0 bottom-0 h-full bg-blue w-[300px]">
                 {/* CLOSE ICON */}
                 <div className="flex justify-end p-12">
                     <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
-                       <img alt="menu-icon" src="../assets/menu-icon.svg"/>
+                       <img alt="menu-icon" src="../assets/close-icon.svg"/>
                     </button>                   
                 </div>
                 {/* MENU ISTEMS */}

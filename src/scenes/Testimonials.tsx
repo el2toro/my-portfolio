@@ -6,7 +6,7 @@ const Testimonials = () => {
                               justify-end p-16 mt-48 before:absolute before:top-[-120px]
                               before:-ml-[110px] before:left-1/2`;
    return(
-       <section is="testimonials" className="pt-32 pb-16">
+       <section id="testimonials" className="pt-32 pb-16">
          {/* HEADING */}
          <motion.div className="md:w-1/3 text-center md:text-left" 
                             initial="hidden" 
