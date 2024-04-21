@@ -1,0 +1,55 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 100px;
+    margin-right: 100px;
+
+    &-link{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 50px;
+
+        .logo{
+            margin-right: 50px;
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+
+    .buttons{
+        margin-top: 2px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 30px;
+        
+
+        .mode-button{
+            background-color: transparent;
+            outline: 1px solid #D0D0D0;
+            outline-offset: 2px;
+            text-align: center;
+            border: none;
+            width: 35px;
+            height: 35px;
+
+            img{
+                padding-bottom: 5px;
+            }
+        }
+
+        .contact-button{
+            border-radius: 50px;
+            border: none;
+            background-color: #D0D0D0;
+            outline: 1px solid #D0D0D0;
+            outline-offset: 2px;
+            color: #727273;
+        }
+    }
+}

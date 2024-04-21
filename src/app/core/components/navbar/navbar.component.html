@@ -1,3 +1,26 @@
-<p>
-  navbar works!
-</p>
+<div class="navbar">
+  
+
+  <div class="navbar-link"> 
+    <div class="logo">
+      <img src="./../../../../assets/logo.png" width="50px" height="30px">
+    </div>
+
+    <a [routerLink]="['/home']">HOME</a>
+    <a [routerLink]="['/detail']">ABOUT</a>
+    <a [routerLink]="['/detail']">PORTFOLIO</a>
+    <a [routerLink]="['/detail']">SERVICE</a>
+    <a [routerLink]="['/detail']">PAGES 
+      <span style="padding-left: 5px;">
+        <img src="./../../../../assets/arrow-down.png" width="15px" height="8px">
+      </span>
+    </a>
+  </div>
+
+  <div class="buttons">
+     <button class="mode-button" mat-icon-button>
+      <img src="./../../../../assets/moon.png" width="30px" height="30px">
+     </button>
+     <button class="contact-button" mat-stroked-button>CONTACT</button>
+  </div>
+</div>
