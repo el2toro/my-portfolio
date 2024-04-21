@@ -1,0 +1,15 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+html, body, div, span, object{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smooting: antialiased;
+    text-size-adjust: none;
+}

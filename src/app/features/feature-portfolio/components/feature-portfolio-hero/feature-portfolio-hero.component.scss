@@ -1,0 +1,25 @@
+.hero{
+    height: 600px;
+    background-color: #1A191D;
+    //display: flex;
+   
+    .rect{
+        display: flex;
+        .rectangle{
+            width: calc(100vw / 4);
+            height: calc(100vh / 2);
+            background-color: #141416;
+        }
+    
+        .rectangle-custom{
+            margin-left: calc(100vw / 4);
+        }
+    }
+
+    .custom{
+        margin-left: calc(100vw / 4);
+        //display: flex;
+        //justify-content: flex-end;
+        //margin-left: -15px;
+    }
+}
