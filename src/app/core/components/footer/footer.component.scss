@@ -1,0 +1,64 @@
+.footer{
+    height: 450px;
+    background-color: black;
+    padding: 60px;
+    
+    &-heading{
+        color: white;
+        display: flex;
+        width: 70%;
+        padding-top: 20px;
+        margin-bottom: 60px;
+
+        h1{
+            font-size: 60px;
+        }
+
+        input{
+            margin-top: 40px;
+            height: 40px;
+            width: 80%;
+        }
+
+        button{
+            border-radius: 0px;
+            height: 41px;
+            
+        }
+    }
+
+    .footer-heading-right{
+        display: grid;
+        grid-gap: 20px;
+        width: 30%;
+
+        &-social{
+            
+        }
+
+        h1{
+            font-size: 16px;   
+        }
+
+
+        .footer-heading-left-contact{
+            display: grid;
+            grid-gap: 20px;
+        }
+    }
+
+    .footer-link{
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        padding-top: 40px;
+
+      .footer-policy{
+        display: flex;
+        
+        p ~ p{
+            margin-left: 60px;
+        }
+      }
+    }
+}

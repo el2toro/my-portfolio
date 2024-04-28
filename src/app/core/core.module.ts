@@ -5,6 +5,7 @@ import { ShellComponent } from './components/shell/shell.component';
 import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { MatIconModule } from '@angular/material/icon';
   imports: [
     RouterModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatFormFieldModule
   ],
   exports: [
     ShellComponent
