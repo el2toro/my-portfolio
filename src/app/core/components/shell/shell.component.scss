@@ -1,24 +1,8 @@
 .page{
-    //background-color: black;
-
-    &-navbar{
-        z-index: 1;
-        top: 30px;
-        height: 45px;
-        position: absolute;
-        align-content: center;
-    }
-
     &-main {
-        position: absolute;
         
         &.full-page {
-            height: 100vh;
+           // height: 100vh;
         }
-    }
-
-    &-footer{
-        position: absolute;
-        top: 4900px;
     }
 }

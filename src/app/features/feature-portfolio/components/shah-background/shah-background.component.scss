@@ -1,0 +1,13 @@
+.background{
+    display: flex;
+
+    .rectangle{
+        width: calc(100vw / 4);
+        height: calc(100vh / 1.5);
+        background-color: var(--hero-section-rectangle);
+    }
+
+    .rectangle-custom{
+        background-color: var(--hero-section-rectangle-custom);
+    }
+}

@@ -1,0 +1,86 @@
+.resume-container{
+    background-color: var(--hero-section-rectangle-custom);
+    height: 1000px;
+    padding: 100px;
+ 
+    .resume-content{
+        text-align: center;
+
+        h1{
+            font-size: 35px;
+            font-weight: 400;
+            color: var(--section-header-text-color);
+            margin-top: 40px;
+        }
+
+        h1 + h1{
+            font-size: 70px;
+            color: var(--white);
+        }
+
+        .resume-navbar{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 80px;
+            padding: 0% 26%;
+            
+            a{
+                text-decoration: none;
+                color: var(--dark-grey-100);
+                margin-left: 10px;
+                font-weight: 200;
+            }
+
+            a:nth-child(1){
+                //TODO: change colore on selected menu
+                color: var(--cream-500);
+            }
+        }
+
+        .resume-photo-section{
+            padding-top: 40px;
+            padding-bottom: 30px;
+            
+
+            .photo{
+                width: 300px;
+                height: 350px;
+                background-color: white;
+                margin-left: 35px;
+                display: inline-block;
+            }
+
+            .details{
+                margin-left: 300px;
+                width: 50%;
+                height: 350px;
+                display: inline-block;   
+                text-align: left;       
+
+                h1{
+                    font-size: 20px;
+                    font-weight: 200;
+                    color: var(--cream-500);
+                }
+
+                p{
+                    padding-top: 20px;
+                    font-weight: 200;
+                    line-height: 25px;
+                    color: white;
+                }
+
+                span{
+                    padding-left: 20px;
+                }
+
+                .contact{
+                    padding-top: 20px;
+                    color: white;
+                    text-align: left;
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+}

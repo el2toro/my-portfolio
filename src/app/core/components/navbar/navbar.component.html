@@ -3,23 +3,29 @@
 
   <div class="navbar-link"> 
     <div class="logo">
-      <img src="./../../../../assets/logo.png" width="50px" height="30px">
+      <img src="assets/logo.png" width="50px" height="30px">
     </div>
 
-    <a [routerLink]="['/home']">HOME</a>
-    <a [routerLink]="['/detail']">ABOUT</a>
-    <a [routerLink]="['/detail']">PORTFOLIO</a>
-    <a [routerLink]="['/detail']">SERVICE</a>
-    <a [routerLink]="['/detail']">PAGES 
-      <span style="padding-left: 5px;">
-        <img src="./../../../../assets/arrow-down.png" width="15px" height="8px">
-      </span>
-    </a>
+    <div class="navbar-link-items" id="navbar">
+      <a class="custom" [routerLink]="['/home']">HOME</a>
+      <a class="custom" [routerLink]="['/about']">ABOUT</a>
+      <a class="custom" [routerLink]="['/portfolio']">PORTFOLIO</a>
+      <a [routerLink]="['/service']">SERVICE</a>
+      <a [routerLink]="['/pages']">PAGES 
+        <span>
+          <img src="assets/arrow-down.png" width="15px" height="8px">
+        </span>
+      </a>
+    </div>
   </div>
+
+  <a (click)="myFunction()">
+    <mat-icon svgIcon="burger-menu">menu</mat-icon>
+  </a>
 
   <div class="buttons">
      <button class="mode-button" mat-icon-button>
-      <img src="./../../../../assets/moon.png" width="30px" height="30px">
+      <img src="assets/moon.png" width="40px" height="40px">
      </button>
      <button class="contact-button" mat-stroked-button>CONTACT</button>
   </div>
