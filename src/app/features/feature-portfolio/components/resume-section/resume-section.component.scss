@@ -1,6 +1,6 @@
 .resume-container{
     background-color: var(--hero-section-rectangle-custom);
-    height: 1000px;
+    height: 160vh;
     padding: 100px;
  
     .resume-content{
@@ -9,7 +9,7 @@
         h1{
             font-size: 35px;
             font-weight: 400;
-            color: var(--section-header-text-color);
+            color: var(--cream-500);
             margin-top: 40px;
         }
 
@@ -40,21 +40,21 @@
         .resume-photo-section{
             padding-top: 40px;
             padding-bottom: 30px;
-            
+            display: flex;
+            justify-content: space-between;
+            height: 600px;
 
             .photo{
-                width: 300px;
-                height: 350px;
-                background-color: white;
-                margin-left: 35px;
-                display: inline-block;
+                width: 405px;
+                height: 526px;
+                background-color: var(--white);
+                margin-left: 100px;  
+                margin-top: 45px; 
             }
 
             .details{
-                margin-left: 300px;
+                margin-left: 120px;
                 width: 50%;
-                height: 350px;
-                display: inline-block;   
                 text-align: left;       
 
                 h1{
@@ -79,6 +79,37 @@
                     color: white;
                     text-align: left;
                     padding-left: 5px;
+                }
+
+                .work-progress-button{
+                    margin-top: 70px;
+                    align-content: center; 
+                   
+                    button{
+                        border-radius: 35px;
+                        outline: 1px solid var(--grey);
+                        outline-offset: 3px;
+                        height: 61px;
+                        width: 256px;
+                        color: var(--cream-700);
+                        font-family: var(--kanit-font-family);
+                        font-size: 18px;
+                        font-weight: 300;
+                        text-align: center;
+                        color: var(--grey);
+                        background-color: var(--dark-grey-100);
+                    }
+            
+                    button:hover{
+                        background-color: var(--button-hover);
+                    }
+
+                    img{
+                        width: 20px;
+                        height: 25px;
+                        margin-left: 15px;
+                        margin-bottom: -6px;
+                    }
                 }
             }
         }

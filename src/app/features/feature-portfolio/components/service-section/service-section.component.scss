@@ -1,0 +1,63 @@
+.service{
+    height: 800px;
+    background-color: var(--hero-section-rectangle-custom);
+    padding: 60px;
+    
+    h1{
+        font-size: 20px;
+        color: white;
+        margin-left: 5px;
+    }
+
+    h2{
+        font-size: 30px;
+        color: white;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-left: 5px;
+    }
+
+    .expertise-area{
+       display: flex;
+       flex-direction: row;
+
+        .expertise-area-item{
+            width: 50%;
+            background-color: black;
+            margin: 10px;
+            padding: 50px;
+
+            .item-count{
+                display: flex;
+
+                h1{          
+                    color: white;
+                    text-align: start;
+                }
+
+                p{
+                  text-align: right;
+                  width: 95%;
+                }
+
+            }
+
+            h1{
+                color: white;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            .line{
+                width: 50%;
+                height: 2px;
+                background-color: white;
+                margin-bottom: 20px;
+            }
+
+            p{
+                color: white;
+            }
+        }
+    }
+}

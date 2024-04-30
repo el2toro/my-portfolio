@@ -1,0 +1,59 @@
+.portfolio{
+    background-color: var(--dark-grey-500);
+    height: 160vh;
+    padding: 100px;
+    text-align: center;       
+
+    h1{
+        font-size: 35px;
+        font-weight: 400;
+        color: var(--cream-500);
+    }
+
+    h2{
+        font-size: 70px;
+        color: var(--white);
+        margin-top: 40px;
+    }
+
+    .work{
+       display: block; 
+       margin-top: 60px;
+
+        .work-item-1, .work-item-2, .work-item-3, .work-item-4, .work-item-5, .work-item-6 {
+            width: calc(100vw / 5);
+            height: 350px;
+            background-color: var(--white);
+            display: inline-block; 
+            margin: 20px;
+            padding: 40px;
+        }
+
+        .custom{
+            width: calc(100vw / 4 + 100vw / 8); 
+        }
+
+        .inner-work-item{
+            width: 230px;
+            height: 80px;
+            padding: 25px;
+            text-align: left;
+            align-content: center;
+            background-color: var(--dark-grey-500);
+            line-height: 25px;
+            margin-top: 195px;
+
+            h3{
+                font-size: 18px;
+                color: var(--white);
+            }
+
+            p{
+                font-size: 14px;
+                font-weight: 300;
+                color: var(--cream-500)
+            }
+        }
+    }
+}
+

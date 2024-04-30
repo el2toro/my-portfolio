@@ -6,6 +6,8 @@ import { ShahBackgroundComponent } from "./components/shah-background/shah-backg
 import { HeroSectionComponent } from "./components/hero-section/hero-section.component";
 import { StatisticComponent } from "./components/statistic/statistic.component";
 import { ResumeSectionComponent } from "./components/resume-section/resume-section.component";
+import { PortfolioSectionComponent } from "./components/portfolio-section/portfolio-section.component";
+import { ServiceSectionComponent } from "./components/service-section/service-section.component";
 
 @NgModule({
   declarations: [
@@ -14,8 +16,10 @@ import { ResumeSectionComponent } from "./components/resume-section/resume-secti
     ShahBackgroundComponent,
     HeroSectionComponent,
     StatisticComponent,
-    ResumeSectionComponent
-
+    ResumeSectionComponent,
+    PortfolioSectionComponent,
+    ServiceSectionComponent
+    
   ],
   imports: [
     FeaturePortfolioRoutingModule
