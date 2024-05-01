@@ -1,0 +1,172 @@
+.testimonial{
+    height: 110vh;
+    background-color: var(--dark-grey-500);
+    padding: 100px 200px;
+    text-align: center;
+
+    h1{
+        font-size: 32px;
+        font-weight: 400;
+        color: var(--cream-500);
+        padding-bottom: 30px;
+    }
+
+    h2{
+        font-size: 64px;
+        color: var(--white);
+        padding-bottom: 80px;
+    }
+
+    .testimonial-card{
+        display: flex;
+        width: 100%;
+        height: 305px;
+        background-color: var(--background);
+        position: relative;
+
+        .image{
+            width: 480px;
+            min-width: 200px;
+            height: 350px;
+            background-color: white;
+            margin-left: 100px;
+            position: relative;
+            bottom: 15%;
+        }
+
+        .sparks{
+            position: relative;
+            left: -25px;
+            top: 230px;
+        }
+
+        .details{
+            padding: 50px;
+            
+            p{
+                font-size: 18px;
+                font-weight: 200;
+                text-align: left;
+                line-height: 32px;
+                color: var(--white);
+            }
+
+
+            .pearson{
+                margin-top: 30px;
+                text-align: left;
+                display: flex;
+                flex-direction: row;
+
+                .name{
+                  display: inline-block;
+                  text-align: left;
+                  margin-right: 50px;
+
+                  p{
+                    font-size: 24px;
+                    font-weight: 400;
+                    color: var(--cream-500);
+                  }
+
+                  p ~ p{
+                    font-size: 16px;
+                    font-weight: 200;
+                    margin-top: 5px;
+                    color: var(--white);
+                  }
+                }
+
+                .vertical-line{
+                    width: 1px;
+                    height: 65px;
+                    border-right: 1px solid var(--white);
+                    margin-top: 2px;
+                }
+
+                
+                .rating{
+                    display: inline-block;
+                    text-align: left;
+                    margin-left: 50px;
+
+                    img{
+                        margin-right: 5px;
+                    }
+
+                    p{
+                        margin-top: 10px;
+                    }
+
+                    p ~ p{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .testimonial-navigation{
+        padding-top: 60px;
+        display: flex;
+        justify-content: space-between;
+        
+
+        button{
+            font-size: 18px;
+            color: var(--dark-grey-100);
+            background-color: transparent;
+            border: none;
+            width: 160px;
+            height: 40px;
+
+            span{
+                margin-left: 30px;
+                margin-right: 10px;
+            }
+
+            img{
+                width: 16px;
+                height: 16px;
+                margin-right: -17px;
+                margin-bottom: -3px;
+            }
+
+            img + img{
+                margin-left: 10px;
+            }
+        }
+
+        button:hover{
+            border-radius: 25px;
+            background-color: var(--dark-grey-400);
+        }
+
+        .progress-bar-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--white);
+            width: 25%; 
+
+            .progress-bar{
+                background-color: var(--white); 
+                height: 5px;
+                width: 80%;
+    
+                .progress{
+                    background-color: var(--cream-500); 
+                    padding: 1%; 
+                    text-align: right; 
+                    font-size: 20px; 
+                    height: 5px;
+                }
+    
+                .html { 
+                    width: 25%; 
+                } 
+            }
+        }
+    }
+}

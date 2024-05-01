@@ -8,6 +8,8 @@ import { StatisticComponent } from "./components/statistic/statistic.component";
 import { ResumeSectionComponent } from "./components/resume-section/resume-section.component";
 import { PortfolioSectionComponent } from "./components/portfolio-section/portfolio-section.component";
 import { ServiceSectionComponent } from "./components/service-section/service-section.component";
+import { TestimonialSectionComponent } from "./components/testimonial-section/testimonial-section.component";
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,12 @@ import { ServiceSectionComponent } from "./components/service-section/service-se
     StatisticComponent,
     ResumeSectionComponent,
     PortfolioSectionComponent,
-    ServiceSectionComponent
-    
+    ServiceSectionComponent,
+    TestimonialSectionComponent
   ],
   imports: [
-    FeaturePortfolioRoutingModule
+    FeaturePortfolioRoutingModule,
+    MatProgressBarModule
   ],
   providers: []
 })
