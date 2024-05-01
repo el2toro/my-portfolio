@@ -21,15 +21,17 @@
         .navbar-link-items{
            
             a{
-
                 text-decoration: none;
                 color: var(--white);
                 padding: 10px 20px;
-               // margin-right: 25px;
+            }
+
+            a:first-child{
+                color: var(--cream-500);
             }
 
             a:hover{
-                color: var(--dark-grey-100);
+                color: red;
             }
 
             .custom.active{

@@ -1,21 +1,23 @@
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
+import { DebugElement } from '@angular/core';
 
-import { ShahBackgroundComponent } from './shah-background.component';
+import { AboutPageComponent } from './about-page.component';
 
-describe('ShahBackgroungComponent', () => {
-  let component: ShahBackgroundComponent;
-  let fixture: ComponentFixture<ShahBackgroundComponent>;
+describe('AboutPageComponent', () => {
+  let component: AboutPageComponent;
+  let fixture: ComponentFixture<AboutPageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ShahBackgroundComponent ]
+      declarations: [ AboutPageComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ShahBackgroundComponent);
+    fixture = TestBed.createComponent(AboutPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

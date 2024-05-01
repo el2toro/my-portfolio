@@ -30,7 +30,7 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.matIconRegistry.addSvgIcon('burger-menu', this.domSanitizer.bypassSecurityTrustResourceUrl('./../../../../assets/icons/burger-menu-1.svg'));
+    this.matIconRegistry.addSvgIcon('burger-menu', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/burger-menu-1.svg'));
   }
 
   myFunction() {
