@@ -10,6 +10,7 @@ import { PortfolioSectionComponent } from "./components/portfolio-section/portfo
 import { ServiceSectionComponent } from "./components/service-section/service-section.component";
 import { TestimonialSectionComponent } from "./components/testimonial-section/testimonial-section.component";
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { BlogSectionComponent } from "./components/blog-section/blog-section.component";
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     ResumeSectionComponent,
     PortfolioSectionComponent,
     ServiceSectionComponent,
-    TestimonialSectionComponent
+    TestimonialSectionComponent,
+    BlogSectionComponent
   ],
   imports: [
     FeaturePortfolioRoutingModule,

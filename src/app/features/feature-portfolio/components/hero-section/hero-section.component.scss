@@ -39,7 +39,7 @@
 
         .title-play-button{
             background-color: transparent;
-            border: 1px solid #E4C8A7;
+            border: 1px solid var(--cream-500);
             width: 35px;
             height: 35px;
             border-radius: 25px;
@@ -69,8 +69,8 @@
         
             button{
                 border-radius: 35px;
-                background-image:  linear-gradient(to right, #E4C8A7, white);
-                outline: 1px solid #E4C8A7;
+                background-image:  linear-gradient(to left, var(--cream-500), var(--cream-100));
+                outline: 1px solid var(--cream-500);
                 outline-offset: 3px;
                 height: 61px;
                 width: 225px;
@@ -81,7 +81,7 @@
             }
     
             button:hover{
-                background-image:  linear-gradient(to left, #E4C8A7, white);
+                background-image:  linear-gradient(to left, var(--cream-500), var(--cream-100));
             }
         }
     }

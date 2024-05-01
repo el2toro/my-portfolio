@@ -1,0 +1,126 @@
+.blog {
+    height: 155vh;
+    background-color: var(--background);
+    padding: 100px;
+    padding-top: 200px;
+
+    h1 {
+        font-size: 32px;
+        font-weight: 400;
+        color: var(--cream-500);
+    }
+
+    .title {
+        display: flex;
+        justify-content: space-between;
+        color: var(--white);
+        font-size: 30px;
+        margin-top: 30px;
+        align-items: center;
+
+        h1{
+            font-size: 64px;
+            color: var(--white);
+            margin-top: 25px;
+            margin-bottom:35px;
+        }
+
+        button {
+            display: flex;
+            justify-content: flex-end;
+            border-radius: 35px;
+            background-color: var(--dark-grey-100);
+            outline: 1px solid var(--dark-grey-100);
+            outline-offset: 3px;
+            height: 50px;
+            width: 220px;
+            color: var(--grey);
+            font-family: var(--kanit-font-family);
+            font-size: 18px;
+            font-weight: 300;
+            align-items: center;
+            padding-right: 30px;
+            margin-bottom: 5px;
+
+            img{
+                width: 24px;
+                height: 24px;
+                margin-left: 10px;
+            }
+        }
+
+        button:hover{
+            background-color: var(--dark-grey-150);
+        }
+    }
+
+    .content {
+        display: flex;
+        gap: 30px;
+        margin-top: 30px;
+        height: 550px;
+
+        .photo-container {
+            width: 50%;
+            background-color: var(--white);;
+            padding: 30px;
+
+            .photo-inner-container {
+                display: grid;
+                row-gap: 20px;
+                height: 47.5%;
+                background-color: var(--white);;
+                padding: 30px;
+                margin-bottom: 30px;
+            }
+        }
+
+        .date-container {
+            height: 40px;
+            background-color: var(--black);
+            padding: 20px;
+            text-align: left;
+            width: 200px;
+            font-size: 18px;
+            font-weight: 300;
+            align-content: center;
+
+            p {
+                color: var(--white);
+                font-size: 16px;
+            }
+        }
+
+        .description {
+            background-color: var(--black);
+            padding: 20px;
+            text-align: left;
+
+            p {
+                color: var(--white);
+                font-size: 16px;
+                margin-top: 10px;
+            }
+
+            p ~ p {
+                color: var(--cream-500);
+                font-size: 14px;
+                font-weight: 200;
+            }
+        }
+
+        .photo-container:nth-child(2){
+            padding: 0px;
+            background-color: transparent;
+        }
+
+        .photo-container:nth-child(2n + 1){
+            display: grid;
+            row-gap: 320px;
+
+            .date-container {
+                width: 200px;
+            }
+        }
+    }
+}
