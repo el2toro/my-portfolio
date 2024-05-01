@@ -1,43 +1,80 @@
+<app-page-heading 
+    [title]="'portfolio'" 
+    [subtitle]="'Explore My Feature Work'">
+</app-page-heading>
+
+
+
 <div class="portfolio">
   <h1>PORTFOLIO</h1>
   <h2>My Selected Work</h2>
 
+  <div class="resume-navbar">
+    <a [routerLink]="['']">VIEW ALL</a>
+    <a [routerLink]="['']">CREATIVE</a>
+    <a [routerLink]="['']">DEVELOPMENT</a>
+    <a [routerLink]="['']">BRANDING</a>
+    <a [routerLink]="['']">WEB DESIGN</a>
+  </div>
+
   <div class="work">
-    <div class="work-item-1 custom">
-      <div class="inner-work-item custom-inner-work-item">
-         <h3>Electronics eCommerce</h3>
-         <p>Web Development</p>
+    <div class="work-item">
+       <div class="inner-work-item">
+          <button>
+            <img src="assets/arrow-right-lg.png" width="30px" height="30px">
+          </button>
+       </div>
+       <h3>Boutique Web Design</h3>
+       <p>Web Development</p>
+    </div>
+
+    <div class="work-item">
+      <div class="inner-work-item">
+        <button>
+          <img src="assets/arrow-right-lg.png" width="30px" height="30px">
+        </button>
       </div>
+      <h3>Boutique Web Design</h3>
+      <p>Web Development</p>
+   </div>
+
+   <div class="work-item">
+    <div class="inner-work-item">
+      <button>
+        <img src="assets/arrow-right-lg.png" width="30px" height="30px">
+      </button>
     </div>
-    <div class="work-item-2">
-      <div class="inner-work-item">
-        <h3>Electronics eCommerce</h3>
-        <p>Web Development</p>
-     </div>
-    </div>
-    <div class="work-item-3">
-      <div class="inner-work-item">
-        <h3>Electronics eCommerce</h3>
-        <p>Web Development</p>
-     </div>
-    </div>
-    <div class="work-item-4">
-      <div class="inner-work-item">
-        <h3>Electronics eCommerce</h3>
-        <p>Web Development</p>
-     </div>
-    </div>
-    <div class="work-item-5">
-      <div class="inner-work-item">
-        <h3>Electronics eCommerce</h3>
-        <p>Web Development</p>
-     </div>
-    </div>
-    <div class="work-item-6 custom">
-      <div class="inner-work-item custom-inner-work-item">
-        <h3>Electronics eCommerce</h3>
-        <p>Web Development</p>
-     </div>
-    </div>
+    <h3>Boutique Web Design</h3>
+    <p>Web Development</p>
+ </div>
+
+ <div class="work-item">
+  <div class="inner-work-item">
+    <button>
+      <img src="assets/arrow-right-lg.png" width="30px" height="30px">
+    </button>
+  </div>
+  <h3>Boutique Web Design</h3>
+  <p>Web Development</p>
+</div>
+
+<div class="work-item">
+  <div class="inner-work-item">
+    <button>
+      <img src="assets/arrow-right-lg.png" width="30px" height="30px">
+    </button>
+  </div>
+  <h3>Boutique Web Design</h3>
+  <p>Web Development</p>
+</div>
+<div class="work-item">
+  <div class="inner-work-item">
+    <button>
+      <img src="assets/arrow-right-lg.png" width="30px" height="30px">
+    </button>
+  </div>
+  <h3>Boutique Web Design</h3>
+  <p>Web Development</p>
+</div>
   </div>
 </div>

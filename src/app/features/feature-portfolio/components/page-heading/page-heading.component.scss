@@ -1,13 +1,54 @@
-.background{
+.background {
     display: flex;
 
-    .rectangle{
+    .rectangle {
         width: calc(100vw / 4);
-        height: calc(100vh / 2);
-        background-color: var(--dark-grey-700);
+        height: calc(100vw / 4);
+        background-color: var(--dark-grey-500);
     }
 
-    .rectangle-custom{
-        background-color: var(--background);
+    .rectangle-custom {
+        background-color: var(--dark-grey-700);
+    }
+}
+
+
+.header {
+    position: absolute;
+    top: 35vh;
+    display: grid;
+
+
+    padding-left: 100px;
+
+    .name {
+        display: flex;
+
+        h1 {
+            color: var(--cream-500);
+            font-size: 32px;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+
+        .hero-name-line {
+            margin-top: 15px;
+            height: 1.5px;
+            border: 1.5px solid #E4C8A7;
+            width: 140px;
+            margin-left: 30px;
+        }
+
+    }
+
+    h2 {
+        width: 75%;
+        font-size: 96px;
+        font-weight: 400;
+        color: var(--white);
+        align-content: center;
+        padding-bottom: 20px;
+        line-height: 120px;
+        margin-bottom: 30px;
     }
 }

@@ -11,14 +11,15 @@
 
         .name{
             display: flex; 
+            align-content: center;
             width: 60%;
             color: #E4C8A7;
-            font-size: 30px;
+            font-size: 32px;
             font-weight: 400;
             margin-bottom: 30px;
 
             .hero-name-line{
-                margin-top: 12px;
+                margin-top: 16px;
                 height: 1.5px;
                 border: 1.5px solid #E4C8A7;
                 width: 120px;

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-page-heading',
@@ -6,6 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page-heading.component.scss']
 })
 export class PageHeadingComponent implements OnInit {
+
+  @Input() title = '';
+  @Input() subtitle = '';
+
+  get titleFormated(): string{
+    return this.title.toUpperCase();
+  }
 
   constructor() { }
 
