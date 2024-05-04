@@ -4,22 +4,24 @@
       <img src="assets/logo.png" width="50px" height="30px">
     </div>
 
-    <div class="navbar-link-items" id="navbar">
+    <div class="navbar-link-items">
       <a class="custom" [routerLink]="['']">HOME</a>
       <a class="custom" [routerLink]="['/about']">ABOUT</a>
       <a class="custom" [routerLink]="['/portfolio']">PORTFOLIO</a>
       <a [routerLink]="['/service']">SERVICE</a>
-      <a [routerLink]="['/pages']">PAGES 
-        <span>
-          <img src="assets/arrow-down.png" width="15px" height="8px">
-        </span>
+      
+      <a (click)="showDropdown()">
+        PAGES
+        <nav class="nav">    
+        <ul class="dropdown-content" id="dropdown-content">
+          <li><a [routerLink]="['/blog']">Blog</a></li>
+          <li><a [routerLink]="['/single-blog']">Single Blog</a></li>
+          <li><a [routerLink]="['/single-portfolio']">Single Portfolio</a></li>
+        </ul>
+        </nav>
       </a>
     </div>
   </div>
-
-  <a (click)="myFunction()">
-    <mat-icon svgIcon="burger-menu">menu</mat-icon>
-  </a>
 
   <div class="buttons">
      <button class="mode-button" mat-icon-button>
@@ -28,3 +30,5 @@
      <button class="contact-button" mat-stroked-button>CONTACT</button>
   </div>
 </div>
+
+

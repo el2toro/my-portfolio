@@ -1,0 +1,21 @@
+.partner{
+    display: flex;
+    padding: 100px;
+    background-color: var(--dark-grey-500);
+
+    h1{
+        font-size: 70px;
+        color: var(--white);
+    }
+
+    .partner-logo{
+        width: 70%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        mat-icon{
+            width: 200px;
+            height: 80px;
+        }
+    }
+}

@@ -1,0 +1,69 @@
+.experience-container {
+    display: flex;
+    justify-content: space-between;
+  height: 120;
+  padding: 100px;
+  background-color: var(--dark-grey-500);
+
+  .description {
+    width: 40%;
+    padding-top: 200px;
+    h3 {
+      font-size: 35px;
+      font-weight: 400;
+      color: var(--cream-500);
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-size: 70px;
+      color: var(--white);
+      margin-bottom: 50px;
+      line-height: 80px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 25px;
+      font-weight: 200;
+      color: var(--white);
+    }
+  }
+
+  .vertical-timeline{
+    //width: 2px;
+    border-left: 6p solid white;
+    border-style: dashed;
+    background-color: red;
+    height: 200px;
+  }
+
+  .timeline{
+    display: grid;
+     width: 40%;
+     gap: 30px;
+
+    .timeline-item{
+background-color: var(--background);
+padding: 70px;
+
+       h4{
+        font-size: 24px;
+        font-weight: 400;
+        color: var(--cream-500);
+        margin-bottom: 10px;
+       }
+
+       p{
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: 200;
+        color: var(--white);
+       }
+
+       p + p{
+        margin-top: 20px;
+       }
+    }
+  }
+}

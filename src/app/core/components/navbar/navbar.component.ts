@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MatIconRegistry } from '@angular/material/icon';
-import { DomSanitizer } from '@angular/platform-browser';
 import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
@@ -9,6 +7,10 @@ import { DeviceDetectorService } from 'ngx-device-detector';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+
+  pages = [
+    'Me', 'Your Page', 'The page'
+  ]
 
   get isMobile(): boolean{
     return this.deviceDetectorService.isMobile();
@@ -22,23 +24,34 @@ export class NavbarComponent implements OnInit {
     return this.deviceDetectorService.isDesktop();
   }
 
-  constructor(private deviceDetectorService: DeviceDetectorService,
-              private matIconRegistry: MatIconRegistry,
-              private domSanitizer: DomSanitizer
-  ) { 
+  constructor(private deviceDetectorService: DeviceDetectorService) { 
     
   }
 
   ngOnInit() {
-    this.matIconRegistry.addSvgIcon('burger-menu', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/burger-menu-1.svg'));
-  }
-
-  myFunction() {
-    let x = document.getElementById("navbar") ;
-    if (x?.className === "navbar") {
-      x.className += " responsive";
-    } else {
-      //x.className = "topnav";
+    
+      // Close the dropdown menu if the user clicks outside of it
+document.onclick = function(event: any) {
+  if (!event?.target?.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
     }
   }
+}
+   
+  }
+
+  showDropdown() {
+    console.log('nav: ', document.getElementById("dropdown-content")?.classList)
+
+    document.getElementById("dropdown-content")?.classList?.toggle("show");
+
+    console.log('nav: ', document.getElementById("dropdown-content")?.classList)
+  }
+
 }

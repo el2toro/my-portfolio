@@ -4,8 +4,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ShellComponent } from './components/shell/shell.component';
 import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -16,8 +17,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
   imports: [
     RouterModule,
     MatButtonModule,
-    MatIconModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatToolbarModule,
+    MatSelectModule
   ],
   exports: [
     ShellComponent

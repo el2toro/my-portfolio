@@ -1,12 +1,11 @@
 .hero-section{
     display: flex;
-    position: absolute;
-    top: 0px;
     width: auto;
 
     .description{
-         padding-top: 250px;
          padding-left: 100px;
+         position: absolute;
+         top: 250px;
          z-index: 1;
 
         .name{

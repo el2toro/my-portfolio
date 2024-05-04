@@ -18,6 +18,13 @@ import { ServicePageComponent } from "./pages/service-page/service-page.componen
 import { BlogPageComponent } from "./pages/blog-page/blog-page.component";
 import { ContactPageComponent } from "./pages/contact-page/contact-page.component";
 import { SingleBlogPageComponent } from "./pages/single-blog-page/single-blog-page.component";
+import { SinglePortfolioPageComponent } from "./pages/single-portfolio-page/single-portfolio-page.component";
+import { MatIconModule } from "@angular/material/icon";
+import { AboutMeSectionComponent } from "./components/about/about-me-section/about-me-section.component";
+import { ExperienceSectionComponent } from "./components/about/experience-section/experience-section.component";
+import { SkillsSectionComponent } from "./components/about/skills-section/skills-section.component";
+import { PartnerSectionComponent } from "./components/about/partner-section/partner-section.component";
+import { AchievementSectionComponent } from "./components/about/achievement-section/achievement-section.component";
 
 @NgModule({
   declarations: [
@@ -27,6 +34,13 @@ import { SingleBlogPageComponent } from "./pages/single-blog-page/single-blog-pa
     ServicePageComponent,
     BlogPageComponent,
     SingleBlogPageComponent,
+    SinglePortfolioPageComponent,
+
+    AboutMeSectionComponent,
+    ExperienceSectionComponent,
+    SkillsSectionComponent,
+    PartnerSectionComponent,
+    AchievementSectionComponent,
     
     ContactPageComponent,
 
@@ -43,7 +57,8 @@ import { SingleBlogPageComponent } from "./pages/single-blog-page/single-blog-pa
   ],
   imports: [
     FeaturePortfolioRoutingModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatIconModule
   ],
   providers: []
 })

@@ -9,6 +9,7 @@
     top: 40px;
     width: 100%;
     padding: 0px 100px;
+    z-index: 1;
 
     &-link{
         display: flex;
@@ -19,6 +20,9 @@
         } 
 
         .navbar-link-items{
+            display: grid;
+            grid-auto-flow: column;
+            align-items: center;
            
             a{
                 text-decoration: none;
@@ -26,22 +30,63 @@
                 padding: 10px 20px;
             }
 
-            a:first-child{
+            a:hover{
                 color: var(--cream-500);
             }
 
-            a:hover{
-                color: red;
-            }
-
-            .custom.active{
-                color: red;
+            a:focus{
+                color: var(--cream-500);
             }
 
             span{
                 margin-left: 10px;
             }
-        }     
+
+
+            a:last-child{
+                :hover{
+                    cursor: pointer;
+                }
+                
+                nav{
+                    padding-top: 5px;
+                    color: white;
+                   
+                    .dropdown-content {
+                        position: absolute;
+                        display: none;
+                        background-color: #f1f1f1;
+                        min-width: 160px; /* Set width */
+                        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+                    }
+                }
+            }  
+            
+            a:last-child{
+                :hover{
+                    cursor: pointer;
+                    .dropdown-content {
+                        display: grid; /* Show dropdown on hover */
+                        //margin-top: 30px;
+                        margin-left: -45px;
+    
+                       li{
+                        margin-top: 30px;
+    
+                        a{
+                            color: var(--body-text-color);
+                            
+                            &:hover{
+                                color: var(--cream-500);
+                                background-color: var(--dark-grey-500);
+                            }
+                        }
+                    
+                       }
+                    }
+                }
+            }
+        } 
     }
 
     .buttons{
@@ -108,4 +153,10 @@
       display: block;
       text-align: left;
     }
+}
+
+
+  
+.show {
+    display: grid;
 }
