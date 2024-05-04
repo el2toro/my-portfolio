@@ -33,6 +33,19 @@
                 color: var(--dark-grey-100);
                 margin-left: 10px;
                 font-weight: 200;
+
+                :focus{
+                    color: var(--cream-500);
+                }
+            }
+
+            a:hover{
+                color: var(--cream-500);;
+                cursor: pointer;
+            }
+
+            a:focus{
+                color: var(--cream-500);
             }
 
             a:nth-child(1){

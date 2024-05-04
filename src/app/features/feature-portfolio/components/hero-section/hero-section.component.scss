@@ -89,15 +89,14 @@
     .image{
         position: absolute;
         top: 130px;
-        height: 115.5vh;
-        width: 50%;
         right: 0px;
         background-color: #D9D9D9;
         overflow: hidden;
-
-        img{
-            height: 100%;
-            width: 100%;
-        }
+        object-fit: fill;
+        //object-fit: cover;
     }
+}
+
+@media only screen and (max-width: 768px){
+
 }

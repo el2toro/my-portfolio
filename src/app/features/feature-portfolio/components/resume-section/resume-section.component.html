@@ -4,18 +4,17 @@
     <h1>Discover My Resume</h1>
   
     <div class="resume-navbar">
-      <a [routerLink]="['/aboutme']">ABOUT ME</a>
-      <a [routerLink]="['/experience']">EXPERIENCE</a>
-      <a [routerLink]="['/education']">EDUCATION</a>
-      <a [routerLink]="['/skills']">SKILLS</a>
-      <a [routerLink]="['/awards']">AWARDS </a>
+      <a (click)="loadSection('aboutme')">ABOUT ME</a>
+      <a (click)="loadSection('experience')">EXPERIENCE</a>
+      <a (click)="loadSection('education')">EDUCATION</a>
+      <a (click)="loadSection('skills')">SKILLS</a>
+      <a (click)="loadSection('awards')">AWARDS</a>
     </div>
   </div>
 
-  
-  <app-resume-about-me-section *ngIf="true"></app-resume-about-me-section>
-  <app-resume-experience-section *ngIf="false"></app-resume-experience-section>
-  <app-resume-education-section *ngIf="false"></app-resume-education-section>
-  <app-resume-skills-section *ngIf="false"></app-resume-skills-section>
-  <app-resume-awards-section ></app-resume-awards-section>
+  <app-resume-about-me-section *ngIf="sectionName === 'aboutme'"></app-resume-about-me-section>
+  <app-resume-experience-section *ngIf="sectionName === 'experience'"></app-resume-experience-section>
+  <app-resume-education-section *ngIf="sectionName === 'education'"></app-resume-education-section>
+  <app-resume-skills-section *ngIf="sectionName === 'skills'"></app-resume-skills-section>
+  <app-resume-awards-section *ngIf="sectionName === 'awards'"></app-resume-awards-section>
 </div>

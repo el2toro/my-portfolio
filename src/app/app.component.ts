@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 
 @Component({
   selector: 'app-root',
@@ -9,6 +11,16 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class AppComponent {
   title = 'my-portfolio';
+
+ firebaseConfig = {
+    apiKey: "AIzaSyD7_-PoKCO8n1swMTTGSkU1Ou5M-L1nYVo",
+    authDomain: "my-portfolio-001-1.firebaseapp.com",
+    projectId: "my-portfolio-001-1",
+    storageBucket: "my-portfolio-001-1.appspot.com",
+    messagingSenderId: "262894568047",
+    appId: "1:262894568047:web:434c050f92afe612c6439a",
+    measurementId: "G-GLQZH05WNT"
+  };
 
   constructor(private matIconRegistry: MatIconRegistry,
               private domSanitizer: DomSanitizer
@@ -24,5 +36,11 @@ export class AppComponent {
     this.matIconRegistry.addSvgIcon('address-icon', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/address-icon.svg'));
     this.matIconRegistry.addSvgIcon('button-arrow-right', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/button-arrow-right.svg'));
     this.matIconRegistry.addSvgIcon('outlined-dot', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/outlined-dot.svg'));
+
+    // Initialize Firebase
+   const app = initializeApp(this.firebaseConfig);
+   const analytics = getAnalytics(app);
+
+   console.log(analytics)
   }
 }

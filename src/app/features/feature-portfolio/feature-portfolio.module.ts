@@ -30,6 +30,7 @@ import { ResumeExperienceSectionComponent } from "./components/resume/resume-exp
 import { ResumeSkillsSectionComponent } from "./components/resume/resume-skills-section/resume-skills-section.component";
 import { ResumeAboutMeSectionComponent } from "./components/resume/resume-about-me-section/resume-about-me-section.component";
 import { HomePageComponent } from "./pages/portfolio-home-page/home-page.component";
+import { CommonModule } from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -66,6 +67,7 @@ import { HomePageComponent } from "./pages/portfolio-home-page/home-page.compone
     PageHeadingComponent
   ],
   imports: [
+    CommonModule,
     FeaturePortfolioRoutingModule,
     MatProgressBarModule,
     MatIconModule
