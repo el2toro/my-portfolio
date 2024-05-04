@@ -1,0 +1,116 @@
+.awards{
+
+    .awards-container{
+        display: grid;
+         grid-template-columns: 1fr 1fr 1fr;
+         column-gap: 30px;
+
+        .award-item{
+            display: grid;
+            padding: 50px 40px 30px 40px;
+            row-gap: 10px;
+
+            background-color: var(--dark-grey-500);
+            height: 250px; //18vw;
+
+            h4{
+                font-size: 24px;
+                color: var(--white);
+            }
+
+            p{
+                color: var(--white);
+                font-size: 18px;
+                font-weight: 200;
+            }
+
+            .icon-section{
+                display: flex;
+                justify-content: space-between;
+                gap: 30px;
+
+                mat-icon{
+                   width: 40px;
+                   height: 40px;
+                   margin-top: 30px;
+                   rotate: 90deg;
+                }
+
+                mat-icon:nth-child(2){
+                    width: 60px;
+                    height: 60px;
+                    margin-top: 0px;
+                    rotate: 0deg;
+                }
+                
+                mat-icon:nth-child(3){
+                    rotate: 360deg;
+                }
+            }
+        }
+    }
+
+
+    .awards-navigation{
+        padding-top: 60px;
+        display: flex;
+        justify-content: space-between;
+        
+
+        button{
+            font-size: 18px;
+            color: var(--dark-grey-100);
+            background-color: transparent;
+            border: none;
+            width: 160px;
+            height: 40px;
+
+            span{
+                margin-left: 30px;
+                margin-right: 10px;
+            }
+
+            img{
+                width: 16px;
+                height: 16px;
+                margin-right: -17px;
+                margin-bottom: -3px;
+            }
+
+            img + img{
+                margin-left: 10px;
+            }
+        }
+
+        button:hover{
+            border-radius: 25px;
+            background-color: var(--dark-grey-400);
+        }
+
+        .progress-bar-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--white);
+            width: 25%; 
+
+            .progress-bar{
+                background-color: var(--white); 
+                height: 5px;
+                width: 80%;
+    
+                .progress{
+                    background-color: var(--cream-500); 
+                    padding: 1%; 
+                    text-align: right; 
+                    font-size: 20px; 
+                    height: 5px;
+                }
+    
+                .html { 
+                    width: 25%; 
+                } 
+            }
+        }
+    }
+}

@@ -1,6 +1,5 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { HomePageComponent  } from "./pages/portfolio-home-page/home-page.component";
 import { ServicePageComponent } from "./pages/service-page/service-page.component";
 import { BlogPageComponent } from "./pages/blog-page/blog-page.component";
 import { PortfolioPageComponent } from "./pages/portfolio-page/portfolio-page.component";
@@ -8,6 +7,7 @@ import { AboutPageComponent } from "./pages/about-page/about-page.component";
 import { SingleBlogPageComponent } from "./pages/single-blog-page/single-blog-page.component";
 import { ContactPageComponent } from "./pages/contact-page/contact-page.component";
 import { NotFoundComponent } from "src/app/core/pages/not-found/not-found.component";
+import { HomePageComponent } from "./pages/portfolio-home-page/home-page.component";
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },

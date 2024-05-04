@@ -1,8 +1,8 @@
-<div class="resume-container">
-  <div class="resume-content">
-    <h1>RESUME</h1>
+<div class="heading-container">
+  <div class="heading">
+    <h3>RESUME</h3>
     <h1>Discover My Resume</h1>
-
+  
     <div class="resume-navbar">
       <a [routerLink]="['/aboutme']">ABOUT ME</a>
       <a [routerLink]="['/experience']">EXPERIENCE</a>
@@ -10,32 +10,12 @@
       <a [routerLink]="['/skills']">SKILLS</a>
       <a [routerLink]="['/awards']">AWARDS </a>
     </div>
-
-    <div class="resume-photo-section">
-       <div class="photo">
-
-       </div>
-       <div class="details">
-          <h1>HI, I AM VASILE BADRAGAN A SOFTWARE ENGINEER</h1>
-          <p>
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-          </p>
-          <div class="contact">
-            <p>Name <span>:Vasile Badragan</span></p>
-            <p>Nationality <span>:Moldavien</span></p>
-            <p>Experience <span>:5+ Years</span></p>
-            <p>Phone <span>:+37376775951</span></p>
-            <p>Languages <span>:English, Russian, Italian</span></p>
-            <p>Email <span>:vb@mail.ru</span></p>
-          </div>
-
-          <div class="work-progress-button">
-            <button>MY WORK PROGRESS 
-              <img src="assets/play-grey.png">
-            </button>
-          </div>
-       </div>
-    </div>
   </div>
+
+  
+  <app-resume-about-me-section *ngIf="true"></app-resume-about-me-section>
+  <app-resume-experience-section *ngIf="false"></app-resume-experience-section>
+  <app-resume-education-section *ngIf="false"></app-resume-education-section>
+  <app-resume-skills-section *ngIf="false"></app-resume-skills-section>
+  <app-resume-awards-section ></app-resume-awards-section>
 </div>

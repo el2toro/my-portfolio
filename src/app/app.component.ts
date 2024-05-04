@@ -23,5 +23,6 @@ export class AppComponent {
     this.matIconRegistry.addSvgIcon('email-icon', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/email-icon.svg'));
     this.matIconRegistry.addSvgIcon('address-icon', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/address-icon.svg'));
     this.matIconRegistry.addSvgIcon('button-arrow-right', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/button-arrow-right.svg'));
+    this.matIconRegistry.addSvgIcon('outlined-dot', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/outlined-dot.svg'));
   }
 }

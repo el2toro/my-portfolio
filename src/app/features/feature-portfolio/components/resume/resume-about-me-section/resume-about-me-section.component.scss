@@ -1,59 +1,81 @@
-.portfolio{
-    background-color: var(--dark-grey-500);
-    height: 160vh;
-    padding: 100px;
-    text-align: center;       
+.resume-container{
+    background-color: var(--background);
+ 
+    .resume-content{
+        .resume-photo-section{
+            padding-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            height: 600px;
 
-    h1{
-        font-size: 32px;
-        font-weight: 400;
-        color: var(--cream-500);
-    }
-
-    h2{
-        font-size: 64px;
-        color: var(--white);
-        margin-top: 40px;
-    }
-
-    .work{
-       display: block; 
-       margin-top: 60px;
-
-        .work-item-1, .work-item-2, .work-item-3, .work-item-4, .work-item-5, .work-item-6 {
-            width: calc(100vw / 5);
-            height: 350px;
-            background-color: var(--white);
-            display: inline-block; 
-            margin: 20px;
-            padding: 40px;
-        }
-
-        .custom{
-            width: calc(100vw / 4 + 100vw / 8); 
-        }
-
-        .inner-work-item{
-            width: 230px;
-            height: 80px;
-            padding: 25px;
-            text-align: left;
-            align-content: center;
-            background-color: var(--dark-grey-500);
-            line-height: 25px;
-            margin-top: 195px;
-
-            h3{
-                font-size: 18px;
-                color: var(--white);
+            .photo{
+                width: 405px;
+                height: 526px;
+                background-color: var(--white);
+                margin-left: 100px;  
+                //margin-top: 45px; 
             }
 
-            p{
-                font-size: 14px;
-                font-weight: 300;
-                color: var(--cream-500)
+            .details{
+                margin-left: 120px;
+                width: 50%;
+                text-align: left;       
+
+                h1{
+                    font-size: 20px;
+                    font-weight: 200;
+                    color: var(--cream-500);
+                }
+
+                p{
+                    padding-top: 20px;
+                    font-weight: 200;
+                    line-height: 25px;
+                    color: white;
+                }
+
+                span{
+                    padding-left: 20px;
+                }
+
+                .contact{
+                    padding-top: 20px;
+                    color: white;
+                    text-align: left;
+                    padding-left: 5px;
+                }
+
+                .work-progress-button{
+                    margin-top: 70px;
+                    align-content: center; 
+                   
+                    button{
+                        border-radius: 35px;
+                        outline: 1px solid var(--grey);
+                        outline-offset: 3px;
+                        height: 61px;
+                        width: 256px;
+                        color: var(--cream-700);
+                        font-family: var(--kanit-font-family);
+                        font-size: 18px;
+                        font-weight: 300;
+                        text-align: center;
+                        color: var(--grey);
+                        background-color: var(--dark-grey-100);
+                    }
+            
+                    button:hover{
+                        background-color: var(--button-hover);
+                    }
+
+                    img{
+                        width: 20px;
+                        height: 25px;
+                        margin-left: 15px;
+                        margin-bottom: -6px;
+                    }
+                }
             }
         }
     }
 }
-

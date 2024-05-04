@@ -1,5 +1,4 @@
 import { NgModule } from "@angular/core";
-import { HomePageComponent } from "./pages/portfolio-home-page/home-page.component";
 import { FeaturePortfolioRoutingModule } from "./feature-portfolio-routing.module";
 import { FeaturePortfolioHeroComponent } from "./components/feature-portfolio-hero/feature-portfolio-hero.component";
 import { ChessBackgroundComponent } from "./components/chess-background/chess-background.component";
@@ -30,6 +29,7 @@ import { ResumeEducationSectionComponent } from "./components/resume/resume-educ
 import { ResumeExperienceSectionComponent } from "./components/resume/resume-experience-section/resume-experience-section.component";
 import { ResumeSkillsSectionComponent } from "./components/resume/resume-skills-section/resume-skills-section.component";
 import { ResumeAboutMeSectionComponent } from "./components/resume/resume-about-me-section/resume-about-me-section.component";
+import { HomePageComponent } from "./pages/portfolio-home-page/home-page.component";
 
 @NgModule({
   declarations: [
