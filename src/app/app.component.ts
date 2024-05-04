@@ -19,5 +19,9 @@ export class AppComponent {
     this.matIconRegistry.addSvgIcon('partner-icon', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/partner-icon.svg'));
     this.matIconRegistry.addSvgIcon('spark-ornament-icon', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/spark-ornament-icon.svg'));
     this.matIconRegistry.addSvgIcon('magic-wand-icon', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/magic-wand-icon.svg'));
+    this.matIconRegistry.addSvgIcon('phone-icon', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/phone-icon.svg'));
+    this.matIconRegistry.addSvgIcon('email-icon', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/email-icon.svg'));
+    this.matIconRegistry.addSvgIcon('address-icon', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/address-icon.svg'));
+    this.matIconRegistry.addSvgIcon('button-arrow-right', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/button-arrow-right.svg'));
   }
 }

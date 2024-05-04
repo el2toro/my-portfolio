@@ -7,19 +7,25 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSelectModule } from '@angular/material/select';
+import { MatIconModule } from '@angular/material/icon';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { FeaturePortfolioModule } from '../features/feature-portfolio/feature-portfolio.module';
 
 @NgModule({
   declarations: [
     FooterComponent,
     NavbarComponent,
-    ShellComponent
+    ShellComponent,
+    NotFoundComponent
   ],
   imports: [
     RouterModule,
     MatButtonModule,
     MatFormFieldModule,
     MatToolbarModule,
-    MatSelectModule
+    MatSelectModule,
+    MatIconModule,
+    FeaturePortfolioModule
   ],
   exports: [
     ShellComponent

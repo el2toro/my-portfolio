@@ -2,3 +2,49 @@
     [title]="'contact'" 
     [subtitle]="'Get In Touch With Me'">
 </app-page-heading>
+
+<div class="contact">
+    <h3>CONTACT ME</h3>
+    <h1>Let's Talk About Ideas</h1>
+
+    <div class="contact-fields">
+        <div class="contact-details">
+           <div class="contact-item">
+            <mat-icon svgIcon="phone-icon"></mat-icon>
+            <div class="inner-contact-item">
+               <p>Phone Number</p>
+               <p>+373-67-963-215</p>
+            </div>
+           </div>
+
+           <div class="contact-item">
+            <mat-icon svgIcon="email-icon"></mat-icon>
+            <div class="inner-contact-item">
+               <p>Email</p>
+               <p>myemail@data.com</p>
+            </div>
+           </div>
+
+           <div class="contact-item">
+            <mat-icon svgIcon="address-icon"></mat-icon>
+            <div class="inner-contact-item">
+               <p>Address</p>
+               <p>Chisinau, Moldova</p>
+            </div>
+           </div>
+        </div>
+
+        <form class="contact-form">
+            <div class="send-message">
+                <div class="name-email-input">
+                    <input matInput placeholder="Your Name" value="">
+                    <input matInput placeholder="Email" value="">
+                </div>
+                <input matInput placeholder="Your Subject" value="">
+                <textarea matInput placeholder="Your Message"></textarea>
+
+                <button matButton>SEND A MESSAGE</button> 
+            </div>
+        </form>
+    </div>
+</div>
