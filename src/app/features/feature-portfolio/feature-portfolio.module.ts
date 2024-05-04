@@ -25,6 +25,10 @@ import { ExperienceSectionComponent } from "./components/about/experience-sectio
 import { SkillsSectionComponent } from "./components/about/skills-section/skills-section.component";
 import { PartnerSectionComponent } from "./components/about/partner-section/partner-section.component";
 import { AchievementSectionComponent } from "./components/about/achievement-section/achievement-section.component";
+import { PortfolioAwardsSectionComponent } from "./components/portfolio/portfolio-awards-section/portfolio-awards-section.component";
+import { PortfolioEducationSectionComponent } from "./components/portfolio/portfolio-education-section/portfolio-education-section.component";
+import { PortfolioExperienceSectionComponent } from "./components/portfolio/portfolio-experience-section/portfolio-experience-section.component";
+import { PortfolioSkillsSectionComponent } from "./components/portfolio/portfolio-skills-section/portfolio-skills-section.component";
 
 @NgModule({
   declarations: [
@@ -35,15 +39,19 @@ import { AchievementSectionComponent } from "./components/about/achievement-sect
     BlogPageComponent,
     SingleBlogPageComponent,
     SinglePortfolioPageComponent,
+    ContactPageComponent,
 
     AboutMeSectionComponent,
     ExperienceSectionComponent,
     SkillsSectionComponent,
     PartnerSectionComponent,
     AchievementSectionComponent,
-    
-    ContactPageComponent,
 
+    PortfolioAwardsSectionComponent,
+    PortfolioEducationSectionComponent,
+    PortfolioExperienceSectionComponent,
+    PortfolioSkillsSectionComponent,
+    
     FeaturePortfolioHeroComponent,
     ChessBackgroundComponent,
     HeroSectionComponent,
