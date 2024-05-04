@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { PortfolioHomePageComponent } from "./pages/portfolio-home-page/portfolio-home-page.component";
+import { HomePageComponent } from "./pages/portfolio-home-page/home-page.component";
 import { FeaturePortfolioRoutingModule } from "./feature-portfolio-routing.module";
 import { FeaturePortfolioHeroComponent } from "./components/feature-portfolio-hero/feature-portfolio-hero.component";
 import { ChessBackgroundComponent } from "./components/chess-background/chess-background.component";
@@ -25,14 +25,15 @@ import { ExperienceSectionComponent } from "./components/about/experience-sectio
 import { SkillsSectionComponent } from "./components/about/skills-section/skills-section.component";
 import { PartnerSectionComponent } from "./components/about/partner-section/partner-section.component";
 import { AchievementSectionComponent } from "./components/about/achievement-section/achievement-section.component";
-import { PortfolioAwardsSectionComponent } from "./components/portfolio/portfolio-awards-section/portfolio-awards-section.component";
-import { PortfolioEducationSectionComponent } from "./components/portfolio/portfolio-education-section/portfolio-education-section.component";
-import { PortfolioExperienceSectionComponent } from "./components/portfolio/portfolio-experience-section/portfolio-experience-section.component";
-import { PortfolioSkillsSectionComponent } from "./components/portfolio/portfolio-skills-section/portfolio-skills-section.component";
+import { ResumeAwardsSectionComponent } from "./components/resume/resume-awards-section/resume-awards-section.component";
+import { ResumeEducationSectionComponent } from "./components/resume/resume-education-section/resume-education-section.component";
+import { ResumeExperienceSectionComponent } from "./components/resume/resume-experience-section/resume-experience-section.component";
+import { ResumeSkillsSectionComponent } from "./components/resume/resume-skills-section/resume-skills-section.component";
+import { ResumeAboutMeSectionComponent } from "./components/resume/resume-about-me-section/resume-about-me-section.component";
 
 @NgModule({
   declarations: [
-    PortfolioHomePageComponent,
+    HomePageComponent,
     AboutPageComponent,
     PortfolioPageComponent,
     ServicePageComponent,
@@ -47,10 +48,11 @@ import { PortfolioSkillsSectionComponent } from "./components/portfolio/portfoli
     PartnerSectionComponent,
     AchievementSectionComponent,
 
-    PortfolioAwardsSectionComponent,
-    PortfolioEducationSectionComponent,
-    PortfolioExperienceSectionComponent,
-    PortfolioSkillsSectionComponent,
+    ResumeAboutMeSectionComponent,
+    ResumeAwardsSectionComponent,
+    ResumeEducationSectionComponent,
+    ResumeExperienceSectionComponent,
+    ResumeSkillsSectionComponent,
     
     FeaturePortfolioHeroComponent,
     ChessBackgroundComponent,
