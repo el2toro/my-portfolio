@@ -79,3 +79,43 @@
         }
     }
 }
+
+@media screen and (max-width: 767px) {
+    .resume-container{
+        margin-top: 30px;
+        
+        .resume-content{
+            .resume-photo-section{
+    
+                .photo{
+                    display: none;
+                }
+    
+                .details{
+                    margin-left: 0px;
+                    width: 100%;
+                    text-align: left;       
+
+    
+                    .work-progress-button{
+                        margin-top: 70px;
+                        align-content: center; 
+                       
+                        button{
+                            height: 41px;
+                            width: 200px;
+                            font-size: 14px; 
+                        }
+    
+                        img{
+                            width: 10px;
+                            height: 15px;
+                            margin-left: 10px;
+                            margin-bottom: -2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

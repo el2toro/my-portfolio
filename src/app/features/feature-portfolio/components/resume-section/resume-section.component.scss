@@ -27,32 +27,107 @@
             margin-top: 6%;
             padding: 0% 21%;
             padding-bottom: 6%;
-            
-            a{
-                text-decoration: none;
-                color: var(--dark-grey-100);
-                margin-left: 10px;
-                font-weight: 200;
 
-                :focus{
+            button{      
+                background-color: transparent;
+                border: none;
+                font-size: 14px;
+                color: var(--dark-grey-100);
+                font-weight: 100;
+
+                &:focus{
+                    color: var(--cream-500);
+                }
+
+                &:hover{
+                    cursor: pointer;
                     color: var(--cream-500);
                 }
             }
 
-            a:hover{
-                color: var(--cream-500);;
-                cursor: pointer;
-            }
-
-            a:focus{
+            .focused-button{
                 color: var(--cream-500);
             }
 
-            a:nth-child(1){
+            button:nth-child(1){
                 //TODO: change colore on selected menu
-                color: var(--cream-500);
+              //  color: var(--cream-500);
             }
         }
 
+        .resume-navbar-mobile{
+            display: none;
+        }
+
     }
+}
+
+@media screen and (max-width: 767px) {
+   
+    .heading-container{
+        padding: 50px 20px;
+        align-items: center;
+    
+        .heading{
+    
+    
+            h3{
+                font-size: 24px;
+                font-weight: 400;
+                color: var(--cream-500);
+                margin-top: 40px;
+            }
+    
+            h1{
+                margin-top: 40px;
+                font-size: 48px;
+                //font-size: 64px;
+                color: var(--white);
+            }
+    
+            .resume-navbar{
+                display: none;
+                justify-content: space-between;
+                margin-top: 6%;
+                padding: 0% 21%;
+                padding-bottom: 6%;
+    
+                button{      
+                    background-color: transparent;
+                    border: none;
+                    font-size: 14px;
+                    color: var(--dark-grey-100);
+                    font-weight: 100;
+    
+                    &:focus{
+                        color: var(--cream-500);
+                    }
+    
+                    &:hover{
+                        cursor: pointer;
+                        color: var(--cream-500);
+                    }
+                }
+    
+                .focused-button{
+                    color: var(--cream-500);
+                }
+    
+            }
+
+            .resume-navbar-mobile{
+                display: flex;
+                justify-content: space-between;
+                margin-top: 30px;
+
+                p{
+                    color: var(--cream-500);
+                    font-size: 18px;
+                    font-weight: 200;
+                }
+            }
+    
+        }
+    }
+    
 }

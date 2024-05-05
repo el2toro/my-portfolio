@@ -4,11 +4,17 @@
     <h1>Discover My Resume</h1>
   
     <div class="resume-navbar">
-      <a (click)="loadSection('aboutme')">ABOUT ME</a>
-      <a (click)="loadSection('experience')">EXPERIENCE</a>
-      <a (click)="loadSection('education')">EDUCATION</a>
-      <a (click)="loadSection('skills')">SKILLS</a>
-      <a (click)="loadSection('awards')">AWARDS</a>
+      <button #aboutMeButton matButton (click)="loadSection($event, 'aboutme')">ABOUT ME</button>
+      <button matButton (click)="loadSection($event, 'experience')">EXPERIENCE</button>
+      <button matButton (click)="loadSection($event, 'education')">EDUCATION</button>
+      <button matButton (click)="loadSection($event, 'skills')">SKILLS</button>
+      <button matButton (click)="loadSection($event, 'awards')">AWARDS</button>
+    </div>
+
+    <div class="resume-navbar-mobile">
+      <button matButton (click)="previuosSection()">{{ sections[index] }}</button>
+        <p>{{ sections[index !== 0 ? -1 : 0] }}</p>
+      <button matButton (click)="nextSection()">{{ sections[index + 1] }}</button>
     </div>
   </div>
 

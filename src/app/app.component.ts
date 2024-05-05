@@ -12,15 +12,15 @@ import { getAnalytics } from "firebase/analytics";
 export class AppComponent {
   title = 'my-portfolio';
 
- firebaseConfig = {
-    apiKey: "AIzaSyD7_-PoKCO8n1swMTTGSkU1Ou5M-L1nYVo",
-    authDomain: "my-portfolio-001-1.firebaseapp.com",
-    projectId: "my-portfolio-001-1",
-    storageBucket: "my-portfolio-001-1.appspot.com",
-    messagingSenderId: "262894568047",
-    appId: "1:262894568047:web:434c050f92afe612c6439a",
-    measurementId: "G-GLQZH05WNT"
-  };
+//  firebaseConfig = {
+//     apiKey: "AIzaSyD7_-PoKCO8n1swMTTGSkU1Ou5M-L1nYVo",
+//     authDomain: "my-portfolio-001-1.firebaseapp.com",
+//     projectId: "my-portfolio-001-1",
+//     storageBucket: "my-portfolio-001-1.appspot.com",
+//     messagingSenderId: "262894568047",
+//     appId: "1:262894568047:web:434c050f92afe612c6439a",
+//     measurementId: "G-GLQZH05WNT"
+//   };
 
   constructor(private matIconRegistry: MatIconRegistry,
               private domSanitizer: DomSanitizer
@@ -37,10 +37,14 @@ export class AppComponent {
     this.matIconRegistry.addSvgIcon('button-arrow-right', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/button-arrow-right.svg'));
     this.matIconRegistry.addSvgIcon('outlined-dot', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/outlined-dot.svg'));
 
-    // Initialize Firebase
-   const app = initializeApp(this.firebaseConfig);
-   const analytics = getAnalytics(app);
+    //Social Media
+    this.matIconRegistry.addSvgIcon('facebook', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/facebook-icon.svg'));
+    this.matIconRegistry.addSvgIcon('tiktok', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/tiktok-icon.svg'));
+    this.matIconRegistry.addSvgIcon('pinterest', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/pinterest-icon.svg'));
+    this.matIconRegistry.addSvgIcon('linkedin', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/linkedin-icon.svg'));
 
-   console.log(analytics)
+    // Initialize Firebase
+   //const app = initializeApp(this.firebaseConfig);
+   //const analytics = getAnalytics(app);
   }
 }

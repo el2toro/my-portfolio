@@ -11,3 +11,11 @@
         background-color: var(--background);
     }
 }
+
+@media screen and (max-width: 767px) {
+    .background{
+        .rectangle{
+            height: calc(100vh / 2.5);
+        }
+    }
+}

@@ -1,6 +1,5 @@
 .portfolio{
     background-color: var(--dark-grey-500);
-    height: 160vh;
     padding: 100px;
     text-align: center;       
 
@@ -17,31 +16,45 @@
     }
 
     .work{
-       display: block; 
+       display: grid; 
+       row-gap: 30px;
        margin-top: 60px;
 
-        .work-item-1, .work-item-2, .work-item-3, .work-item-4, .work-item-5, .work-item-6 {
-            width: calc(100vw / 5);
-            height: 350px;
-            background-color: var(--white);
+       .work-row{
+          display: grid;
+          grid-template-columns: 2fr 1fr 1fr;
+          column-gap: 30px;
+       }
+
+       .work-row + .work-row{
+         grid-template-columns: 1fr 1fr 2fr;
+       }
+
+
+        .work-item{
+            height: 270px;
             display: inline-block; 
-            margin: 20px;
-            padding: 40px;
+            background-color: white;
+
+            img{
+                object-fit: fill;
+                height: 100%;
+                width: 100%;
+            }
         }
 
-        .custom{
-            width: calc(100vw / 4 + 100vw / 8); 
-        }
 
         .inner-work-item{
-            width: 230px;
+           display: none;
             height: 80px;
             padding: 25px;
             text-align: left;
             align-content: center;
             background-color: var(--dark-grey-500);
             line-height: 25px;
-            margin-top: 195px;
+            position: relative;
+            margin-bottom: 50px;
+            z-index: 1;
 
             h3{
                 font-size: 18px;
@@ -57,3 +70,38 @@
     }
 }
 
+@media screen and (max-width: 767px) {
+    .portfolio{
+        padding: 50px 20px;
+        text-align: center;       
+    
+        h1{
+            font-size: 24px;
+            font-weight: 400;
+        }
+    
+        h2{
+            font-size: 48px;
+            margin-top: 20px;
+        }
+
+        
+       .work{
+        display: grid; 
+        row-gap: 30px;
+        margin-top: 60px;
+ 
+        .work-row{
+           display: grid;
+           grid-template-columns: 1fr;
+           row-gap: 30px;
+        }
+
+        .work-row + .work-row{
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 30px;
+         }
+      }
+    }
+}
