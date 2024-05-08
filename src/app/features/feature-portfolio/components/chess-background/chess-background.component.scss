@@ -15,7 +15,22 @@
 @media screen and (max-width: 767px) {
     .background{
         .rectangle{
-            height: calc(100vh / 2.5);
+            width: calc(100vw / 2);
+            height: calc(100vh / 2);
         }
+
+        .rectangle:nth-child(2){
+          display: none;
+        }
+        .rectangle-custom:nth-child(2){
+            display: none;
+        }
+
+        .rectangle:nth-child(4){
+            display: none;
+          }
+          .rectangle-custom:nth-child(4){
+              display: none;
+          }
     }
 }

@@ -22,3 +22,24 @@
         // height: 40px;
     }
 }
+
+.mat-menu-panel{
+    background-color: transparent;
+  }
+
+  .mat-menu-item{
+    color: var(--white);
+    padding: 0px;
+    line-height: 20px !important;
+    height: 25px !important;
+}
+
+@media screen and (min-width: 767px) {
+ 
+    .mat-menu-panel{
+        display: none;
+      }
+}
+  
+
+  

@@ -26,6 +26,9 @@ export class AppComponent {
               private domSanitizer: DomSanitizer
   ) {
 
+    this.matIconRegistry.addSvgIcon('menu', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/menu-icon.svg'));
+    this.matIconRegistry.addSvgIcon('close', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/close-icon.svg'));
+
     this.matIconRegistry.addSvgIcon('programmer-laptop', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/programmer-laptop.svg'));
     this.matIconRegistry.addSvgIcon('radio-button-icon', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/radio-button-icon.svg'));
     this.matIconRegistry.addSvgIcon('partner-icon', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/partner-icon.svg'));

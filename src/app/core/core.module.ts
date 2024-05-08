@@ -10,6 +10,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { FeaturePortfolioModule } from '../features/feature-portfolio/feature-portfolio.module';
+import { CommonModule } from '@angular/common';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { FeaturePortfolioModule } from '../features/feature-portfolio/feature-po
     MatToolbarModule,
     MatSelectModule,
     MatIconModule,
-    FeaturePortfolioModule
+    MatMenuModule,
+    FeaturePortfolioModule,
+    CommonModule
   ],
   exports: [
     ShellComponent
