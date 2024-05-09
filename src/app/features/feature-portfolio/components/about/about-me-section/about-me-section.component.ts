@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutMeSectionComponent implements OnInit {
 
+  skills = ['Backend Development', 'Frontend Development', 'Database', 'CI/CD'];
+
   constructor() { }
 
   ngOnInit() {
   }
-
 }

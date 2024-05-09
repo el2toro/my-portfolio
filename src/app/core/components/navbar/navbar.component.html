@@ -1,7 +1,7 @@
 <div class="navbar">
   <div class="navbar-link"> 
     <div class="logo">
-      <img src="assets/logo.png" width="50px" height="30px">
+      <img src="assets/logo/logo.png" width="100px" height="100px">
     </div>
 
     <div class="navbar-link-items">
@@ -32,7 +32,7 @@
 </div>
 
 <div class="navbar-mobile">
-    <img src="assets/logo.png" width="50px" height="30px">
+  <img src="assets/logo/logo.png" width="100px" height="100px">
 
     <button class="contact-button"  [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger">
       <mat-icon svgIcon="menu" *ngIf="!menuTrigger.menuOpen"></mat-icon>
@@ -42,6 +42,7 @@
         <button mat-menu-item [routerLink]="['']">HOME</button>
         <button mat-menu-item [routerLink]="['/about']">ABOUT</button>
         <button mat-menu-item [routerLink]="['/portfolio']">PORTFOLIO</button>
+        <button mat-menu-item [routerLink]="['/service']">SERVICE</button>
         <button mat-menu-item [matMenuTriggerFor]="pages">PAGES</button>
       </mat-menu>
       

@@ -74,3 +74,76 @@
         }
     }
 }
+
+@media screen and (max-width: 767px) {
+    .achievement{
+        text-align: center;
+        padding: 50px 20px;
+    
+        h3{
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+    
+        h1{
+            font-size: 48px;
+            margin-bottom: 60px;
+        }
+    
+        .achievement-container{
+            display: block;
+
+            .achievement-item{
+                display: flex;
+                justify-content: space-between;
+                text-align: left;
+                height: 226px;
+                background-color: var(--dark-grey-500);
+                padding: 30px 20px; 
+                margin-top: 30px;
+    
+                .item-description{
+                    p{
+                        font-size: 18px;
+                        line-height: 25px;
+                        font-weight: 200;
+                        color: var(--cream-500);
+                        margin-bottom: 20px;
+                    }
+    
+                    h4{
+                        font-size: 24px;
+                        font-weight: 400;
+                        color: var(--cream-500);
+                       margin-bottom: 30px; 
+                    }
+    
+                    hr{
+                        color: var(--cream-500);
+                        height: 2px;
+                        //width: 50%;
+                        margin-bottom: 30px;
+                    }
+    
+                    p + p{
+    
+                    }
+                }
+    
+                .item-icon{
+                    display: grid;
+                    gap: 60px;
+    
+                    mat-icon{
+                        width: 40px;
+                        height: 50px;
+                    }
+                    mat-icon + mat-icon{
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+            }
+        }
+    } 
+}
