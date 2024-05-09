@@ -34,6 +34,27 @@
     }
   }
 
+  .resume-navbar-mobile{
+    display: none;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding: 0px 20px;
+    
+    p{
+      color: var(--cream-500);
+    }
+
+    button{
+      background-color: transparent;
+      border: none;
+
+      mat-icon{
+        margin-right: -15px;
+        height: 20px;
+      }
+    }
+  }
+
   .work {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -43,12 +64,16 @@
 
     .work-item{
         display: block;
-        
         height: 445px;
 
         .inner-work-item{
             height: 80%;
-            background-color: rgb(222, 217, 217);   
+
+            img{
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
 
             button{
                 display: none;
@@ -93,4 +118,95 @@
 
     }
   }
+}
+
+
+@media screen and (max-width: 767px) {
+  .portfolio {
+    padding: 50px 20px;
+  
+    h1 {
+      font-size: 24px;
+    }
+  
+    h2 {
+      font-size: 48px;
+      color: var(--white);
+      margin-top: 40px;
+    }
+  
+    .resume-navbar {
+      display: none;
+      justify-content: space-between;
+      margin-top: 40px;
+      padding: 0% 26%;
+  
+      a {
+        text-decoration: none;
+        color: var(--dark-grey-100);
+        margin-left: 10px;
+        font-weight: 200;
+      }
+  
+      a:nth-child(1) {
+        //TODO: change colore on selected menu
+        color: var(--cream-500);
+      }
+    }
+
+    .resume-navbar-mobile{
+      display: flex;
+
+      button{
+
+      }
+    }
+  
+    .work {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 20px;
+      row-gap: 0px;
+      margin-top: 60px;
+  
+      .work-item{
+          display: block;
+          
+          height: 375px;
+  
+          .inner-work-item{
+              height: 60%;
+              background-color: rgb(222, 217, 217);   
+
+              button{
+                display: none;
+              }
+          }
+  
+          h3{
+            margin-top: 20px;
+          }
+  
+          p{
+
+          }
+      }
+  
+      .work-item:hover{
+  
+          .inner-work-item{
+              background-color: rgb(150, 149, 149);
+              button{
+                  display: inline;   
+              }
+          }
+  
+          p{
+              color: var(--cream-500)
+          }
+  
+      }
+    }
+  }
+  
 }

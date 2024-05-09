@@ -46,6 +46,10 @@ export class AppComponent {
     this.matIconRegistry.addSvgIcon('pinterest', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/pinterest-icon.svg'));
     this.matIconRegistry.addSvgIcon('linkedin', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/linkedin-icon.svg'));
 
+    //Arrows
+    this.matIconRegistry.addSvgIcon('chevron-right', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/chevron-rigth.svg'));
+    this.matIconRegistry.addSvgIcon('chevron-left', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/chevron-left.svg'));
+
     // Initialize Firebase
    //const app = initializeApp(this.firebaseConfig);
    //const analytics = getAnalytics(app);

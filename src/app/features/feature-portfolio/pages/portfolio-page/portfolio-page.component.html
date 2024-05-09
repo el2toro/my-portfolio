@@ -3,8 +3,6 @@
     [subtitle]="'Explore My Feature Work'">
 </app-page-heading>
 
-
-
 <div class="portfolio">
   <h1>PORTFOLIO</h1>
   <h2>My Selected Work</h2>
@@ -15,66 +13,36 @@
     <a [routerLink]="['']">DEVELOPMENT</a>
     <a [routerLink]="['']">BRANDING</a>
     <a [routerLink]="['']">WEB DESIGN</a>
+
+    <!-- TODO: use buttons instead of a tag -->
+  </div>
+
+  <div class="resume-navbar-mobile">
+    <button matButton (click)="previuosSection()">
+      <mat-icon svgIcon="chevron-left"></mat-icon>
+      <mat-icon svgIcon="chevron-left"></mat-icon>
+      <mat-icon svgIcon="chevron-left"></mat-icon>
+    </button>
+
+      <p>{{ sections[index] }}</p>
+
+      <button matButton (click)="nextSection()">
+        <mat-icon svgIcon="chevron-right"></mat-icon>
+        <mat-icon svgIcon="chevron-right"></mat-icon>
+        <mat-icon svgIcon="chevron-right"></mat-icon>
+      </button>
   </div>
 
   <div class="work">
-    <div class="work-item">
+    <div class="work-item" *ngFor="let work of loadSection()">
        <div class="inner-work-item">
+        <img src="{{ work.image }}">
           <button>
             <img src="assets/arrow-right-lg.png" width="30px" height="30px">
           </button>
        </div>
-       <h3>Boutique Web Design</h3>
-       <p>Web Development</p>
+       <h3>{{ work.title }}</h3>
+       <p>{{ work.subtitle }}</p>
     </div>
-
-    <div class="work-item">
-      <div class="inner-work-item">
-        <button>
-          <img src="assets/arrow-right-lg.png" width="30px" height="30px">
-        </button>
-      </div>
-      <h3>Boutique Web Design</h3>
-      <p>Web Development</p>
-   </div>
-
-   <div class="work-item">
-    <div class="inner-work-item">
-      <button>
-        <img src="assets/arrow-right-lg.png" width="30px" height="30px">
-      </button>
-    </div>
-    <h3>Boutique Web Design</h3>
-    <p>Web Development</p>
- </div>
-
- <div class="work-item">
-  <div class="inner-work-item">
-    <button>
-      <img src="assets/arrow-right-lg.png" width="30px" height="30px">
-    </button>
-  </div>
-  <h3>Boutique Web Design</h3>
-  <p>Web Development</p>
-</div>
-
-<div class="work-item">
-  <div class="inner-work-item">
-    <button>
-      <img src="assets/arrow-right-lg.png" width="30px" height="30px">
-    </button>
-  </div>
-  <h3>Boutique Web Design</h3>
-  <p>Web Development</p>
-</div>
-<div class="work-item">
-  <div class="inner-work-item">
-    <button>
-      <img src="assets/arrow-right-lg.png" width="30px" height="30px">
-    </button>
-  </div>
-  <h3>Boutique Web Design</h3>
-  <p>Web Development</p>
-</div>
   </div>
 </div>
