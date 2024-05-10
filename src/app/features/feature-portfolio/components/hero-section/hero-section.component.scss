@@ -1,177 +1,184 @@
-.hero-section{
-    .description{
-         padding-left: 100px;
-         position: absolute;
-         top: 200px;
-         z-index: 1;
+.hero-section {
+  .description {
+    padding-left: 100px;
+    position: absolute;
+    top: 200px;
+    z-index: 1;
 
-        .name{
-            display: flex; 
-            align-content: center;
-            width: 60%;
-            color: #E4C8A7;
-            font-size: 32px;
-            font-weight: 400;
-            margin-bottom: 30px;
+    .name {
+      display: flex;
+      align-content: center;
+      width: 60%;
+      color: #e4c8a7;
+      font-size: 32px;
+      font-weight: 400;
+      margin-bottom: 30px;
 
-            .hero-name-line{
-                margin-top: 16px;
-                height: 1.5px;
-                border: 1.5px solid #E4C8A7;
-                width: 120px;
-                margin-left: 30px;
-            }
-        }
-
-        .title{
-            width: 75%;
-            font-size: 110px;
-            font-weight: 400;
-            color: var(--white);
-            align-content: center;    
-            padding-bottom: 20px;  
-            line-height: 120px;
-            margin-bottom: 20px;
-        }
-
-        .title-play-button{
-            background-color: transparent;
-            border: 1px solid var(--cream-500);
-            width: 35px;
-            height: 35px;
-            border-radius: 25px;
-            align-content: center;
-            margin-bottom: 10px;
-           
-        
-            img{
-                padding-top: 3px;
-                padding-left: 2px;
-            }
-        }
-        
-        .subtitle{
-            width: 53%;
-            color: var(--white);
-            align-content: center;  
-            margin-bottom: 50px;  
-            font-size: 20px;
-            font-weight: 200;
-            line-height: 30px;
-        }
-        
-        .download-cv{
-            width: 75%;
-            align-content: center; 
-        
-            button{
-                border-radius: 35px;
-                background-image:  linear-gradient(to left, var(--cream-500), var(--cream-100));
-                outline: 1px solid var(--cream-500);
-                outline-offset: 3px;
-                height: 61px;
-                width: 225px;
-                color: var(--cream-700);
-                font-family: var(--kanit-font-family);
-                font-size: 18px;
-                font-weight: 300;
-            }
-    
-            button:hover{
-                background-image:  linear-gradient(to left, var(--cream-500), var(--cream-100));
-            }
-        }
+      .hero-name-line {
+        margin-top: 16px;
+        height: 1.5px;
+        border: 1.5px solid #e4c8a7;
+        width: 120px;
+        margin-left: 30px;
+      }
     }
 
-    .image{
-        width: 50%;
-        position: absolute;
-        top: 170px;
-        //bottom: 0px;
-        right: 0px;
-        //background-color: #D9D9D9;
-        //overflow: hidden;
-        //object-fit: cover;
-
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: fill;
-        }
+    .title {
+      width: 75%;
+      font-size: 110px;
+      font-weight: 400;
+      color: var(--white);
+      align-content: center;
+      padding-bottom: 20px;
+      line-height: 120px;
+      margin-bottom: 20px;
     }
+
+    .title-play-button {
+      background-color: transparent;
+      border: 1px solid var(--cream-500);
+      width: 35px;
+      height: 35px;
+      border-radius: 25px;
+      align-content: center;
+      margin-bottom: 10px;
+
+      img {
+        padding-top: 3px;
+        padding-left: 2px;
+      }
+    }
+
+    .subtitle {
+      width: 53%;
+      color: var(--white);
+      align-content: center;
+      margin-bottom: 50px;
+      font-size: 20px;
+      font-weight: 200;
+      line-height: 30px;
+    }
+
+    .download-cv {
+      width: 75%;
+      align-content: center;
+
+      button {
+        border-radius: 35px;
+        background-image: linear-gradient(
+          to left,
+          var(--cream-500),
+          var(--cream-100)
+        );
+        outline: 1px solid var(--cream-500);
+        outline-offset: 3px;
+        height: 61px;
+        width: 225px;
+        color: var(--cream-700);
+        font-family: var(--kanit-font-family);
+        font-size: 18px;
+        font-weight: 300;
+      }
+
+      button:hover {
+        background-image: linear-gradient(
+          to left,
+          var(--cream-500),
+          var(--cream-100)
+        );
+      }
+    }
+  }
+
+  .image {
+    width: 50%;
+    position: absolute;
+    top: 170px;
+    //bottom: 0px;
+    right: 0px;
+    //background-color: #D9D9D9;
+    //overflow: hidden;
+    //object-fit: cover;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+  }
 }
 
 @media screen and (max-width: 767px) {
-    .hero-section{
-        .description{
-            padding-left: 20px;
+  .hero-section {
+    .description {
+      padding-left: 20px;
 
-            .name{
-                font-size: 24px;
-    
-                .hero-name-line{
-                   display: none;
-                }
-            }
+      .name {
+        font-size: 24px;
 
-            .title{
-                width: 90%;
-            font-size: 60px; 
-            padding-bottom: 20px;  
-            line-height: 50px;
-            margin-bottom: 5px;
-               
-            }
-    
-            .title-play-button{
-               
-               
-            
-                img{
-                    
-                }
-            }
-            
-            .subtitle{
-                width: 75%;
-            color: var(--white);
-            align-content: center;  
-            margin-bottom: 25px;  
-            font-size: 16px;
-            font-weight: 200;
-            line-height: 15px;
-                
-            }
-            
-            .download-cv{
-                button{
-                    border: none;
+        .hero-name-line {
+          display: none;
+        }
+      }
 
-                    border-radius: 35px;
-                    background-image:  linear-gradient(to left, var(--cream-500), var(--cream-100));
-                    outline: 1px solid var(--cream-500);
-                    outline-offset: 2px;
-                    height: 40px;
-                    width: 170px;
-                    color: var(--cream-700);
-                    font-family: var(--kanit-font-family);
-                    font-size: 14px;
-                    font-weight: 300;
-                   
-                }
-        
-                button:hover{
-                    background-image:  linear-gradient(to left, var(--cream-500), var(--cream-100));
-                }
-            }
+      .title {
+        width: 90%;
+        font-size: 60px;
+        padding-bottom: 20px;
+        line-height: 50px;
+        margin-bottom: 5px;
+      }
 
+      .title-play-button {
+        img {
+        }
+      }
+
+      .subtitle {
+        width: 75%;
+        color: var(--white);
+        align-content: center;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-weight: 200;
+        line-height: 20px;
+      }
+
+      .download-cv {
+        button {
+          border: none;
+
+          border-radius: 35px;
+          background-image: linear-gradient(
+            to left,
+            var(--cream-500),
+            var(--cream-100)
+          );
+          outline: 1px solid var(--cream-500);
+          outline-offset: 2px;
+          height: 40px;
+          width: 170px;
+          color: var(--cream-700);
+          font-family: var(--kanit-font-family);
+          font-size: 14px;
+          font-weight: 300;
         }
 
-        .image{
-            position: absolute;
-            top: 50px;
-            object-fit: fill;
-            width: 100%;
+        button:hover {
+          background-image: linear-gradient(
+            to left,
+            var(--cream-500),
+            var(--cream-100)
+          );
         }
+      }
     }
+
+    .image {
+      position: absolute;
+      top: 50px;
+      object-fit: fill;
+      width: 100%;
+    }
+  }
 }

@@ -4,17 +4,27 @@
     <h1>Discover My Resume</h1>
   
     <div class="resume-navbar">
-      <button #aboutMeButton matButton (click)="loadSection($event, 'aboutme')">ABOUT ME</button>
-      <button matButton (click)="loadSection($event, 'experience')">EXPERIENCE</button>
-      <button matButton (click)="loadSection($event, 'education')">EDUCATION</button>
-      <button matButton (click)="loadSection($event, 'skills')">SKILLS</button>
-      <button matButton (click)="loadSection($event, 'awards')">AWARDS</button>
+      <button #aboutMeButton matButton (click)="loadSection('aboutme')">ABOUT ME</button>
+      <button matButton (click)="loadSection('experience')">EXPERIENCE</button>
+      <button matButton (click)="loadSection('education')">EDUCATION</button>
+      <button matButton (click)="loadSection('skills')">SKILLS</button>
+      <button matButton (click)="loadSection('awards')">AWARDS</button>
     </div>
 
     <div class="resume-navbar-mobile">
-      <button matButton (click)="previuosSection()">{{ sections[index] }}</button>
-        <p>{{ sections[index !== 0 ? -1 : 0] }}</p>
-      <button matButton (click)="nextSection()">{{ sections[index + 1] }}</button>
+      <button matButton (click)="previuosSection()">
+        <mat-icon svgIcon="chevron-left"></mat-icon>
+        <mat-icon svgIcon="chevron-left"></mat-icon>
+        <mat-icon svgIcon="chevron-left"></mat-icon>
+      </button>
+  
+        <p>{{ sections[index] }}</p>
+  
+        <button matButton (click)="nextSection()">
+          <mat-icon svgIcon="chevron-right"></mat-icon>
+          <mat-icon svgIcon="chevron-right"></mat-icon>
+          <mat-icon svgIcon="chevron-right"></mat-icon>
+        </button>
     </div>
   </div>
 

@@ -1,8 +1,8 @@
 <div class="awards">
-  <div class="awards-container">
-    <div class="award-item">
-      <h4>The Art & Design 2022</h4>
-      <p>1 st Winner</p>
+  <div class="awards-container" #awardContainer>
+    <div class="award-item" *ngFor="let award of awards">
+      <h4>{{ award.title }}</h4>
+      <p>{{ award.description }}</p>
       <div class="icon-section">
         <mat-icon svgIcon="spark-ornament-icon"></mat-icon>
         <mat-icon svgIcon="magic-wand-icon"></mat-icon>
@@ -10,25 +10,6 @@
       </div>
     </div>
 
-    <div class="award-item">
-      <h4>The Art & Design 2022</h4>
-      <p>1 st Winner</p>
-      <div class="icon-section">
-        <mat-icon svgIcon="spark-ornament-icon"></mat-icon>
-        <mat-icon svgIcon="magic-wand-icon"></mat-icon>
-        <mat-icon svgIcon="spark-ornament-icon"></mat-icon>
-      </div>
-    </div>
-
-    <div class="award-item">
-      <h4>The Art & Design 2022</h4>
-      <p>1 st Winner</p>
-      <div class="icon-section">
-        <mat-icon svgIcon="spark-ornament-icon"></mat-icon>
-        <mat-icon svgIcon="magic-wand-icon"></mat-icon>
-        <mat-icon svgIcon="spark-ornament-icon"></mat-icon>
-      </div>
-    </div>
 
     <!-- <div class="award-item">
   <h4>The Art & Design 2022</h4>
@@ -41,7 +22,7 @@
 
 
   <div class="awards-navigation">
-    <button matButton>
+    <button matButton (click)="goToPrevious(-1)">
       <img src="assets/chevron-left.svg">
       <img src="assets/chevron-left.svg">
       <span>PREVIOUS</span> </button>
@@ -54,7 +35,7 @@
       <p>04</p>
     </div>
 
-    <button matButton>
+    <button matButton (click)="goToNext(1)">
       <span>NEXT </span>
       <img src="assets/chevron-rigth.svg">
       <img src="assets/chevron-rigth.svg">

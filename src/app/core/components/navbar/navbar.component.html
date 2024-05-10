@@ -10,15 +10,13 @@
       <a class="custom" [routerLink]="['/portfolio']">PORTFOLIO</a>
       <a [routerLink]="['/service']">SERVICE</a>
       
-      <a (click)="showPageDropdown()">
+      <a #menuTrigger="matMenuTrigger" mat-menu-item [matMenuTriggerFor]="pages">
         PAGES
-        <nav class="nav">    
-        <ul class="dropdown-content" id="dropdown-content">
-          <li><a [routerLink]="['/blog']">Blog</a></li>
-          <li><a [routerLink]="['/single-blog']">Single Blog</a></li>
-          <li><a [routerLink]="['/single-portfolio']">Single Portfolio</a></li>
-        </ul>
-        </nav>
+        <mat-menu #pages="matMenu">
+          <button mat-menu-item [routerLink]="['/blog']">BLOG</button>
+          <button mat-menu-item [routerLink]="['/single-blog']">SINGLE BLOG</button>
+          <button mat-menu-item [routerLink]="['/single-portfolio']">SINGLE PORTFOLIO</button>
+        </mat-menu>
       </a>
     </div>
   </div>

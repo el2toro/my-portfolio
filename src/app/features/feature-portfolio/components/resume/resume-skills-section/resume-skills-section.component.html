@@ -1,98 +1,14 @@
 <div class="skills">
   <div class="skill-level">
-
-    <div class="skill-level-column">
-
-      <div class="skill-level-item">
-        <div class="skill-title">
-         <p>.NET</p>
-         <p>95%</p>
-        </div>
-    
-        <div class="progress-bar">
-          <div class="progress persantage"></div> 
-        </div>
-      </div>
-
-      <div class="skill-level-item">
-        <div class="skill-title">
-         <p>.NET</p>
-         <p>95%</p>
-        </div>
-    
-        <div class="progress-bar">
-          <div class="progress persantage"></div> 
-        </div>
-      </div>
-
-      <div class="skill-level-item">
-        <div class="skill-title">
-         <p>.NET</p>
-         <p>95%</p>
-        </div>
-    
-        <div class="progress-bar">
-          <div class="progress persantage"></div> 
-        </div>
-      </div>
-
-      <div class="skill-level-item">
-        <div class="skill-title">
-         <p>.NET</p>
-         <p>95%</p>
-        </div>
-    
-        <div class="progress-bar">
-          <div class="progress persantage"></div> 
-        </div>
-      </div>
-    </div>
-
-    <div class="skill-level-column">
-
-      
-    <div class="skill-level-item">
+    <div class="skill-level-item" *ngFor="let skill of skills">
       <div class="skill-title">
-       <p>.NET</p>
-       <p>95%</p>
+        <p>{{ skill.title }}</p>
+        <p>{{ skill.level }}</p>
       </div>
-  
-      <div class="progress-bar">
-        <div class="progress persantage"></div> 
-      </div>
-    </div>
-  
-    <div class="skill-level-item">
-      <div class="skill-title">
-       <p>.NET</p>
-       <p>95%</p>
-      </div>
-  
-      <div class="progress-bar">
-        <div class="progress persantage"></div> 
-      </div>
-    </div>
 
-    <div class="skill-level-item">
-      <div class="skill-title">
-       <p>.NET</p>
-       <p>95%</p>
-      </div>
-  
       <div class="progress-bar">
-        <div class="progress persantage"></div> 
+        <div class="progress persantage"></div>
       </div>
-    </div>
-    <div class="skill-level-item">
-      <div class="skill-title">
-       <p>.NET</p>
-       <p>95%</p>
-      </div>
-  
-      <div class="progress-bar">
-        <div class="progress persantage"></div> 
-      </div>
-    </div>
     </div>
   </div>
-  </div>
+</div>

@@ -117,25 +117,34 @@
         }
       }
     }
+
+    .expertise-area-item-photo {
+      padding: 0px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
   }
 }
-
 
 @media screen and (max-width: 767px) {
   .service {
     padding: 50px 20px;
-  
+
     h1 {
       font-size: 24px;
     }
-  
+
     h2 {
       font-size: 48px;
       margin-top: 50px;
       margin-bottom: 50px;
       margin-left: 5px;
     }
-  
+
     .expertise-area {
       display: block;
 
@@ -143,91 +152,91 @@
         height: 450px;
         padding: 20px;
         margin-top: 20px;
-  
+
         .item-count {
           display: flex;
           justify-content: space-between;
-  
+
           h1 {
             color: var(--cream-500);
             text-align: start;
             font-size: 18px;
             font-weight: 300;
           }
-  
+
           mat-icon {
             color: var(--cream-500);
             width: 50px;
             height: 50px;
           }
         }
-  
+
         .item-count:hover {
           h1 {
             color: var(--cream-500);
           }
-  
+
           mat-icon {
             color: var(--cream-500);
           }
         }
-  
+
         h1 {
           color: var(--cream-500);
           margin-top: 10px;
           margin-bottom: 30px;
           font-size: 24px;
         }
-  
+
         p {
           color: var(--white);
           font-size: 18px;
           font-weight: 200;
           line-height: 30px;
         }
-  
+
         .work-process-tools-dividion {
           display: flex;
           justify-content: space-between;
           margin-top: 20px;
-  
+
           .work-process {
             line-height: 40px;
-  
+
             h3 {
               color: var(--white);
             }
-  
+
             .work-process-item {
               display: flex;
               align-items: center;
               gap: 20px;
-  
+
               mat-icon {
                 width: 20px;
               }
-  
+
               p {
                 line-height: 40px;
               }
             }
           }
-  
+
           .tools {
             line-height: 40px;
             h3 {
               color: white;
             }
-  
+
             .work-process-item {
               display: flex;
               align-items: center;
               gap: 20px;
-  
+
               mat-icon {
                 width: 20px;
               }
-  
+
               p {
                 line-height: 40px;
               }
@@ -235,11 +244,11 @@
           }
         }
       }
-  
+
       .expertise-area-item-photo {
         padding: 0px;
 
-        img{
+        img {
           width: 100%;
           height: 100%;
           object-fit: cover;

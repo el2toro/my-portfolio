@@ -1,36 +1,79 @@
-.education{    
-    .timeline {
-        display: grid;
-        grid-template-columns: 6fr 1fr 6fr;
+.education {
+  hr {
+    border: 1px dashed var(--white);
+  }
+  .timeline {
+    display: grid;
+    grid-template-columns: 6fr 1fr 6fr;
 
-        .timeline-item-container{
-            display: grid;
-            gap: 30px;
-        }
-    
-        .timeline-item {
-          background-color: var(--dark-grey-500);
-          padding: 50px;
-          text-align: left;
-    
-          h4 {
-            font-size: 24px;
-            font-weight: 400;
-            color: var(--cream-500);
-            margin-bottom: 10px;
-          }
-    
-          p {
-            font-size: 18px;
-            line-height: 25px;
-            font-weight: 200;
-            color: var(--white);
-          }
-    
-          p + p {
-            margin-top: 20px;
-          }
-        }
+    .timeline-item-container {
+      display: grid;
+      gap: 30px;
+    }
+
+    .timeline-item {
+      background-color: var(--dark-grey-500);
+      padding: 50px;
+      text-align: left;
+
+      h4 {
+        font-size: 24px;
+        font-weight: 400;
+        color: var(--cream-500);
+        margin-bottom: 10px;
       }
 
+      p {
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: 200;
+        color: var(--white);
+      }
+
+      p + p {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .education {
+    hr {
+      display: none;
+    }
+    .timeline {
+      display: block;
+
+      .timeline-item-container {
+        display: block;
+        margin-top: 20px;
+      }
+
+      .timeline-item {
+        background-color: var(--dark-grey-500);
+        padding: 30px;
+        text-align: left;
+        margin-top: 20px;
+
+        h4 {
+          font-size: 24px;
+          font-weight: 400;
+          color: var(--cream-500);
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 18px;
+          line-height: 25px;
+          font-weight: 200;
+          color: var(--white);
+        }
+
+        p + p {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
 }

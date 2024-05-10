@@ -6,60 +6,33 @@ import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
   templateUrl: './resume-section.component.html',
   styleUrls: ['./resume-section.component.scss']
 })
-export class ResumeSectionComponent implements OnInit, AfterViewInit {
+export class ResumeSectionComponent {
 
   @ViewChild('aboutMeButton') aboutMeButton: ElementRef | undefined;
 
   sectionName = 'aboutme';
-  sections = [ 'ABOUT ME', 'EXPERIENCE', 'EDUCATION', 'SKILLS', 'AWARDS'];
-
-  sectionNameMobile = 'ABOUT ME';
+  sections = ['ABOUT ME', 'EXPERIENCE', 'EDUCATION', 'SKILLS', 'AWARDS'];
+  sectionsData = ['aboutme', 'experience', 'education', 'skills', 'awards'];
   index = 0;
 
   constructor() { }
 
-  ngAfterViewInit(): void {
-    this.addFocusedButtonClass();
-  }
-
-  ngOnInit() {
-  }
-
   nextSection(){
-    console.log(this.index)
-    if(this.index === 4) { return; }
-    this.index + 2;
-
-    console.log('after: ', this.index)
+    if(this.index === this.sections.length - 1) { return; }
+    this.index += 1; 
     
+    this.sectionName = this.sectionsData[this.index]
   }
 
   previuosSection(){
-    console.log(this.index)
     if(this.index === 0) { return; }
-    this.index - 1;
+    this.index -= 1;
+
+    this.sectionName = this.sectionsData[this.index]
   }
 
-  loadSection($event: any, section: string){
-
-    // console.log($event.target.nativeElement.classList.add('focused-button'))
+  loadSection(section: string){
 
     this.sectionName = section;
-    this.removeClassToButton();
-  }
-
-  private addFocusedButtonClass(){
-    this.aboutMeButton?.nativeElement.classList.add('focused-button')
-  }
-
-  private removeClassToButton(){
-    const classList = this.aboutMeButton?.nativeElement.classList as DOMTokenList;
-
-    console.log('class list:', classList.value.includes('focused-button'))
-
-    if( classList?.value?.includes('focused-button')){
-      this.aboutMeButton?.nativeElement.classList.remove('focused-button')
-      return;
-    }
   }
 }
