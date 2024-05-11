@@ -1,6 +1,9 @@
 <div class="awards">
   <div class="awards-container" #awardContainer>
-    <div class="award-item" *ngFor="let award of awards">
+
+    
+  <ng-container *ngFor="let award of awards; let i = index">
+    <div class="award-item" *ngIf="i === currentSlide">
       <h4>{{ award.title }}</h4>
       <p>{{ award.description }}</p>
       <div class="icon-section">
@@ -9,7 +12,7 @@
         <mat-icon svgIcon="spark-ornament-icon"></mat-icon>
       </div>
     </div>
-
+  </ng-container>
 
     <!-- <div class="award-item">
   <h4>The Art & Design 2022</h4>

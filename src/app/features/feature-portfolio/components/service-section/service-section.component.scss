@@ -1,116 +1,116 @@
-.service{
-    background-color: var(--background);
-    padding: 100px;
-    padding-top: 200px;
-    
-    h1{
-        font-size: 32px;
-        font-weight: 400;
-        color: var(--cream-500);
-    }
+.service {
+  background-color: var(--background);
+  padding: 100px;
+  padding-top: 200px;
 
-    h2{
-        font-size: 64px;
-        color: var(--white);
-        margin-top: 50px;
-        margin-bottom: 50px;
-        margin-left: 5px;
-    }
+  h1 {
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--cream-500);
+  }
 
-    .expertise-area{
-       display: flex;
-       flex-direction: row;
-       gap: 15px;
+  h2 {
+    font-size: 64px;
+    color: var(--white);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 5px;
+  }
 
-        .expertise-area-item{
-            width: 50%;
-            background-color: var(--dark-grey-500);
-            margin: 10px;
-            padding: 50px;
+  .expertise-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 20px;
 
-            .item-count{
-                display: flex;
-                justify-content: space-between;
+    .expertise-area-item {
+      width: 100%;
+      background-color: var(--dark-grey-500);
+      margin: 10px;
+      padding: 80px;
 
-                h1{          
-                    color: var(--cream-500);
-                    text-align: start;
-                    font-size: 18px;
-                }
+      .item-count {
+        display: flex;
+        justify-content: space-between;
 
-                mat-icon{
-                    width: 50px;
-                    height: 50px;
-                    color: var(--cream-500);
-                }
-            }
-
-            h1{
-                color: var(--cream-500);
-                margin-top: 20px;
-                margin-bottom: 20px;
-                font-size: 24px;
-                margin-left: 0px;
-            }
-
-            .line{
-                width: 50%;
-                height: 2px;
-                background-color: var(--cream-500);
-                margin-bottom: 20px;
-            }
-
-            p{
-                color: white;
-                font-size: 18px;
-                font-weight: 200;
-            }
+        h1 {
+          color: var(--cream-500);
+          text-align: start;
+          font-size: 18px;
         }
+
+        mat-icon {
+          width: 50px;
+          height: 50px;
+          color: var(--cream-500);
+        }
+      }
+
+      h1 {
+        color: var(--cream-500);
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 24px;
+        margin-left: 0px;
+      }
+
+      .line {
+        width: 50%;
+        height: 2px;
+        background-color: var(--cream-500);
+        margin-bottom: 20px;
+      }
+
+      p {
+        color: white;
+        font-size: 18px;
+        font-weight: 200;
+      }
     }
+  }
 }
 
 @media screen and (max-width: 767px) {
+  .service {
+    padding: 50px 20px;
 
-    .service{
-        padding: 50px 20px;
-        
-        h1{
-            font-size: 24px;
-            font-weight: 400;
-        }
-    
-        h2{
-            font-size: 48px;
-            margin-top: 25px;
-            margin-bottom: 25px;
-        }
-    
-        .expertise-area{
-           display: grid;
-           row-gap: 15px;
-    
-            .expertise-area-item{
-                width: 100%;
-                margin: 0px;
-                padding: 25px;
-    
-                h1{
-                    margin-top: 20px;
-                    margin-bottom: 20px;
-                    font-size: 24px;
-                }
-    
-                .line{
-                    width: 50%;
-                    height: 2px;
-                    margin-bottom: 20px;
-                }
-    
-                p{
-                    font-size: 18px;
-                    font-weight: 200;
-                }
-            }
-        }
+    h1 {
+      font-size: 24px;
+      font-weight: 400;
     }
+
+    h2 {
+      font-size: 48px;
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+
+    .expertise-area {
+      grid-template-columns: 1fr;
+      column-gap: 20px;
+
+      .expertise-area-item {
+        width: 100%;
+        margin: 0px;
+        padding: 25px;
+
+        h1 {
+          margin-top: 20px;
+          margin-bottom: 20px;
+          font-size: 24px;
+        }
+
+        .line {
+          width: 50%;
+          height: 2px;
+          margin-bottom: 20px;
+        }
+
+        p {
+          font-size: 18px;
+          font-weight: 200;
+        }
+      }
+    }
+  }
 }

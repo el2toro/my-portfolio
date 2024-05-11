@@ -2,17 +2,18 @@
   <h1>TESTIMONIAL</h1>
   <h2>Clients Feedback</h2>
 
-  <div class="testimonial-card">
-      <div class="image"></div>
+  <ng-container *ngFor="let testimonial of testimonials; let index = index">
+    <div class="testimonial-card" *ngIf="index === currentSlide">
+      <div class="image">
+        <img src="{{ testimonial.image }}">
+      </div>
       <img class="sparks" src="assets/sparks-ornament.png" width="60px" height="60px">
       <div class="details">
-        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum has been the industry's.
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1800s
-        </p>
+        <p>{{ testimonial.description }}</p>
         <div class="pearson">
           <div class="name">
-            <p>Daniel Manson</p>
-            <p>Founder at CM Corp</p>
+            <p>{{ testimonial.name }}</p>
+            <p>{{ testimonial.position }}</p>
           </div>
 
           <div class="vertical-line"></div>
@@ -28,50 +29,52 @@
         </div>
       </div>
   </div>
+  </ng-container>
 
-  <div class="testimonial-card-mobile">
-    <p>"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum has been the industry's.
-      Lorem Ipsum has been the industry's standard dummy text ever since the 1800s"</p>
+  
 
-      <div class="hero-details">
-       <div class="hero-photo">
-         <img src="assets/images/testimonial-1.jpg">
-         <div class="hero-name">
-          <h5>Daniela Madison</h5>
-          <p>Founder at CM Corp</p>
-
-          <div class="rating">
-            <img src="assets/star.png">
-            <img src="assets/star.png">
-            <img src="assets/star.png">
-            <img src="assets/star.png">
-            <img src="assets/star.png">
-            <p>5.0/5.0</p>
+  <ng-container *ngFor="let testimonial of testimonials; let index = index">
+    <div class="testimonial-card-mobile" *ngIf="index === currentSlide">
+      <p>{{ testimonial.description }}</p>
+  
+        <div class="hero-details">
+         <div class="hero-photo">
+           <img src="{{ testimonial.image }}">
+           <div class="hero-name">
+            <h5>{{ testimonial.name }}</h5>
+            <p>{{ testimonial.position }}</p>
+  
+            <div class="rating">
+              <img src="assets/star.png">
+              <img src="assets/star.png">
+              <img src="assets/star.png">
+              <img src="assets/star.png">
+              <img src="assets/star.png">
+              <p>5.0/5.0</p>
+             </div>
            </div>
          </div>
-       </div>
-      </div>
-  </div>
+        </div>
+    </div>
+  </ng-container>
 
   <div class="testimonial-navigation">
-   <button matButton>
-     <img src="assets/chevron-left.svg">
-     <img src="assets/chevron-left.svg">
-     <img src="assets/chevron-left.svg">
+   <button class="slide-button" matButton (click)="goToPrevious(-1)">
+     <mat-icon svgIcon="chevron-left"></mat-icon>
+     <mat-icon svgIcon="chevron-left"></mat-icon>
+     <span>PREVIOUS</span>
    </button>
 
    <div class="progress-bar-container">
-    <p>01</p>
-    <div class="progress-bar">
-      <div class="progress html"></div> 
-    </div>
-    <p>04</p>
+    <p>{{ currentSlide + 1 }}</p>
+    <mat-progress-bar mode="determinate" value="{{ progress[currentSlide] }}"></mat-progress-bar>
+    <p>{{ testimonials.length }}</p>
    </div>
 
-   <button matButton>
-     <img src="assets/chevron-rigth.svg">
-     <img src="assets/chevron-rigth.svg">
-     <img src="assets/chevron-rigth.svg">
+   <button class="slide-button second-slide-button" matButton (click)="goToNext(-1)">
+    <span>NEXT</span>
+    <mat-icon svgIcon="chevron-right"></mat-icon>
+    <mat-icon svgIcon="chevron-right"></mat-icon>
   </button>
  </div>
 </div>
