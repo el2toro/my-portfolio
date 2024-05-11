@@ -31,6 +31,8 @@ export class ResumeAwardsSectionComponent implements OnInit {
     },
   ];
 
+  progress = [25, 50, 75, 100]
+
   currentSlide = 1;
 
   constructor() { }

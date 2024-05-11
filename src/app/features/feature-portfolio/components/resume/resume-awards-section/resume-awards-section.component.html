@@ -25,23 +25,22 @@
 
 
   <div class="awards-navigation">
-    <button matButton (click)="goToPrevious(-1)">
-      <img src="assets/chevron-left.svg">
-      <img src="assets/chevron-left.svg">
-      <span>PREVIOUS</span> </button>
-
-    <div class="progress-bar-container">
-      <p>01</p>
-      <div class="progress-bar">
-        <div class="progress html"></div>
-      </div>
-      <p>04</p>
-    </div>
-
-    <button matButton (click)="goToNext(1)">
-      <span>NEXT </span>
-      <img src="assets/chevron-rigth.svg">
-      <img src="assets/chevron-rigth.svg">
+    <button class="slide-button" matButton (click)="goToPrevious(-1)">
+      <mat-icon svgIcon="chevron-left"></mat-icon>
+      <mat-icon svgIcon="chevron-left"></mat-icon>
+      <span>PREVIOUS</span>
     </button>
+ 
+    <div class="progress-bar-container">
+     <p>{{ currentSlide + 1 }}</p>
+     <mat-progress-bar mode="determinate" value="{{ progress[currentSlide] }}"></mat-progress-bar>
+     <p>{{ awards.length }}</p>
+    </div>
+ 
+    <button class="slide-button second-slide-button" matButton (click)="goToNext(-1)">
+     <span>NEXT</span>
+     <mat-icon svgIcon="chevron-right"></mat-icon>
+     <mat-icon svgIcon="chevron-right"></mat-icon>
+   </button>
   </div>
 </div>

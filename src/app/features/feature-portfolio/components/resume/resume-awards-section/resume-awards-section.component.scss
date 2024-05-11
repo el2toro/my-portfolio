@@ -172,8 +172,9 @@
     
         .awards-navigation{
             padding-top: 60px;
-            display: none;
-            row-gap: 20px;
+            display: flex;
+            justify-content: space-between;
+            //row-gap: 20px;
             
             span{
                 display: none;
@@ -184,53 +185,29 @@
                 color: var(--dark-grey-100);
                 background-color: transparent;
                 border: none;
-                width: 160px;
+                width: 80px;
                 height: 40px;
     
-                span{
-                    margin-left: 30px;
-                    margin-right: 10px;
-                }
-    
-                img{
-                    width: 16px;
-                    height: 16px;
-                    margin-right: -17px;
-                    margin-bottom: -3px;
-                }
-    
-                img + img{
-                    margin-left: 10px;
+                mat-icon{
+                  margin-left: -10px;
+                  width: 20px;
+                  height: 20px;
                 }
             }
     
             button:hover{
-                border-radius: 25px;
-                background-color: var(--dark-grey-400);
+                border-radius: none;
+                background-color: transparent;
             }
     
             .progress-bar-container{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                display: none;
-    
-                .progress-bar{
-                    background-color: var(--white); 
-                    height: 5px;
-                    width: 80%;
-        
-                    .progress{
-                        background-color: var(--cream-500); 
-                        padding: 1%; 
-                        text-align: right; 
-                        font-size: 20px; 
-                        height: 5px;
-                    }
-        
-                    .html { 
-                        width: 25%; 
-                    } 
+                width: 50%;
+
+                mat-progress-bar{
+                    margin: 0px 10px;
                 }
             }
         }
