@@ -8,13 +8,11 @@
   <h2>My Selected Work</h2>
 
   <div class="resume-navbar">
-    <a [routerLink]="['']">VIEW ALL</a>
-    <a [routerLink]="['']">CREATIVE</a>
-    <a [routerLink]="['']">DEVELOPMENT</a>
-    <a [routerLink]="['']">BRANDING</a>
-    <a [routerLink]="['']">WEB DESIGN</a>
-
-    <!-- TODO: use buttons instead of a tag -->
+    <button matButton (click)="getSelectedWorkList('all')">VIEW ALL</button>
+    <button matButton (click)="getSelectedWorkList('creative')">CREATIVE</button>
+    <button matButton (click)="getSelectedWorkList('development')">DEVELOPMENT</button>
+    <button matButton (click)="getSelectedWorkList('branding')">BRANDING</button>
+    <button matButton (click)="getSelectedWorkList('webdesign')">WEB DESIGN</button>
   </div>
 
   <div class="resume-navbar-mobile">

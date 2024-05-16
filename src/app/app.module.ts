@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
+import { NgOptimizedImage, provideImgixLoader } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -16,9 +17,12 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     CoreModule,
     BrowserAnimationsModule,
-    HttpClientModule 
+    HttpClientModule,
+    NgOptimizedImage 
   ],
-  providers: [],
+  providers: [
+    provideImgixLoader('http://localhost:4200/assets/images/')
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

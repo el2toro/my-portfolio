@@ -31,6 +31,7 @@ import { ResumeSkillsSectionComponent } from "./components/resume/resume-skills-
 import { ResumeAboutMeSectionComponent } from "./components/resume/resume-about-me-section/resume-about-me-section.component";
 import { HomePageComponent } from "./pages/portfolio-home-page/home-page.component";
 import { CommonModule } from "@angular/common";
+import { NgOptimizedImage } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { CommonModule } from "@angular/common";
     CommonModule,
     FeaturePortfolioRoutingModule,
     MatProgressBarModule,
-    MatIconModule
+    MatIconModule,
+    NgOptimizedImage
   ],
   providers: []
 })

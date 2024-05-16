@@ -11,6 +11,7 @@ export class PortfolioPageComponent implements OnInit {
 
   sectionName = 'aboutme';
   sections = [ 'VIEW ALL', 'CREATIVE', 'DEVELOPMENT', 'BRANDING', 'WEB DESIGN'];
+  desktopSections = ['all', 'creative', 'development', 'branding', 'webdesign'];
 
   sectionNameMobile = 'VIEW ALL';
   index = 0;
@@ -41,6 +42,11 @@ export class PortfolioPageComponent implements OnInit {
     }
     return this.data.filter(work => work.section === this.index.toString());
   }
+
+  getSelectedWorkList(sectionName: string){
+    this.index = this.desktopSections.indexOf(sectionName)
+  }
+
 
   initData(){
     this.data = [

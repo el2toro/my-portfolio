@@ -1,107 +1,125 @@
-.portfolio{
-    background-color: var(--dark-grey-500);
-    padding: 100px;
-    text-align: center;       
+.portfolio {
+  background-color: var(--dark-grey-500);
+  padding: 100px;
+  text-align: center;
 
-    h1{
-        font-size: 32px;
-        font-weight: 400;
-        color: var(--cream-500);
+  h1 {
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--cream-500);
+  }
+
+  h2 {
+    font-size: 64px;
+    color: var(--white);
+    margin-top: 40px;
+  }
+
+  .work {
+    display: grid;
+    row-gap: 30px;
+    margin-top: 60px;
+
+    .work-row {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      column-gap: 30px;
     }
 
-    h2{
-        font-size: 64px;
+    .work-row + .work-row {
+      grid-template-columns: 1fr 1fr 2fr;
+    }
+
+    .work-item {
+      height: 270px;
+      display: inline-block;
+      background-color: white;
+
+      img {
+        object-fit: fill;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .work-item {
+      &:hover {
+        cursor: pointer;
+
+        .inner-work-item {
+          display: block;
+        }
+      }
+    }
+
+    .inner-work-item {
+      display: none;
+      height: 80px;
+      padding: 20px;
+      text-align: left;
+      align-content: center;
+      background-color: var(--dark-grey-500);
+      line-height: 25px;
+      position: relative;
+      width: 80%;
+      margin-left: 30px;
+      top: -110px;
+      overflow: hidden;
+
+      h3 {
+        font-size: 18px;
         color: var(--white);
-        margin-top: 40px;
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: 300;
+        color: var(--cream-500);
+      }
     }
 
-    .work{
-       display: grid; 
-       row-gap: 30px;
-       margin-top: 60px;
-
-       .work-row{
-          display: grid;
-          grid-template-columns: 2fr 1fr 1fr;
-          column-gap: 30px;
-       }
-
-       .work-row + .work-row{
-         grid-template-columns: 1fr 1fr 2fr;
-       }
-
-
-        .work-item{
-            height: 270px;
-            display: inline-block; 
-            background-color: white;
-
-            img{
-                object-fit: fill;
-                height: 100%;
-                width: 100%;
-            }
-        }
-
-
-        .inner-work-item{
-           display: none;
-            height: 80px;
-            padding: 25px;
-            text-align: left;
-            align-content: center;
-            background-color: var(--dark-grey-500);
-            line-height: 25px;
-            position: relative;
-            margin-bottom: 50px;
-            z-index: 1;
-
-            h3{
-                font-size: 18px;
-                color: var(--white);
-            }
-
-            p{
-                font-size: 14px;
-                font-weight: 300;
-                color: var(--cream-500)
-            }
-        }
+    .custom-inner-work-item {
+      display: none;
+      width: 40%;
     }
+  }
 }
 
 @media screen and (max-width: 767px) {
-    .portfolio{
-        padding: 50px 20px;
-        text-align: center;       
-    
-        h1{
-            font-size: 24px;
-            font-weight: 400;
-        }
-    
-        h2{
-            font-size: 48px;
-            margin-top: 20px;
-        }
+  .portfolio {
+    padding: 50px 20px;
+    text-align: center;
 
-        
-       .work{
-        display: grid; 
+    h1 {
+      font-size: 24px;
+      font-weight: 400;
+    }
+
+    h2 {
+      font-size: 48px;
+      margin-top: 20px;
+    }
+
+    .work {
+      display: grid;
+      row-gap: 30px;
+      margin-top: 60px;
+
+      .work-row {
+        display: grid;
+        grid-template-columns: 1fr;
         row-gap: 30px;
-        margin-top: 60px;
- 
-        .work-row{
-           display: grid;
-           grid-template-columns: 1fr;
-           row-gap: 30px;
-        }
+      }
 
-        .work-row + .work-row{
-            display: grid;
-            grid-template-columns: 1fr;
-            row-gap: 30px;
-         }
+      .work-row + .work-row {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+      }
+
+      .custom-inner-work-item {
+        width: 80%;
       }
     }
+  }
 }

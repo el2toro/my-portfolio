@@ -21,14 +21,21 @@
     margin-top: 80px;
     padding: 0% 26%;
 
-    a {
+    button {
       text-decoration: none;
       color: var(--dark-grey-100);
       margin-left: 10px;
       font-weight: 200;
+      background-color: transparent;
+      border: none;
     }
 
-    a:nth-child(1) {
+    button:hover {
+      //TODO: change colore on selected menu
+      color: var(--cream-500);
+    }
+
+    button:focus {
       //TODO: change colore on selected menu
       color: var(--cream-500);
     }

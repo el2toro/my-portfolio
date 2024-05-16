@@ -30,7 +30,6 @@
             width: 480px;
             min-width: 200px;
             height: 350px;
-            background-color: var(--white);
             margin-left: 100px;
             position: relative;
             bottom: 15%;
@@ -50,6 +49,7 @@
 
         .details{
             padding: 50px;
+            overflow: hidden;
             
             p{
                 font-size: 18px;
