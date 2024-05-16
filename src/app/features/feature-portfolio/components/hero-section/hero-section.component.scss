@@ -78,14 +78,20 @@
         font-family: var(--kanit-font-family);
         font-size: 18px;
         font-weight: 300;
-      }
 
-      button:hover {
-        background-image: linear-gradient(
-          to left,
-          var(--cream-500),
-          var(--cream-100)
-        );
+        mat-icon {
+          width: 20px;
+          height: 20px;
+          margin-top: -10px;
+        }
+
+        &:hover {
+          background-image: linear-gradient(
+            to left,
+            var(--cream-100),
+            var(--cream-500)
+          );
+        }
       }
     }
   }
@@ -94,11 +100,7 @@
     width: 50%;
     position: absolute;
     top: 170px;
-    //bottom: 0px;
     right: 0px;
-    //background-color: #D9D9D9;
-    //overflow: hidden;
-    //object-fit: cover;
 
     img {
       width: 100%;

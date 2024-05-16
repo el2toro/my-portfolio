@@ -3,7 +3,7 @@
 
     
   <ng-container *ngFor="let award of awards; let i = index">
-    <div class="award-item" *ngIf="i === currentSlide">
+    <div class="award-item" *ngIf="i === currentSlide || i === currentSlide + 1 || i === currentSlide + 2">
       <h4>{{ award.title }}</h4>
       <p>{{ award.description }}</p>
       <div class="icon-section">
@@ -32,9 +32,9 @@
     </button>
  
     <div class="progress-bar-container">
-     <p>{{ currentSlide + 1 }}</p>
+     <p>0{{ currentSlide + 1 }}</p>
      <mat-progress-bar mode="determinate" value="{{ progress[currentSlide] }}"></mat-progress-bar>
-     <p>{{ awards.length }}</p>
+     <p>0{{ awards.length }}</p>
     </div>
  
     <button class="slide-button second-slide-button" matButton (click)="goToNext(-1)">

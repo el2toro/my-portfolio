@@ -56,35 +56,35 @@
         display: flex;
         justify-content: space-between;
         
-
-        button{
+        .slide-button{
             font-size: 18px;
             color: var(--dark-grey-100);
             background-color: transparent;
             border: none;
             width: 160px;
             height: 40px;
+            display: flex;
+
+            mat-icon{
+                width: 18px;
+                height: 18px;
+                margin-left: -10px;
+            }
+
+            &:hover{
+                color: var(--cream-500);
+                cursor: pointer;
+            }
 
             span{
-                margin-left: 30px;
-                margin-right: 10px;
-            }
-
-            img{
-                width: 16px;
-                height: 16px;
-                margin-right: -17px;
-                margin-bottom: -3px;
-            }
-
-            img + img{
-                margin-left: 10px;
+                 margin-left: 15px;
             }
         }
 
-        button:hover{
-            border-radius: 25px;
-            background-color: var(--dark-grey-400);
+        .second-slide-button{
+            span{
+                margin-right: 20px;
+            }
         }
 
         .progress-bar-container{
@@ -94,22 +94,9 @@
             color: var(--white);
             width: 25%; 
 
-            .progress-bar{
-                background-color: var(--white); 
-                height: 5px;
-                width: 80%;
-    
-                .progress{
-                    background-color: var(--cream-500); 
-                    padding: 1%; 
-                    text-align: right; 
-                    font-size: 20px; 
-                    height: 5px;
-                }
-    
-                .html { 
-                    width: 25%; 
-                } 
+            mat-progress-bar{
+                margin-left: 10px;
+                margin-right: 10px;
             }
         }
     }

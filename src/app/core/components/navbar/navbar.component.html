@@ -5,19 +5,12 @@
     </div>
 
     <div class="navbar-link-items">
-      <a class="custom" [routerLink]="['']">HOME</a>
-      <a class="custom" [routerLink]="['/about']">ABOUT</a>
-      <a class="custom" [routerLink]="['/portfolio']">PORTFOLIO</a>
-      <a [routerLink]="['/service']">SERVICE</a>
-      
-      <a #menuTrigger="matMenuTrigger" mat-menu-item [matMenuTriggerFor]="pages">
-        PAGES
-        <mat-menu #pages="matMenu">
-          <button mat-menu-item [routerLink]="['/blog']">BLOG</button>
-          <button mat-menu-item [routerLink]="['/single-blog']">SINGLE BLOG</button>
-          <button mat-menu-item [routerLink]="['/single-portfolio']">SINGLE PORTFOLIO</button>
-        </mat-menu>
-      </a>
+      <button class="navbar-buttons" [routerLink]="['']">HOME</button>
+      <button class="navbar-buttons" [routerLink]="['/about']">ABOUT</button>
+      <button class="navbar-buttons" [routerLink]="['/portfolio']">PORTFOLIO</button>
+      <button class="navbar-buttons" [routerLink]="['/service']">SERVICE</button>
+
+      <button class="navbar-buttons" [routerLink]="['/pages']">PAGES</button>
     </div>
   </div>
 

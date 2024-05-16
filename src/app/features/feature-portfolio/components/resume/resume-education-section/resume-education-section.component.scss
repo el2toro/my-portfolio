@@ -1,7 +1,11 @@
 .education {
   hr {
     border: 1px dashed var(--white);
+    color: var(--white);
+    width: 1px;
+    margin: 0% 0% 0% 50%;
   }
+
   .timeline {
     display: grid;
     grid-template-columns: 6fr 1fr 6fr;
