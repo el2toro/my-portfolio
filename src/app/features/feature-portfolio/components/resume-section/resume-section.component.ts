@@ -6,7 +6,7 @@ import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
   templateUrl: './resume-section.component.html',
   styleUrls: ['./resume-section.component.scss']
 })
-export class ResumeSectionComponent {
+export class ResumeSectionComponent implements OnInit {
 
   @ViewChild('aboutMeButton') aboutMeButton: ElementRef | undefined;
 
@@ -16,6 +16,10 @@ export class ResumeSectionComponent {
   index = 0;
 
   constructor() { }
+  ngOnInit(): void {
+    let navbarButtons = Array.from(document.getElementsByClassName('resume-navbar-button'));
+    navbarButtons[0].classList.add('resume-focused-menu')
+  }
 
   nextSection(){
     if(this.index === this.sections.length - 1) { return; }
@@ -31,8 +35,22 @@ export class ResumeSectionComponent {
     this.sectionName = this.sectionsData[this.index]
   }
 
-  loadSection(section: string){
-
+  loadSection(section: string, event: any){
     this.sectionName = section;
+
+    this.toggleActiveMenu(event);
+  }
+
+  toggleActiveMenu(event: any){
+    let navbarButtons = Array.from(document.getElementsByClassName('resume-navbar-button'));
+
+    navbarButtons.forEach(button => button.classList.remove('resume-focused-menu'));
+
+    if(Array.from(event.srcElement.classList).includes('resume-navbar-button')){
+      event.srcElement.classList.add('resume-focused-menu');
+      return;
+    }
+
+    navbarButtons[0].classList.add('resume-focused-menu');
   }
 }

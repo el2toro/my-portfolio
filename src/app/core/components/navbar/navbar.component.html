@@ -1,16 +1,18 @@
 <div class="navbar">
   <div class="navbar-link"> 
     <div class="logo">
-      <img src="assets/logo/logo.png" width="100px" height="100px">
+      <a (click)="toggleActiveMenu($event)" [routerLink]="['']">
+        <img src="assets/logo/logo.png" width="100px" height="100px">
+      </a>
     </div>
 
-    <div class="navbar-link-items">
-      <button class="navbar-buttons" [routerLink]="['']">HOME</button>
-      <button class="navbar-buttons" [routerLink]="['/about']">ABOUT</button>
-      <button class="navbar-buttons" [routerLink]="['/portfolio']">PORTFOLIO</button>
-      <button class="navbar-buttons" [routerLink]="['/service']">SERVICE</button>
+    <div class="navbar-link-items" #navbarItems>
+      <button class="navbar-buttons" (click)="toggleActiveMenu($event)" [routerLink]="['']">HOME</button>
+      <button class="navbar-buttons" (click)="toggleActiveMenu($event)" [routerLink]="['/about']">ABOUT</button>
+      <button class="navbar-buttons" (click)="toggleActiveMenu($event)" [routerLink]="['/portfolio']">PORTFOLIO</button>
+      <button class="navbar-buttons" (click)="toggleActiveMenu($event)" [routerLink]="['/service']">SERVICE</button>
 
-      <button class="navbar-buttons" [routerLink]="['/pages']">PAGES</button>
+      <button class="navbar-buttons" (click)="toggleActiveMenu($event)" [routerLink]="['/pages']">PAGES</button>
     </div>
   </div>
 
@@ -18,7 +20,7 @@
      <!-- <button class="mode-button" mat-icon-button>
       <img src="assets/moon.png" width="40px" height="40px">
      </button> -->
-     <button class="contact-button" [routerLink]="['/contact']">CONTACT</button>
+     <button class="contact-button" (click)="toggleActiveMenu($event)" [routerLink]="['/contact']">CONTACT</button>
   </div>
 </div>
 

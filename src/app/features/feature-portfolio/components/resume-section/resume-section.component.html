@@ -4,11 +4,11 @@
     <h1>Discover My Resume</h1>
   
     <div class="resume-navbar">
-      <button #aboutMeButton matButton (click)="loadSection('aboutme')">ABOUT ME</button>
-      <button matButton (click)="loadSection('experience')">EXPERIENCE</button>
-      <button matButton (click)="loadSection('education')">EDUCATION</button>
-      <button matButton (click)="loadSection('skills')">SKILLS</button>
-      <button matButton (click)="loadSection('awards')">AWARDS</button>
+      <button class="resume-navbar-button resume-focused-menu" #aboutMeButton matButton (click)="loadSection('aboutme', $event)">ABOUT ME</button>
+      <button class="resume-navbar-button" matButton (click)="loadSection('experience', $event)">EXPERIENCE</button>
+      <button class="resume-navbar-button" matButton (click)="loadSection('education', $event)">EDUCATION</button>
+      <button class="resume-navbar-button" matButton (click)="loadSection('skills', $event)">SKILLS</button>
+      <button class="resume-navbar-button" matButton (click)="loadSection('awards', $event)">AWARDS</button>
     </div>
 
     <div class="resume-navbar-mobile">
