@@ -49,6 +49,7 @@ export class AppComponent {
     this.matIconRegistry.addSvgIcon('chevron-right', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/chevron-rigth.svg'));
     this.matIconRegistry.addSvgIcon('chevron-left', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/chevron-left.svg'));
     this.matIconRegistry.addSvgIcon('arrow-right', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/arrow-email-button.svg'));
+    this.matIconRegistry.addSvgIcon('arrow-basic-right', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/arrow-basic-right.svg'));
 
     // Initialize Firebase
    //const app = initializeApp(this.firebaseConfig);

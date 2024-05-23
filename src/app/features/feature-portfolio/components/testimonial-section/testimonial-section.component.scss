@@ -122,28 +122,31 @@
         
 
         .slide-button{
+            display: flex;
             font-size: 18px;
             color: var(--dark-grey-100);
             background-color: transparent;
             border: none;
             height: 40px;
-            align-content: center;
+            justify-content: center;
 
             span{
-                margin-left: 10px;
-                margin-top: -15px;
+               margin-left: 10px;
               }
   
               mat-icon{
                   margin-left: -10px;
                   width: 18px;
                   height: 18px;
-                  margin-top: 10px;
               }
 
               &:hover{       
                 cursor: pointer;   
                 color: var(--cream-500); 
+                
+                mat-icon{
+                    fill: var(--cream-500);
+                }
               }
         }
 
@@ -152,11 +155,6 @@
 
             span{
                 margin-right: 20px;
-              }
-
-              mat-icon{
-        
-                margin-bottom: -10px;
             }
         }
 
@@ -257,8 +255,10 @@
             padding: 50px 10px 0px 10px;
             display: flex;
             justify-content: space-between;
+            
     
             button{
+                align-items: center;
                 font-size: 18px;
                 background-color: transparent;
                 border: none;

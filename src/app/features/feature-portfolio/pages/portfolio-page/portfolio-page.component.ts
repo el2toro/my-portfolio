@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioWorkModel } from '../../models/portfolio-work.model';
 import * as  portfolioWork from '../../data/portfolio-work.json';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-portfolio-page',
@@ -17,7 +18,7 @@ export class PortfolioPageComponent implements OnInit {
   index = 0;
   data: PortfolioWorkModel[] = [];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.initData()
@@ -47,41 +48,50 @@ export class PortfolioPageComponent implements OnInit {
     this.index = this.desktopSections.indexOf(sectionName)
   }
 
+  onWorkItemClick(id: number){
+    this.router.navigate([`/single-portfolio-page/${id}`])
+  }
 
   initData(){
     this.data = [
       {
+          "id": 1,
           "title": "Boutique Web Design",
           "subtitle": "Web Development",
           "image": "assets/images/work-1.jpg",
-          "section": "1"
+          "section": "1",
       },
       {
+          "id": 2,
           "title": "Company Landing Page",
           "subtitle": "Web Development",
           "image": "assets/images/work-2.jpg",
           "section": "1"
       },
       {
-          "title": "Hotel Booking",
+          "id": 3,
+          "title": "eCommerce ",
           "subtitle": "Web Development",
           "image": "assets/images/work-3.jpg",
           "section": "1"
       },
       {
-          "title": "Travel Advisor",
+          "id": 4,
+          "title": "Food Delivery",
           "subtitle": "Web Development",
           "image": "assets/images/work-4.jpg",
           "section": "1"
       },
       {
+          "id": 5,
           "title": "Personal Portfolio",
           "subtitle": "Web Development",
           "image": "assets/images/work-5.jpg",
           "section": "1"
       },
       {
-          "title": "eCommerce",
+          "id": 6,
+          "title": "Hotel Booking",
           "subtitle": "Web Development",
           "image": "assets/images/work-6.jpg",
           "section": "1"

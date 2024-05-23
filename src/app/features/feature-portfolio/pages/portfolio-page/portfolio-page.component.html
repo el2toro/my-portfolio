@@ -32,11 +32,11 @@
   </div>
 
   <div class="work">
-    <div class="work-item" *ngFor="let work of loadSection()">
+    <div class="work-item" *ngFor="let work of loadSection()" (click)="onWorkItemClick(work.id)">
        <div class="inner-work-item">
         <img src="{{ work.image }}">
           <button>
-            <img src="assets/arrow-right-lg.png" width="30px" height="30px">
+            <mat-icon svgIcon="arrow-basic-right"></mat-icon>
           </button>
        </div>
        <h3>{{ work.title }}</h3>

@@ -8,6 +8,7 @@ import { SingleBlogPageComponent } from "./pages/single-blog-page/single-blog-pa
 import { ContactPageComponent } from "./pages/contact-page/contact-page.component";
 import { NotFoundComponent } from "src/app/core/pages/not-found/not-found.component";
 import { HomePageComponent } from "./pages/portfolio-home-page/home-page.component";
+import { SinglePortfolioPageComponent } from "./pages/single-portfolio-page/single-portfolio-page.component";
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -17,7 +18,9 @@ const routes: Routes = [
   { path: 'blog', component: BlogPageComponent },
   { path: 'single-blog', component: SingleBlogPageComponent },
   { path: 'contact', component: ContactPageComponent },
-  { path: 'notfound', component: NotFoundComponent }
+  { path: 'notfound', component: NotFoundComponent },
+  { path: 'single-portfolio-page/:id', component: SinglePortfolioPageComponent }
+
 ];
 
 @NgModule({
