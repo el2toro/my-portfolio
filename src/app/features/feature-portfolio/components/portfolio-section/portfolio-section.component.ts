@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-portfolio-section',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortfolioSectionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router,
+              private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
   }
 
+  onWorkItemClick(id: number){
+    
+    this.router.navigate([`/single-portfolio-page/${id}`])
+  }
 }
