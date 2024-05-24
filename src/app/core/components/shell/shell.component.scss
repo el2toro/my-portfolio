@@ -1,8 +1,40 @@
 .page{
+    background-color: var(--dark-grey-500);
+    
     &-main {
         
         &.full-page {
            // height: 100vh;
+        }
+    }
+
+    .top-scroller{
+        position: sticky;
+        display: flex;
+        justify-content: flex-end;
+        bottom: 50px;
+        margin-right: 50px;
+    
+        button{
+          cursor: pointer;
+          width: 50px;
+          height: 50px;
+          border-radius: 25px;
+          rotate: -90deg;
+          outline: 2px solid var(--cream-500);
+          background-color: transparent;
+          border: none;
+
+          mat-icon{
+            fill: var(--cream-500);
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+          }
+
+          &:hover{
+            opacity: 0.7;
+          }
         }
     }
 }

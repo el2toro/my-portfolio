@@ -8,4 +8,10 @@
   <div class="page-footer">
     <app-footer></app-footer>
   </div>
+
+  <div class="top-scroller" *ngIf="scrollPosition">
+    <button matButton (click)="onScrollToTop()">
+      <mat-icon svgIcon="chevron-right"></mat-icon>
+    </button>
+  </div>
 </div>
