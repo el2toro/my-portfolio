@@ -1,9 +1,9 @@
 .background{
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
 
     .rectangle{
-        width: calc(100vw / 4);
-        height: calc(100vh / 1.5);
+        height: 29rem;
         background-color: var(--hero-section-rectangle);
     }
 
@@ -12,25 +12,18 @@
     }
 }
 
+@media screen and (max-width: 1200px) {
+    // .background{
+    //     .rectangle{
+    //         height: calc(100vh / 2);
+    //     } 
+    // }
+}
+
 @media screen and (max-width: 767px) {
     .background{
         .rectangle{
-            width: calc(100vw / 2);
-            height: calc(100vh / 2);
-        }
-
-        .rectangle:nth-child(2){
-          display: none;
-        }
-        .rectangle-custom:nth-child(2){
-            display: none;
-        }
-
-        .rectangle:nth-child(4){
-            display: none;
-          }
-          .rectangle-custom:nth-child(4){
-              display: none;
-          }
+            height: 19rem
+        } 
     }
 }

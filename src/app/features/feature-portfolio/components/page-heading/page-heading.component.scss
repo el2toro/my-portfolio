@@ -1,9 +1,9 @@
 .background {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
 
     .rectangle {
-        width: calc(100vw / 4);
-        height: calc(100vw / 4);
+        height: 22rem;
         background-color: var(--dark-grey-500);
     }
 
@@ -57,11 +57,8 @@
 @media screen and (max-width: 767px) {
 
     .background {
-         rotate: 180deg;
-    
         .rectangle {
-            width: calc(100vh / 4);
-            height: calc(100vh / 4);
+            height: 13rem;
         }
     }
  
@@ -72,7 +69,6 @@
         .name {
             h1 {
                 font-size: 24px;
-
             }
         }
     
@@ -87,11 +83,8 @@
 @media screen and (max-width: 376px) {
 
     .background {
-         rotate: 180deg;
-    
         .rectangle {
-            width: calc(100vh / 4);
-            height: calc(100vh / 4);
+            height: 12rem;
         }
     }
  
@@ -102,7 +95,6 @@
         .name {
             h1 {
                 font-size: 24px;
-
             }
         }
     

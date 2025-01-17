@@ -16,6 +16,6 @@ export class PortfolioSectionComponent implements OnInit {
 
   onWorkItemClick(id: number){
     
-    this.router.navigate([`/single-portfolio-page/${id}`])
+    this.router.navigate([`/single-portfolio-page/${id}`]);
   }
 }
