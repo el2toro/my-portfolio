@@ -1,4 +1,5 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, Inject, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 
 @Component({
@@ -15,21 +16,25 @@ export class StatisticComponent implements OnInit {
   private experienceCounter = 5;
   private awardsCounter = 8;
 
-  @ViewChild('statistic') input: any;
-  // intersection observer
-  private _observer: IntersectionObserver | any;
-
-  // intersection trigger
-  private _intersect$ = new Subject<void>();
-
-  constructor(private _element: ElementRef) { }
+  constructor(@Inject(DOCUMENT) private _document: HTMLDocument) { }
+  
 
   ngOnInit() {
+    //this.animate()
     this.projectCopiledAnimate();
     this.experienceAnimate();
     this.awardsAnimate();
+  }
 
-    console.log(this.input)
+  //TODO: animate when sroll reach the component
+  animate(){
+    window.addEventListener("scroll", (event: Event) => {
+      let scroll = this._document.scrollingElement?.scrollTop.toFixed();
+      let heroSectionScroll = this._document.getElementsByClassName('hero-statistic')[0].scrollHeight;
+
+      console.log('Scroll: ', Number(scroll))
+      console.log('Scroll hero section: ', heroSectionScroll)
+    });   
   }
 
   projectCopiledAnimate(){

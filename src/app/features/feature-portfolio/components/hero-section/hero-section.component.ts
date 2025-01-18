@@ -8,7 +8,6 @@ import { PopupDialogComponent } from 'src/app/shared/components/popup-dialog/pop
   styleUrls: ['./hero-section.component.scss']
 })
 export class HeroSectionComponent implements OnInit {
-  //readonly dialog = inject(MatDialog);
   constructor(private dialog: MatDialog) { }
 
   ngOnInit() {
@@ -19,6 +18,6 @@ export class HeroSectionComponent implements OnInit {
   }
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(PopupDialogComponent, {});
+    const dialogRef = this.dialog.open(PopupDialogComponent, { data: 'Please contact me for the CV' });
   }
 }
