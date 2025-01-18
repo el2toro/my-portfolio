@@ -7,7 +7,7 @@ import { AboutPageComponent } from "./pages/about-page/about-page.component";
 import { SingleBlogPageComponent } from "./pages/single-blog-page/single-blog-page.component";
 import { ContactPageComponent } from "./pages/contact-page/contact-page.component";
 import { NotFoundComponent } from "src/app/core/pages/not-found/not-found.component";
-import { HomePageComponent } from "./pages/portfolio-home-page/home-page.component";
+import { HomePageComponent } from "./pages/home-page/home-page.component";
 import { SinglePortfolioPageComponent } from "./pages/single-portfolio-page/single-portfolio-page.component";
 
 const routes: Routes = [

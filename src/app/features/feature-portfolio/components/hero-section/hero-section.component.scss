@@ -4,6 +4,7 @@
     position: absolute;
     top: 200px;
     z-index: 1;
+    overflow: hidden;
 
     .name {
       display: flex;
@@ -13,6 +14,25 @@
       font-size: 32px;
       font-weight: 400;
       margin-bottom: 30px;
+
+      
+      /* Custom */
+
+h1 {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: type 2s steps(90) 0.5s 1 normal both, cursor 1s step-end infinite;
+}
+
+@keyframes type {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 25rem;
+  }
+}
 
       .hero-name-line {
         margin-top: 16px;
@@ -32,6 +52,24 @@
       padding-bottom: 20px;
       line-height: 120px;
       margin-bottom: 20px;
+
+
+
+      @keyframes fade-in-right {
+        0% {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0%);
+          opacity: 1;
+        }
+      }
+      
+      .fade-in-right-animation {
+        animation: 2.5s fade-in-right;
+      }
+
     }
 
     .title-play-button {
@@ -57,12 +95,40 @@
       font-size: 20px;
       font-weight: 200;
       line-height: 30px;
+
+      @keyframes fade-in-left {
+        0% {
+          transform: translateX(-50%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0%);
+          opacity: 1;
+        }
+      }
+      
+      .fade-in-left-animation {
+        animation: 2.5s fade-in-left;
+      }
     }
 
     .download-cv {
       width: 75%;
       align-content: center;
+      animation: fade-in-opacity ease 5s;
+      animation-iteration-count: 1;
+      animation-fill-mode: both;
 
+      @keyframes fade-in-opacity {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 2;
+        }
+      }
+      
+  
       button {
         cursor: pointer;
         border-radius: 35px;
@@ -192,9 +258,23 @@
 @media screen and (max-width: 826px) {
   .hero-section {
     .description {
+
+      .name{
+        @keyframes type {
+          from {
+            width: 0;
+          }
+        
+          to {
+            width: 30rem;
+          }
+        }
+      }
+
       .title {
         width: 90%;
       }
     }
   }
 }
+

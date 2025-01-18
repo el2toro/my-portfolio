@@ -1,0 +1,19 @@
+.popup{
+    padding: 10px;
+
+    p{
+        font-size: 22px;
+        font-family: var(--kanit-font-family);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .popup{
+        padding: 0px;
+    
+        p{
+            font-size: 16px;
+            font-family: var(--kanit-font-family);
+        }
+    }
+}

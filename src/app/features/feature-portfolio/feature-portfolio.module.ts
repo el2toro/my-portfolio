@@ -29,9 +29,10 @@ import { ResumeEducationSectionComponent } from "./components/resume/resume-educ
 import { ResumeExperienceSectionComponent } from "./components/resume/resume-experience-section/resume-experience-section.component";
 import { ResumeSkillsSectionComponent } from "./components/resume/resume-skills-section/resume-skills-section.component";
 import { ResumeAboutMeSectionComponent } from "./components/resume/resume-about-me-section/resume-about-me-section.component";
-import { HomePageComponent } from "./pages/portfolio-home-page/home-page.component";
+import { HomePageComponent } from "./pages/home-page/home-page.component";
 import { CommonModule } from "@angular/common";
 import { NgOptimizedImage } from '@angular/common';
+import { MatDialogModule } from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -72,7 +73,8 @@ import { NgOptimizedImage } from '@angular/common';
     FeaturePortfolioRoutingModule,
     MatProgressBarModule,
     MatIconModule,
-    NgOptimizedImage
+    NgOptimizedImage,
+    MatDialogModule
   ],
   providers: []
 })
