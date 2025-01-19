@@ -37,11 +37,11 @@
         <form class="contact-form" [formGroup]="contactForm">
             <div class="send-message">
                 <div class="name-email-input">
-                    <input formControlName="name" matInput placeholder="Your Name">
-                    <input formControlName="email" matInput placeholder="Email">
+                    <input formControlName="name" matInput placeholder="Your Name" required="">
+                    <input formControlName="email" matInput placeholder="Email" required="">
                 </div>
-                <input formControlName="subject" matInput placeholder="Your Subject">
-                <textarea formControlName="message" matInput placeholder="Your Message"></textarea>
+                <input formControlName="subject" matInput placeholder="Your Subject" required="">
+                <textarea formControlName="message" matInput placeholder="Your Message" required=""></textarea>
 
                 <button [disabled]="contactForm.invalid" matButton (click)="sendMessage()">SEND A MESSAGE</button> 
             </div>

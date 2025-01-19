@@ -1,6 +1,7 @@
 .background {
     display: grid;
     grid-template-columns: auto auto auto auto;
+   
 
     .rectangle {
         height: 22rem;
@@ -17,18 +18,19 @@
     position: absolute;
     top: 35vh;
     display: grid;
-
-
+    overflow: hidden;
     padding-left: 100px;
 
     .name {
-        display: flex;
+        display: flex; 
+        width: 50%;
 
         h1 {
             color: var(--cream-500);
             font-size: 32px;
             font-weight: 400;
             margin-bottom: 30px;
+            width: 35%;
         }
 
         .hero-name-line {
@@ -51,7 +53,7 @@
             }
           
             to {
-              width: 10rem;
+              width: 11rem;
             }
           }
     }

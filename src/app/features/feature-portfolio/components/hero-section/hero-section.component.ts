@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { PopupDialogComponent } from 'src/app/shared/components/popup-dialog/popup-dialog.component';
+import { PopupDialogComponent } from './../../../../shared/components/popup-dialog/popup-dialog.component';
 
 @Component({
   selector: 'app-hero-section',
@@ -18,6 +18,6 @@ export class HeroSectionComponent implements OnInit {
   }
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(PopupDialogComponent, { data: 'Please contact me for the CV' });
+    this.dialog.open(PopupDialogComponent, { data: 'Please contact me for the CV' });
   }
 }

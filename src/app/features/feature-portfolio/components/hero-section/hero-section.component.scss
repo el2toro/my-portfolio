@@ -53,8 +53,6 @@ h1 {
       line-height: 120px;
       margin-bottom: 20px;
 
-
-
       @keyframes fade-in-right {
         0% {
           transform: translateX(100%);
@@ -118,6 +116,7 @@ h1 {
       animation: fade-in-opacity ease 5s;
       animation-iteration-count: 1;
       animation-fill-mode: both;
+      height: 70px;
 
       @keyframes fade-in-opacity {
         0% {
@@ -127,8 +126,7 @@ h1 {
           opacity: 2;
         }
       }
-      
-  
+        
       button {
         cursor: pointer;
         border-radius: 35px;

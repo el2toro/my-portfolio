@@ -34,6 +34,7 @@ import { CommonModule } from "@angular/common";
 import { NgOptimizedImage } from '@angular/common';
 import { MatDialogModule } from "@angular/material/dialog";
 import { ReactiveFormsModule } from "@angular/forms";
+import { MatSnackBarModule } from "@angular/material/snack-bar";
 
 @NgModule({
   declarations: [
@@ -76,7 +77,8 @@ import { ReactiveFormsModule } from "@angular/forms";
     MatIconModule,
     NgOptimizedImage,
     MatDialogModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSnackBarModule
   ],
   providers: []
 })
