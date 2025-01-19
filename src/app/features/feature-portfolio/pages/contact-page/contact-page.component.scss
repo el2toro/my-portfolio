@@ -107,6 +107,23 @@
           color: var(--cream-700);
           font-size: 18px;
         }
+
+        button:hover{
+          background-image: linear-gradient(
+            to right,
+            var(--cream-100),
+            var(--cream-500)
+          );
+        }
+
+        button:disabled{
+          opacity: 0.5;
+          background-image: linear-gradient(
+            to right,
+            var(--cream-500),
+            var(--cream-100)
+          );
+        }
       }
     }
   }

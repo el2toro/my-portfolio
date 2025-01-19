@@ -39,6 +39,21 @@
             margin-left: 30px;
         }
 
+        h1 {
+            overflow: hidden;
+            white-space: nowrap;
+            animation: type 2s steps(90) 0.5s 1 normal both, cursor 1s step-end infinite;
+          }
+          
+          @keyframes type {
+            from {
+              width: 0;
+            }
+          
+            to {
+              width: 10rem;
+            }
+          }
     }
 
     h2 {
@@ -50,7 +65,24 @@
         padding-bottom: 20px;
         line-height: 120px;
         margin-bottom: 30px;
+        
     }
+
+    @keyframes fade-in-right {
+        0% {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0%);
+          opacity: 1;
+        }
+      }
+      
+      .fade-in-right-animation {
+        animation: 2.5s fade-in-right;
+        overflow: hidden;
+      }
 }
 
 

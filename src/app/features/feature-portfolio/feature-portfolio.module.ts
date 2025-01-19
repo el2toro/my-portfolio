@@ -33,6 +33,7 @@ import { HomePageComponent } from "./pages/home-page/home-page.component";
 import { CommonModule } from "@angular/common";
 import { NgOptimizedImage } from '@angular/common';
 import { MatDialogModule } from "@angular/material/dialog";
+import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -74,7 +75,8 @@ import { MatDialogModule } from "@angular/material/dialog";
     MatProgressBarModule,
     MatIconModule,
     NgOptimizedImage,
-    MatDialogModule
+    MatDialogModule,
+    ReactiveFormsModule
   ],
   providers: []
 })

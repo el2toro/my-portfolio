@@ -34,16 +34,16 @@
            </div>
         </div>
 
-        <form class="contact-form">
+        <form class="contact-form" [formGroup]="contactForm">
             <div class="send-message">
                 <div class="name-email-input">
-                    <input matInput placeholder="Your Name" value="">
-                    <input matInput placeholder="Email" value="">
+                    <input formControlName="name" matInput placeholder="Your Name">
+                    <input formControlName="email" matInput placeholder="Email">
                 </div>
-                <input matInput placeholder="Your Subject" value="">
-                <textarea matInput placeholder="Your Message"></textarea>
+                <input formControlName="subject" matInput placeholder="Your Subject">
+                <textarea formControlName="message" matInput placeholder="Your Message"></textarea>
 
-                <button matButton>SEND A MESSAGE</button> 
+                <button [disabled]="contactForm.invalid" matButton (click)="sendMessage()">SEND A MESSAGE</button> 
             </div>
         </form>
     </div>
