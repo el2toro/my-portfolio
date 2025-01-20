@@ -15,24 +15,21 @@
       font-weight: 400;
       margin-bottom: 30px;
 
-      
-      /* Custom */
+      h1 {
+        overflow: hidden;
+        white-space: nowrap;
+        animation: type 2s steps(90) 0.5s 1 normal both, cursor 1s step-end infinite;
+      }
 
-h1 {
-  overflow: hidden;
-  white-space: nowrap;
-  animation: type 2s steps(90) 0.5s 1 normal both, cursor 1s step-end infinite;
-}
+      @keyframes type {
+        from {
+          width: 0;
+        }
 
-@keyframes type {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 25rem;
-  }
-}
+        to {
+          width: 25rem;
+        }
+      }
 
       .hero-name-line {
         margin-top: 16px;
@@ -58,12 +55,13 @@ h1 {
           transform: translateX(100%);
           opacity: 0;
         }
+
         100% {
           transform: translateX(0%);
           opacity: 1;
         }
       }
-      
+
       .fade-in-right-animation {
         animation: 2.5s fade-in-right;
       }
@@ -99,12 +97,13 @@ h1 {
           transform: translateX(-50%);
           opacity: 0;
         }
+
         100% {
           transform: translateX(0%);
           opacity: 1;
         }
       }
-      
+
       .fade-in-left-animation {
         animation: 2.5s fade-in-left;
       }
@@ -122,19 +121,18 @@ h1 {
         0% {
           opacity: 0;
         }
+
         100% {
           opacity: 2;
         }
       }
-        
+
       button {
         cursor: pointer;
         border-radius: 35px;
-        background-image: linear-gradient(
-          to left,
-          var(--cream-500),
-          var(--cream-100)
-        );
+        background-image: linear-gradient(to left,
+            var(--cream-500),
+            var(--cream-100));
         outline: 1px solid var(--cream-500);
         outline-offset: 3px;
         height: 61px;
@@ -154,11 +152,9 @@ h1 {
         }
 
         &:hover {
-          background-image: linear-gradient(
-            to left,
-            var(--cream-100),
-            var(--cream-500)
-          );
+          background-image: linear-gradient(to left,
+              var(--cream-100),
+              var(--cream-500));
         }
       }
     }
@@ -171,7 +167,7 @@ h1 {
     top: 125px;
     right: 0px;
 
-    img{
+    img {
       width: 100%;
       height: 100%;
       object-fit: fill;
@@ -201,8 +197,7 @@ h1 {
       }
 
       .title-play-button {
-        img {
-        }
+        img {}
       }
 
       .subtitle {
@@ -220,11 +215,9 @@ h1 {
           border: none;
 
           border-radius: 35px;
-          background-image: linear-gradient(
-            to left,
-            var(--cream-500),
-            var(--cream-100)
-          );
+          background-image: linear-gradient(to left,
+              var(--cream-500),
+              var(--cream-100));
           outline: 1px solid var(--cream-500);
           outline-offset: 2px;
           height: 40px;
@@ -236,11 +229,9 @@ h1 {
         }
 
         button:hover {
-          background-image: linear-gradient(
-            to left,
-            var(--cream-500),
-            var(--cream-100)
-          );
+          background-image: linear-gradient(to left,
+              var(--cream-500),
+              var(--cream-100));
         }
       }
     }
@@ -257,12 +248,12 @@ h1 {
   .hero-section {
     .description {
 
-      .name{
+      .name {
         @keyframes type {
           from {
             width: 0;
           }
-        
+
           to {
             width: 30rem;
           }
@@ -275,4 +266,3 @@ h1 {
     }
   }
 }
-
