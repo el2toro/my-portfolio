@@ -1,6 +1,5 @@
-import { DOCUMENT } from '@angular/common';
-import { Component, Inject, OnInit } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
+import { ScrollService } from '../../services/scroll.service';
 
 @Component({
   selector: 'app-statistic',
@@ -8,42 +7,44 @@ import { Subject } from 'rxjs';
   styleUrls: ['./statistic.component.scss']
 })
 export class StatisticComponent implements OnInit {
+  @HostListener('window:scroll', [])
+  public onViewportScroll(){
+    if(this.scrollService.isInView(this.statistic) && this.counter < this.viewCount){
+      this.counter++
+      this.animate();
+    }
+  }
+  
   projectCopiled = 0;
-  experience = 0 ;
+  experience = 0;
   awards = 0;
 
   private projectCopiledCounter = 20;
   private experienceCounter = 5;
   private awardsCounter = 8;
+  private counter = 0;
+  private viewCount = 1;
 
-  constructor(@Inject(DOCUMENT) private _document: HTMLDocument) { }
+  constructor(private statistic: ElementRef, private scrollService: ScrollService) { }
   
-
   ngOnInit() {
-    //this.animate()
+    
+  }
+
+  animate(){
     this.projectCopiledAnimate();
     this.experienceAnimate();
     this.awardsAnimate();
   }
 
-  //TODO: animate when sroll reach the component
-  animate(){
-    window.addEventListener("scroll", (event: Event) => {
-      let scroll = this._document.scrollingElement?.scrollTop.toFixed();
-      let heroSectionScroll = this._document.getElementsByClassName('hero-statistic')[0].scrollHeight;
-
-      console.log('Scroll: ', Number(scroll))
-      console.log('Scroll hero section: ', heroSectionScroll)
-    });   
-  }
-
+  //TODO: refactoring   DRY
   projectCopiledAnimate(){
     let projectCountUp = setInterval(() => {
       this.projectCopiled++;
       if(this.projectCopiled === this.projectCopiledCounter){
         clearInterval(projectCountUp)
       }
-    }, 50);
+    }, 80);
   }
 
   experienceAnimate(){
@@ -52,7 +53,7 @@ export class StatisticComponent implements OnInit {
       if(this.experience === this.experienceCounter){
         clearInterval(experienceCountUp)
       }
-    }, 50);
+    }, 80);
   }
 
   awardsAnimate(){
@@ -61,6 +62,6 @@ export class StatisticComponent implements OnInit {
       if(this.awards === this.awardsCounter){
         clearInterval(awardsCountUp)
       }
-    }, 50);
+    }, 80);
   }
 }
