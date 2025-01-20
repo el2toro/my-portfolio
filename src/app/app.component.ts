@@ -44,6 +44,8 @@ export class AppComponent {
     this.matIconRegistry.addSvgIcon('tiktok', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/tiktok-icon.svg'));
     this.matIconRegistry.addSvgIcon('pinterest', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/pinterest-icon.svg'));
     this.matIconRegistry.addSvgIcon('linkedin', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/linkedin-icon.svg'));
+    this.matIconRegistry.addSvgIcon('instagram', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/instagram-icon.svg'));
+
 
     //Arrows
     this.matIconRegistry.addSvgIcon('chevron-right', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/chevron-rigth.svg'));
