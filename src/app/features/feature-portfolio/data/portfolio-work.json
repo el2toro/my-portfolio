@@ -1,35 +1,41 @@
 [
     {
+        "id": 1,
         "title": "Boutique Web Design",
         "subtitle": "Web Development",
         "image": "assets/images/work-1.jpg",
         "section": "webDevelopment"
     },
     {
-        "title": "Company Landing Page",
+        "id": 2,
+        "title": "Landing Page",
         "subtitle": "Web Development",
         "image": "assets/images/work-2.jpg",
         "section": "webDevelopment"
     },
     {
+        "id": 3,
         "title": "Hotel Booking",
         "subtitle": "Web Development",
         "image": "assets/images/work-3.jpg",
         "section": "webDevelopment"
     },
     {
+        "id": 4,
         "title": "Travel Advisor",
         "subtitle": "Web Development",
         "image": "assets/images/work-4.jpg",
         "section": "branding"
     },
     {
+        "id": 5,
         "title": "Personal Portfolio",
         "subtitle": "Web Development",
         "image": "assets/images/work-5.jpg",
         "section": "webDevelopment"
     },
     {
+        "id": 6,
         "title": "eCommerce",
         "subtitle": "Web Development",
         "image": "assets/images/work-6.jpg",

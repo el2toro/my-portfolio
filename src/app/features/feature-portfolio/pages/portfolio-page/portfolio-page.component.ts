@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioWorkModel } from '../../models/portfolio-work.model';
-import * as  portfolioWork from '../../data/portfolio-work.json';
+import * as  portfolioWorks from '../../data/portfolio-work.json';
 import { Router } from '@angular/router';
 
 @Component({
@@ -16,7 +16,7 @@ export class PortfolioPageComponent implements OnInit {
 
   sectionNameMobile = 'VIEW ALL';
   index = 0;
-  data: PortfolioWorkModel[] = [];
+  data: PortfolioWorkModel[] =  portfolioWorks;
 
   constructor(private router: Router) { }
 
@@ -63,7 +63,7 @@ export class PortfolioPageComponent implements OnInit {
       },
       {
           "id": 2,
-          "title": "Company Landing Page",
+          "title": "Landing Page",
           "subtitle": "Web Development",
           "image": "assets/images/work-2.jpg",
           "section": "1"
