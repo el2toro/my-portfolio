@@ -19,7 +19,7 @@ export class StatisticComponent implements OnInit {
   experience = 0;
   awards = 0;
 
-  private projectCopiledCounter = 20;
+  private projectCopiledCounter = 50;
   private experienceCounter = 5;
   private awardsCounter = 8;
   private counter = 0;

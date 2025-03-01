@@ -10,8 +10,8 @@
       display: flex;
       align-content: center;
       width: 60%;
-      color: #e4c8a7;
-      font-size: 32px;
+      color: var(--cream-500);
+      font-size: 2rem;
       font-weight: 400;
       margin-bottom: 30px;
 
@@ -34,7 +34,7 @@
       .hero-name-line {
         margin-top: 16px;
         height: 1.5px;
-        border: 1.5px solid #e4c8a7;
+        border: 1.5px solid var(--cream-500);
         width: 120px;
         margin-left: 30px;
       }
@@ -42,7 +42,7 @@
 
     .title {
       width: 75%;
-      font-size: 110px;
+      font-size: 6.8rem;
       font-weight: 400;
       color: var(--white);
       align-content: center;
@@ -88,7 +88,7 @@
       color: var(--white);
       align-content: center;
       margin-bottom: 50px;
-      font-size: 20px;
+      font-size: 1.25rem;
       font-weight: 200;
       line-height: 30px;
 
@@ -139,7 +139,7 @@
         width: 225px;
         color: var(--cream-700);
         font-family: var(--kanit-font-family);
-        font-size: 18px;
+        font-size: 1.12rem;
         font-weight: 300;
         display: flex;
         justify-content: center;
@@ -179,9 +179,10 @@
   .hero-section {
     .description {
       padding-left: 20px;
+      top: 150px;
 
       .name {
-        font-size: 24px;
+        font-size: 1.5rem;
 
         .hero-name-line {
           display: none;
@@ -190,14 +191,10 @@
 
       .title {
         width: 90%;
-        font-size: 60px;
+        font-size: 3.75rem;
         padding-bottom: 20px;
         line-height: 50px;
         margin-bottom: 5px;
-      }
-
-      .title-play-button {
-        img {}
       }
 
       .subtitle {
@@ -205,7 +202,7 @@
         color: var(--white);
         align-content: center;
         margin-bottom: 25px;
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 200;
         line-height: 20px;
       }
@@ -224,7 +221,7 @@
           width: 170px;
           color: var(--cream-700);
           font-family: var(--kanit-font-family);
-          font-size: 14px;
+          font-size: 0.9rem;
           font-weight: 300;
         }
 
@@ -239,7 +236,7 @@
     .image {
       width: 30rem;
       height: 30rem;
-      top: 60px;
+      top: 130px;
     }
   }
 }
