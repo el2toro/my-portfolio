@@ -1,9 +1,9 @@
-<app-page-heading [title]="'portfolio web development'" [subtitle]="'Boutique Web Design'">
+<app-page-heading [title]="selectedWork.title" [subtitle]="selectedWork.subtitle">
 </app-page-heading>
 
 <div class="container">
     <div class="image-container">
-        <img src="assets/images/work-3.jpg" alt="img">
+        <img src="{{selectedWork.image}}" alt="img" loading="lazy">
     </div>
 
     <div class="project-details">
@@ -89,27 +89,11 @@
         <h2>Related Work</h2>
 
         <div class="related-work-container">
-            <div class="related-work-item" (click)="onWorkItemClick(1)">
-                <img src="assets/images/work-1.jpg" alt="img">
+            <div class="related-work-item" (click)="onWorkItemClick(relatedWork.id)" *ngFor="let relatedWork of relatedWorks">
+                <img src="{{relatedWork.image}}" alt="img" loading="lazy">
                 <div class="related-work-title">
-                    <p>Business Brand Design</p>
-                    <p>Brand Identity</p>
-                </div>
-            </div>
-
-            <div class="related-work-item" (click)="onWorkItemClick(2)">
-                <img src="assets/images/work-2.jpg" alt="img">
-                <div class="related-work-title">
-                    <p>Business Brand Design</p>
-                    <p>Brand Identity</p>
-                </div>
-            </div>
-
-            <div class="related-work-item" (click)="onWorkItemClick(3)">
-                <img src="assets/images/work-4.jpg" alt="img">
-                <div class="related-work-title">
-                    <p>Business Brand Design</p>
-                    <p>Brand Identity</p>
+                    <p>{{relatedWork.title}}</p>
+                    <p>{{relatedWork.subtitle}}</p>
                 </div>
             </div>
         </div>
