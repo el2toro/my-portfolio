@@ -19,17 +19,19 @@
     top: 35vh;
     display: grid;
     overflow: hidden;
+    padding: 0px 100px;
 
     .name {
         display: flex;   
         justify-content: flex-start;  
+        width: 100%;
 
         h1 {
             color: var(--cream-500);
             font-size: 32px;
             font-weight: 400;
             margin-bottom: 30px;
-            width: 55%;
+            width: 100%;
         }
 
         .hero-name-line {
@@ -37,6 +39,7 @@
             height: 1.5px;
             border: 1.5px solid #E4C8A7;
             width: 140px;
+            margin-left: 50px;
         }
 
         h1 {
@@ -47,16 +50,12 @@
           
           @keyframes fade-in-right{
             from {
-              width: 0%;
+              width: 0;
             }
           
             to {
-              width: 55%;
+              width: 11rem;
             }
-        }
-
-        .fade-in-right-animation{
-            animation: 2.5s fade-in-right;
         }
     }
 
@@ -69,7 +68,6 @@
         padding-bottom: 20px;
         line-height: 120px;
         margin-bottom: 30px;
-        animation: fa;
     }
 
     @keyframes fade-in-left {
@@ -100,7 +98,7 @@
  
     .header {
         top: 15vh;
-        padding-left: 20px;
+        padding: 20px 20px 0px 20px;
     
         .name {
             h1 {
@@ -126,7 +124,7 @@
  
     .header {
         top: 20vh;
-        padding-left: 20px;
+        padding: 0px 20px;
     
         .name {
             h1 {

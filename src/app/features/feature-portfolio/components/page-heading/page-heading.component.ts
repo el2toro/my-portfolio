@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-page-heading',
@@ -18,5 +18,4 @@ export class PageHeadingComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

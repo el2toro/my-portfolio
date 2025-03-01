@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute,  Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { PortfolioWorkModel } from '../../models/portfolio-work.model';
+import { DataService } from '../../services/data.service';
+import { ScrollService } from '../../services/scroll.service';
 
 @Component({
   selector: 'app-single-portfolio-page',
@@ -10,17 +12,18 @@ import { PortfolioWorkModel } from '../../models/portfolio-work.model';
 export class SinglePortfolioPageComponent implements OnInit {
   relatedWorks = <PortfolioWorkModel[]>[];
   workId = this.activatedRoute.snapshot.paramMap.get('id');
-  selectedWork: PortfolioWorkModel = new PortfolioWorkModel();
+  selectedWork!: PortfolioWorkModel;
+  portfolioWorks = <PortfolioWorkModel[]>[];
 
-  constructor(private activatedRoute: ActivatedRoute) {}
+  constructor(private activatedRoute: ActivatedRoute, 
+    private dataService: DataService) {}
 
   ngOnInit() {
    this.initData();
-   this.selectedWork = this.relatedWorks.find(relatedWork => relatedWork.id === Number(this.workId)) as PortfolioWorkModel;
   }
 
   onWorkItemClick(id: number){
-    this.selectedWork = this.relatedWorks.find(relatedWork => relatedWork.id === id) as PortfolioWorkModel;
+    this.selectedWork = this.portfolioWorks.filter(portfolioWork => portfolioWork.id === id)[0];
     
     this.scrollToTop();
   }
@@ -31,28 +34,13 @@ export class SinglePortfolioPageComponent implements OnInit {
   }
 
   initData(){
-    this.relatedWorks = [
-      {
-          "id": 1,
-          "title": "Boutique Web Design",
-          "subtitle": "Web Development",
-          "image": "assets/images/work-1.jpg",
-          "section": "1",
-      },
-      {
-          "id": 2,
-          "title": "Landing Page",
-          "subtitle": "Web Development",
-          "image": "assets/images/work-2.jpg",
-          "section": "1"
-      },
-      {
-          "id": 3,
-          "title": "eCommerce ",
-          "subtitle": "Web Development",
-          "image": "assets/images/work-3.jpg",
-          "section": "1"
-      }
-    ]
+   this.dataService.getProjects().subscribe({
+    next: (projects) => {
+      this.portfolioWorks = projects;
+      this.relatedWorks = projects.slice(0, 3);
+      this.selectedWork = projects.filter(project => project.id === Number(this.workId))[0];
+    },
+    error: (error) => console.log(error)
+   })
   }
 }

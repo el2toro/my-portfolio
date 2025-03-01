@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioWorkModel } from '../../models/portfolio-work.model';
-import * as  portfolioWorks from '../../data/portfolio-work.json';
 import { Router } from '@angular/router';
 
 @Component({
@@ -16,7 +15,7 @@ export class PortfolioPageComponent implements OnInit {
 
   sectionNameMobile = 'VIEW ALL';
   index = 0;
-  data: PortfolioWorkModel[] =  portfolioWorks;
+  data = <PortfolioWorkModel[]>[];
 
   constructor(private router: Router) { }
 
@@ -56,7 +55,7 @@ export class PortfolioPageComponent implements OnInit {
     this.data = [
       {
           "id": 1,
-          "title": "Boutique Web Design",
+          "title": "Boutique",
           "subtitle": "Web Development",
           "image": "assets/images/work-1.jpg",
           "section": "1",

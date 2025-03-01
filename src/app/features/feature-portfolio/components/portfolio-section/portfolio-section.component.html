@@ -5,50 +5,27 @@
   <div class="work">
 
     <div class="work-row">
-      <div class="work-item" (click)="onWorkItemClick(1)">
-        <img src="assets/images/ecommerce.jpg" alt="img" loading="lazy"> 
-        <div class="inner-work-item custom-inner-work-item">
-           <h3>Electronics eCommerce</h3>
-           <p>Web Development</p>
+      <div class="work-item" 
+       (click)="onWorkItemClick(portfolioWork.id)" 
+       *ngFor="let portfolioWork of portfolioWorksFirstRow">
+
+        <img src="{{portfolioWork.image}}" alt="img" loading="lazy"> 
+        <div class="inner-work-item">
+           <h3>{{portfolioWork.title}}</h3>
+           <p>{{portfolioWork.subtitle}}</p>
         </div>
       </div>
-      <div class="work-item" (click)="onWorkItemClick(1)">
-        <img src="assets/images/work-1.jpg" alt="img" loading="lazy">
-        <div class="inner-work-item">
-          <h3>Admin Dashboard</h3>
-          <p>Web Development</p>
-       </div>
-      </div>
-      <div class="work-item" (click)="onWorkItemClick(1)">
-        <img src="assets/images/work-2.jpg" alt="img" loading="lazy">
-        <div class="inner-work-item">
-          <h3>Photo Gallery</h3>
-          <p>Web Development</p>
-       </div>
-      </div>
     </div>
-
    
     <div class="work-row">
-      <div class="work-item" (click)="onWorkItemClick(1)">
-        <img src="assets/images/work-3.jpg" alt="img" loading="lazy">
+      <div class="work-item" 
+      (click)="onWorkItemClick(portfolioWork.id)" 
+      *ngFor="let portfolioWork of portfolioWorksSecondRow">
+      
+        <img src="{{portfolioWork.image}}" alt="img" loading="lazy">
         <div class="inner-work-item">
-          <h3>Multipurpose eCommerce</h3>
-          <p>Web Development</p>
-       </div>
-      </div>
-      <div class="work-item" (click)="onWorkItemClick(1)">
-        <img src="assets/images/work-4.jpg" alt="img" loading="lazy">
-        <div class="inner-work-item">
-          <h3>Food Delivery App</h3>
-          <p>Web Development</p>
-       </div>
-      </div>
-      <div class="work-item custom" (click)="onWorkItemClick(1)">
-        <img src="assets/images/work-5.jpg" alt="img" loading="lazy">
-        <div class="inner-work-item custom-inner-work-item">
-          <h3>Work Progress Tracker</h3>
-          <p>Web Development</p>
+          <h3>{{portfolioWork.title}}</h3>
+          <p>{{portfolioWork.subtitle}}</p>
        </div>
       </div>
     </div>
