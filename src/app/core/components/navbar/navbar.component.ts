@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
@@ -10,7 +11,7 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   @ViewChild('pagesDropDown') pagesDropDown: ElementRef | undefined;
   @ViewChild('navbarItems') navbarItems: ElementRef | undefined;
 
-  constructor(private deviceDetectorService: DeviceDetectorService) { 
+  constructor(private deviceDetectorService: DeviceDetectorService, private router: Router) { 
     
   }
   ngAfterViewInit(): void {
@@ -42,5 +43,9 @@ export class NavbarComponent implements OnInit, AfterViewInit {
 
     navbarButtons[0].classList.add('focused-menu')
     
+  }
+
+  goToHomePage(){
+    this.router.navigate([''])
   }
 }

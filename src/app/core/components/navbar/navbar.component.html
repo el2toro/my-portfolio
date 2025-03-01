@@ -25,7 +25,7 @@
 </div>
 
 <div class="navbar-mobile">
-  <img src="assets/logo/logo.png" width="100px" height="100px">
+  <img src="assets/logo/logo.png" width="100px" height="100px"  (click)="goToHomePage()">
 
     <button class="contact-button"  [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger">
       <mat-icon svgIcon="menu" *ngIf="!menuTrigger.menuOpen"></mat-icon>
