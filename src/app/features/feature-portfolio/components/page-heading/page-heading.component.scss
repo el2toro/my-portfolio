@@ -19,18 +19,17 @@
     top: 35vh;
     display: grid;
     overflow: hidden;
-    padding-left: 100px;
 
     .name {
-        display: flex; 
-        width: 50%;
+        display: flex;   
+        justify-content: flex-start;  
 
         h1 {
             color: var(--cream-500);
             font-size: 32px;
             font-weight: 400;
             margin-bottom: 30px;
-            width: 35%;
+            width: 55%;
         }
 
         .hero-name-line {
@@ -38,24 +37,27 @@
             height: 1.5px;
             border: 1.5px solid #E4C8A7;
             width: 140px;
-            margin-left: 30px;
         }
 
         h1 {
             overflow: hidden;
             white-space: nowrap;
-            animation: type 2s steps(90) 0.5s 1 normal both, cursor 1s step-end infinite;
+            animation: fade-in-right 2s steps(90) 0.5s 1 normal both, cursor 1s step-end infinite;
           }
           
-          @keyframes type {
+          @keyframes fade-in-right{
             from {
-              width: 0;
+              width: 0%;
             }
           
             to {
-              width: 11rem;
+              width: 55%;
             }
-          }
+        }
+
+        .fade-in-right-animation{
+            animation: 2.5s fade-in-right;
+        }
     }
 
     h2 {
@@ -67,10 +69,10 @@
         padding-bottom: 20px;
         line-height: 120px;
         margin-bottom: 30px;
-        
+        animation: fa;
     }
 
-    @keyframes fade-in-right {
+    @keyframes fade-in-left {
         0% {
           transform: translateX(100%);
           opacity: 0;
@@ -81,9 +83,9 @@
         }
       }
       
-      .fade-in-right-animation {
-        animation: 2.5s fade-in-right;
-        overflow: hidden;
+      .fade-in-left-animation {
+        animation: 2.5s fade-in-left;
+        //overflow: hidden;
       }
 }
 
