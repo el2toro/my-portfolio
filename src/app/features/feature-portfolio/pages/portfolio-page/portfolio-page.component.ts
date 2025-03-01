@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioWorkModel } from '../../models/portfolio-work.model';
 import { Router } from '@angular/router';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-portfolio-page',
@@ -15,12 +16,13 @@ export class PortfolioPageComponent implements OnInit {
 
   sectionNameMobile = 'VIEW ALL';
   index = 0;
-  data = <PortfolioWorkModel[]>[];
+  projects = <PortfolioWorkModel[]>[];
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, 
+    private dataService: DataService) { }
 
   ngOnInit() {
-    this.initData()
+    this.initData();
   }
 
   nextSection(){
@@ -36,11 +38,10 @@ export class PortfolioPageComponent implements OnInit {
   }
 
   loadSection(){
-
     if(this.index === 0){
-      return this.data;
+      return this.projects;
     }
-    return this.data.filter(work => work.section === this.index.toString());
+    return this.projects.filter(project => project.section === this.index.toString());
   }
 
   getSelectedWorkList(sectionName: string){
@@ -48,53 +49,19 @@ export class PortfolioPageComponent implements OnInit {
   }
 
   onWorkItemClick(id: number){
+    this.scrollToTop();
     this.router.navigate([`/single-portfolio-page/${id}`])
   }
 
   initData(){
-    this.data = [
-      {
-          "id": 1,
-          "title": "Boutique",
-          "subtitle": "Web Development",
-          "image": "assets/images/work-1.jpg",
-          "section": "1",
-      },
-      {
-          "id": 2,
-          "title": "Landing Page",
-          "subtitle": "Web Development",
-          "image": "assets/images/work-2.jpg",
-          "section": "1"
-      },
-      {
-          "id": 3,
-          "title": "eCommerce ",
-          "subtitle": "Web Development",
-          "image": "assets/images/work-3.jpg",
-          "section": "1"
-      },
-      {
-          "id": 4,
-          "title": "Food Delivery",
-          "subtitle": "Web Development",
-          "image": "assets/images/work-4.jpg",
-          "section": "1"
-      },
-      {
-          "id": 5,
-          "title": "Personal Portfolio",
-          "subtitle": "Web Development",
-          "image": "assets/images/work-5.jpg",
-          "section": "1"
-      },
-      {
-          "id": 6,
-          "title": "Hotel Booking",
-          "subtitle": "Web Development",
-          "image": "assets/images/work-6.jpg",
-          "section": "1"
-      }
-  ]
+    this.dataService.getProjects().subscribe({
+      next: (projects ) => this.projects = projects,
+      error: (error) => console.log(error)
+    })
+  }
+
+  scrollToTop(){
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
   }
 }

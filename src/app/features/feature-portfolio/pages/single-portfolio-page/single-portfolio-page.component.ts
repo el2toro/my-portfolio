@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PortfolioWorkModel } from '../../models/portfolio-work.model';
 import { DataService } from '../../services/data.service';
-import { ScrollService } from '../../services/scroll.service';
 
 @Component({
   selector: 'app-single-portfolio-page',
@@ -12,7 +11,7 @@ import { ScrollService } from '../../services/scroll.service';
 export class SinglePortfolioPageComponent implements OnInit {
   relatedWorks = <PortfolioWorkModel[]>[];
   workId = this.activatedRoute.snapshot.paramMap.get('id');
-  selectedWork!: PortfolioWorkModel;
+  selectedWork: PortfolioWorkModel = new PortfolioWorkModel();
   portfolioWorks = <PortfolioWorkModel[]>[];
 
   constructor(private activatedRoute: ActivatedRoute, 
