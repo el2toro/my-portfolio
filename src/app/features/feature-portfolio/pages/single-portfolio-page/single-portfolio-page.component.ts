@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PortfolioWorkModel } from '../../models/portfolio-work.model';
 import { DataService } from '../../services/data.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-single-portfolio-page',
@@ -15,7 +16,8 @@ export class SinglePortfolioPageComponent implements OnInit {
   portfolioWorks = <PortfolioWorkModel[]>[];
 
   constructor(private activatedRoute: ActivatedRoute, 
-    private dataService: DataService) {}
+    private dataService: DataService,
+    private location: Location) {}
 
   ngOnInit() {
    this.initData();
@@ -23,7 +25,8 @@ export class SinglePortfolioPageComponent implements OnInit {
 
   onWorkItemClick(id: number){
     this.selectedWork = this.portfolioWorks.filter(portfolioWork => portfolioWork.id === id)[0];
-    
+    this.relatedWorks = this.filterWorkItems(this.portfolioWorks, id);
+    this.location.replaceState(`/single-portfolio-page/${id}`); // No reload!
     this.scrollToTop();
   }
 
@@ -36,10 +39,14 @@ export class SinglePortfolioPageComponent implements OnInit {
    this.dataService.getProjects().subscribe({
     next: (projects) => {
       this.portfolioWorks = projects;
-      this.relatedWorks = projects.slice(0, 3);
+      this.relatedWorks = this.filterWorkItems(projects, Number(this.workId));
       this.selectedWork = projects.filter(project => project.id === Number(this.workId))[0];
     },
     error: (error) => console.log(error)
    })
+  }
+
+  filterWorkItems(workItems:  PortfolioWorkModel[], workItemId: number) : PortfolioWorkModel[]{
+    return workItems.filter(p => p.id !== Number(workItemId)).slice(0, 3);
   }
 }

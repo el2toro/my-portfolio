@@ -50,18 +50,6 @@
       line-height: 120px;
       margin-bottom: 20px;
 
-      @keyframes fade-in-right {
-        0% {
-          transform: translateX(100%);
-          opacity: 0;
-        }
-
-        100% {
-          transform: translateX(0%);
-          opacity: 1;
-        }
-      }
-
       .fade-in-right-animation {
         animation: 2.5s fade-in-right;
       }
@@ -92,18 +80,6 @@
       font-weight: 200;
       line-height: 30px;
 
-      @keyframes fade-in-left {
-        0% {
-          transform: translateX(-50%);
-          opacity: 0;
-        }
-
-        100% {
-          transform: translateX(0%);
-          opacity: 1;
-        }
-      }
-
       .fade-in-left-animation {
         animation: 2.5s fade-in-left;
       }
@@ -116,16 +92,6 @@
       animation-iteration-count: 1;
       animation-fill-mode: both;
       height: 70px;
-
-      @keyframes fade-in-opacity {
-        0% {
-          opacity: 0;
-        }
-
-        100% {
-          opacity: 2;
-        }
-      }
 
       button {
         cursor: pointer;
@@ -171,6 +137,41 @@
       width: 100%;
       height: 100%;
       object-fit: fill;
+    }
+  }
+
+
+  @keyframes fade-in-opacity {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 2;
+    }
+  }
+
+  @keyframes fade-in-left {
+    0% {
+      transform: translateX(-50%);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-in-right {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateX(0%);
+      opacity: 1;
     }
   }
 }

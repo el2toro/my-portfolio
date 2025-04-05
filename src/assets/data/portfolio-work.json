@@ -8,7 +8,7 @@
     },
     {
         "id": 2,
-        "title": "Landing Page",
+        "title": "Corporate Website",
         "subtitle": "Web Development",
         "image": "assets/images/work-2.jpg",
         "section": "webDevelopment"
@@ -29,7 +29,7 @@
     },
     {
         "id": 5,
-        "title": "Personal Portfolio",
+        "title": "Chat Web App",
         "subtitle": "Web Development",
         "image": "assets/images/work-5.jpg",
         "section": "webDevelopment"
