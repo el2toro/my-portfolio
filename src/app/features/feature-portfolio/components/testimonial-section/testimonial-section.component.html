@@ -7,7 +7,7 @@
       <div class="image">
         <img src="{{ testimonial.image }}" alt="img" loading="lazy">
       </div>
-      <img class="sparks" src="assets/sparks-ornament.png" width="60px" height="60px" alt="img" loading="lazy">
+      <mat-icon class="sparks" svgIcon="spark-ornament"></mat-icon>
       <div class="details">
         <p>{{ testimonial.description }}</p>
         <div class="pearson">
@@ -19,19 +19,13 @@
           <div class="vertical-line"></div>
 
           <div class="rating">
-           <img src="assets/star.png" width="22.66px" height="19.66px" alt="img" loading="lazy">
-           <img src="assets/star.png" width="22.66px" height="19.66px" alt="img" loading="lazy">
-           <img src="assets/star.png" width="22.66px" height="19.66px" alt="img" loading="lazy">
-           <img src="assets/star.png" width="22.66px" height="19.66px" alt="img" loading="lazy">
-           <img src="assets/star.png" width="22.66px" height="19.66px" alt="img" loading="lazy">
+            <mat-icon svgIcon="star" *ngFor="let star of stars"></mat-icon>
            <p>5.0/5.0</p>
          </div>
         </div>
       </div>
   </div>
   </ng-container>
-
-  
 
   <ng-container *ngFor="let testimonial of testimonials; let index = index">
     <div class="testimonial-card-mobile" *ngIf="index === currentSlide">
@@ -45,11 +39,7 @@
             <p>{{ testimonial.position }}</p>
   
             <div class="rating">
-              <img src="assets/star.png" alt="img" loading="lazy">
-              <img src="assets/star.png" alt="img" loading="lazy">
-              <img src="assets/star.png" alt="img" loading="lazy">
-              <img src="assets/star.png" alt="img" loading="lazy">
-              <img src="assets/star.png" alt="img" loading="lazy">
+              <mat-icon svgIcon="star" *ngFor="let star of stars"></mat-icon>
               <p>5.0/5.0</p>
              </div>
            </div>
@@ -60,8 +50,7 @@
 
   <div class="testimonial-navigation">
    <button class="slide-button" matButton (click)="goToPrevious(-1)">
-     <mat-icon svgIcon="chevron-left"></mat-icon>
-     <mat-icon svgIcon="chevron-left"></mat-icon>
+     <mat-icon svgIcon="chevron-left" *ngFor="let arrow of arrows"></mat-icon>
      <span>PREVIOUS</span>
    </button>
 
@@ -73,8 +62,7 @@
 
    <button class="slide-button second-slide-button" matButton (click)="goToNext(-1)">
     <span>NEXT</span>
-    <mat-icon svgIcon="chevron-right"></mat-icon>
-    <mat-icon svgIcon="chevron-right"></mat-icon>
+    <mat-icon svgIcon="chevron-right" *ngFor="let arrow of arrows"></mat-icon>
   </button>
  </div>
 </div>

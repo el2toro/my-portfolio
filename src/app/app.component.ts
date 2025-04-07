@@ -24,14 +24,14 @@ export class AppComponent {
     this.matIconRegistry.addSvgIcon('programmer-laptop', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/programmer-laptop.svg'));
     this.matIconRegistry.addSvgIcon('radio-button-icon', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/radio-button-icon.svg'));
     this.matIconRegistry.addSvgIcon('partner-icon', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/partner-icon.svg'));
-    this.matIconRegistry.addSvgIcon('spark-ornament-icon', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/spark-ornament-icon.svg'));
+    this.matIconRegistry.addSvgIcon('spark-ornament', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/spark-ornament.svg'));
     this.matIconRegistry.addSvgIcon('magic-wand-icon', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/magic-wand-icon.svg'));
     this.matIconRegistry.addSvgIcon('phone-icon', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/phone-icon.svg'));
     this.matIconRegistry.addSvgIcon('email-icon', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/email-icon.svg'));
     this.matIconRegistry.addSvgIcon('address-icon', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/address-icon.svg'));
     this.matIconRegistry.addSvgIcon('button-arrow-right', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/button-arrow-right.svg'));
     this.matIconRegistry.addSvgIcon('outlined-dot', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/outlined-dot.svg'));
-
+    this.matIconRegistry.addSvgIcon('star', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/star.svg'));
     //Social Media
     this.matIconRegistry.addSvgIcon('facebook', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/facebook-icon.svg'));
     this.matIconRegistry.addSvgIcon('tiktok', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/tiktok-icon.svg'));
@@ -45,6 +45,7 @@ export class AppComponent {
     this.matIconRegistry.addSvgIcon('chevron-left', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/chevron-left.svg'));
     this.matIconRegistry.addSvgIcon('arrow-right', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/arrow-email-button.svg'));
     this.matIconRegistry.addSvgIcon('arrow-basic-right', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/arrow-basic-right.svg'));
+    this.matIconRegistry.addSvgIcon('arrow-right2', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/arrow-right2.svg'));
 
     // Initialize Firebase
    //const app = initializeApp(this.firebaseConfig);

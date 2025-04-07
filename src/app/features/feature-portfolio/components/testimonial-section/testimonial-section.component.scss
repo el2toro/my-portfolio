@@ -44,7 +44,10 @@
         .sparks{
             position: relative;
             left: -25px;
-            top: 230px;
+            top: 200px;           
+            width: 150px;
+            height: 150px;
+            
         }
 
         .details{
@@ -98,7 +101,7 @@
                     text-align: left;
                     margin-left: 50px;
 
-                    img{
+                    mat-icon{
                         margin-right: 5px;
                     }
 
@@ -239,7 +242,7 @@
                             margin-top: 10px;
                             text-align: left;
                             
-                            img{
+                            mat-icon{
                                 margin-right: 5px;
                                 width: 15px;
                                 height: 15px;
