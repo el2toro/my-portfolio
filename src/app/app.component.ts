@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { environment } from 'environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -12,8 +9,6 @@ import { environment } from 'environments/environment';
 })
 export class AppComponent {
   title = 'my-portfolio';
- // firebaseConfig = environment.firebaseConfig;
-
 
   constructor(private matIconRegistry: MatIconRegistry,
               private domSanitizer: DomSanitizer
@@ -46,9 +41,5 @@ export class AppComponent {
     this.matIconRegistry.addSvgIcon('arrow-right', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/arrow-email-button.svg'));
     this.matIconRegistry.addSvgIcon('arrow-basic-right', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/arrow-basic-right.svg'));
     this.matIconRegistry.addSvgIcon('arrow-right2', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/svg/arrow-right2.svg'));
-
-    // Initialize Firebase
-   //const app = initializeApp(this.firebaseConfig);
-   //const analytics = getAnalytics(app);
   }
 }
