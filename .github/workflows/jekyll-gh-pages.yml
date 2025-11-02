@@ -7,7 +7,13 @@ on:
   workflow_dispatch: # allows manual run from the Actions tab
 
 permissions:
-  contents: write  # required for deployment
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -31,11 +37,21 @@ jobs:
       # 🏗️ Build the Angular app for production
       - name: Build Angular app
         run: |
-          npm run build -- --configuration production --output-path=browser
+          npm run build -- --configuration production --base-href /el2toro/my-portfolio/
+
+      - name: Upload artifact for GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/my-portfolio/browser 
 
       # 🚀 Deploy to GitHub Pages
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./browser
+        id: deployment
+        uses: actions/deploy-pages@v4
