@@ -37,7 +37,7 @@ jobs:
       # 🏗️ Build the Angular app for production
       - name: Build Angular app
         run: |
-          npm run build -- --configuration production
+          npm run build -- --configuration production --base-href /my-portfolio/
 
       - name: Upload artifact for GitHub Pages
         uses: actions/upload-pages-artifact@v3
