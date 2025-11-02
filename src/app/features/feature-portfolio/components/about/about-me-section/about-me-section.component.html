@@ -14,10 +14,12 @@
           I also keep myself updated on the latest advancements and trends in software development to stay on top of the ever-changing tech landscape.</p>
 
         <div class="domain-skill">
-          <div class="domain-skill-item" *ngFor="let skill of skills">
+          @for (skill of skills; track $index) {
+            <div class="domain-skill-item">
             <mat-icon svgIcon="programmer-laptop"></mat-icon>
             <h4>{{ skill }}</h4>
           </div>
+          }
         </div>
      </div>
   </div>

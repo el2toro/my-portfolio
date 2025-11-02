@@ -1,10 +1,24 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
+import { ResumeAboutMeSectionComponent } from '../resume/resume-about-me-section/resume-about-me-section.component';
+import { ResumeExperienceSectionComponent } from '../resume/resume-experience-section/resume-experience-section.component';
+import { ResumeEducationSectionComponent } from '../resume/resume-education-section/resume-education-section.component';
+import { ResumeSkillsSectionComponent } from '../resume/resume-skills-section/resume-skills-section.component';
+import { ResumeAwardsSectionComponent } from '../resume/resume-awards-section/resume-awards-section.component';
 
 @Component({
   selector: 'app-resume-section',
   templateUrl: './resume-section.component.html',
-  styleUrls: ['./resume-section.component.scss']
+  styleUrls: ['./resume-section.component.scss'],
+  standalone: true,
+  imports: [
+    MatIconModule, 
+    ResumeAboutMeSectionComponent,
+    ResumeExperienceSectionComponent,
+    ResumeEducationSectionComponent,
+    ResumeSkillsSectionComponent,
+    ResumeAwardsSectionComponent
+  ]
 })
 export class ResumeSectionComponent implements OnInit {
 

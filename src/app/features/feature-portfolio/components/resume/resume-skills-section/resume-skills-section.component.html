@@ -1,6 +1,7 @@
 <div class="skills">
   <div class="skill-level">
-    <div class="skill-level-item" *ngFor="let skill of skills">
+    @for (skill of skills; track $index) {
+      <div class="skill-level-item">
       <div class="skill-title">
         <p>{{ skill.title }}</p>
         <p>{{ skill.level }}</p>
@@ -10,5 +11,6 @@
         <div class="progress persantage"></div>
       </div>
     </div>
+    }
   </div>
 </div>

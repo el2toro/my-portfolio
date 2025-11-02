@@ -27,10 +27,24 @@
         </button>
     </div>
   </div>
+  
+  @if (sectionName === 'aboutme') {
+    <app-resume-about-me-section></app-resume-about-me-section>
+  }
 
-  <app-resume-about-me-section *ngIf="sectionName === 'aboutme'"></app-resume-about-me-section>
-  <app-resume-experience-section *ngIf="sectionName === 'experience'"></app-resume-experience-section>
-  <app-resume-education-section *ngIf="sectionName === 'education'"></app-resume-education-section>
-  <app-resume-skills-section *ngIf="sectionName === 'skills'"></app-resume-skills-section>
-  <app-resume-awards-section *ngIf="sectionName === 'awards'"></app-resume-awards-section>
+  @if (sectionName === 'experience') {
+    <app-resume-experience-section></app-resume-experience-section>
+  }
+
+  @if (sectionName === 'education') {
+    <app-resume-education-section></app-resume-education-section>
+  }
+
+  @if (sectionName === 'skills') {
+    <app-resume-skills-section></app-resume-skills-section>
+  }
+
+  @if (sectionName === 'awards') {
+    <app-resume-awards-section></app-resume-awards-section>
+  }
 </div>

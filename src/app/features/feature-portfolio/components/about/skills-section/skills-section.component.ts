@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-skills-section',
   templateUrl: './skills-section.component.html',
-  styleUrls: ['./skills-section.component.scss']
+  styleUrls: ['./skills-section.component.scss'],
+  standalone: true
 })
 export class SkillsSectionComponent implements OnInit {
 

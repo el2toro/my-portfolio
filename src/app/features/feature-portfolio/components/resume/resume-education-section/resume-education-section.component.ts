@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-resume-education-section',
   templateUrl: './resume-education-section.component.html',
-  styleUrls: ['./resume-education-section.component.scss']
+  styleUrls: ['./resume-education-section.component.scss'],
+  standalone: true
 })
 export class ResumeEducationSectionComponent implements OnInit {
 

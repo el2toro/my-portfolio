@@ -30,7 +30,8 @@
   </div>
 
   <div class="work">
-    <div class="work-item" *ngFor="let work of loadSection()" (click)="onWorkItemClick(work.id)">
+   @for (work of loadSection(); track $index) {
+     <div class="work-item" (click)="onWorkItemClick(work.id)">
        <div class="inner-work-item">
         <img src="{{ work.image }}">
           <button>
@@ -40,5 +41,6 @@
        <h3>{{ work.title }}</h3>
        <p>{{ work.subtitle }}</p>
     </div>
+   }
   </div>
 </div>

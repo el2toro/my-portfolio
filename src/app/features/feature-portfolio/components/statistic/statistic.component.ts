@@ -4,7 +4,8 @@ import { ScrollService } from '../../services/scroll.service';
 @Component({
   selector: 'app-statistic',
   templateUrl: './statistic.component.html',
-  styleUrls: ['./statistic.component.scss']
+  styleUrls: ['./statistic.component.scss'],
+  standalone: true
 })
 export class StatisticComponent implements OnInit {
   @HostListener('window:scroll', [])

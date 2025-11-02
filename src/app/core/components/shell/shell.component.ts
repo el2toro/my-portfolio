@@ -1,11 +1,16 @@
-import { DOCUMENT, ViewportScroller } from '@angular/common';
+import { CommonModule, DOCUMENT, ViewportScroller } from '@angular/common';
 import { Component, HostListener, OnInit, inject } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
+import { RouterModule } from '@angular/router';
 import { Observable, fromEvent, map } from 'rxjs';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-shell',
   templateUrl: './shell.component.html',
-  styleUrls: ['./shell.component.scss']
+  styleUrls: ['./shell.component.scss'],
+  standalone: true,
+  imports: [CommonModule, RouterModule, MatIconModule, NavbarComponent]
 })
 export class ShellComponent implements OnInit {
   scrollPosition = false;

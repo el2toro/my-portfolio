@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-achievement-section',
   templateUrl: './achievement-section.component.html',
-  styleUrls: ['./achievement-section.component.scss']
+  styleUrls: ['./achievement-section.component.scss'],
+  standalone: true,
+  imports: [MatIconModule]
 })
 export class AchievementSectionComponent implements OnInit {
 

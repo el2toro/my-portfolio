@@ -18,6 +18,11 @@
 
     .logo {
       margin-right: 100px;
+
+      &:hover{
+        cursor: pointer;
+        opacity: 0.8;
+      }
     }
 
     .navbar-link-items {

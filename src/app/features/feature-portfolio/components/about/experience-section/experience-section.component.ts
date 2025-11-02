@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-experience-section',
   templateUrl: './experience-section.component.html',
-  styleUrls: ['./experience-section.component.scss']
+  styleUrls: ['./experience-section.component.scss'],
+  standalone: true,
+  imports: [MatIconModule]
 })
 export class ExperienceSectionComponent implements OnInit {
 

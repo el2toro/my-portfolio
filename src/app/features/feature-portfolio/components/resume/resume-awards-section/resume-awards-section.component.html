@@ -2,8 +2,9 @@
   <div class="awards-container" #awardContainer>
 
     
-  <ng-container *ngFor="let award of awards; let i = index">
-    <div class="award-item" *ngIf="i === currentSlide || i === currentSlide + 1 || i === currentSlide + 2">
+ @for (award of awards; track $index) {
+   @if ($index === currentSlide || $index === currentSlide + 1 || $index === currentSlide + 2) {
+     <div class="award-item">
       <h4>{{ award.title }}</h4>
       <p>{{ award.description }}</p>
       <div class="icon-section">
@@ -12,10 +13,12 @@
         <mat-icon svgIcon="spark-ornament"></mat-icon>
       </div>
     </div>
-  </ng-container>
+   }
+ }
 
-  <ng-container *ngFor="let award of awards; let i = index">
-    <div class="award-item-mobile" *ngIf="i === currentSlide">
+  @for (award of awards; track $index) {
+   @if ($index === currentSlide) {
+     <div class="award-item-mobile">
       <h4>{{ award.title }}</h4>
       <p>{{ award.description }}</p>
       <div class="icon-section">
@@ -24,7 +27,8 @@
         <mat-icon svgIcon="spark-ornament"></mat-icon>
       </div>
     </div>
-  </ng-container>
+   }
+  }
   </div>
 
 

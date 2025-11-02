@@ -3,7 +3,8 @@
   <h2>My Expertise Area</h2>
 
   <div class="expertise-area">
-    <div class="expertise-area-item" *ngFor="let expertise of expertises">
+   @for (expertise of expertises; track $index) {
+     <div class="expertise-area-item">
       <div class="item-count">
         <h1>{{ expertise.id }}</h1>
         <mat-icon svgIcon="programmer-laptop"></mat-icon>
@@ -12,5 +13,6 @@
       <div class="line"></div>
       <p>{{ expertise.description }}</p>
     </div>
+   }
   </div>
 </div>

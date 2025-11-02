@@ -1,23 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PortfolioWorkModel } from '../../models/portfolio-work.model';
 import { DataService } from '../../services/data.service';
 import { Location } from '@angular/common';
+import { PageHeadingComponent } from '../../components/page-heading/page-heading.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-single-portfolio-page',
   templateUrl: './single-portfolio-page.component.html',
-  styleUrls: ['./single-portfolio-page.component.scss']
+  styleUrls: ['./single-portfolio-page.component.scss'],
+  standalone: true,
+  imports: [PageHeadingComponent, MatIconModule]
 })
 export class SinglePortfolioPageComponent implements OnInit {
+  private activatedRoute = inject(ActivatedRoute);
+  private dataService = inject(DataService);
+  private location = inject(Location);
   relatedWorks = <PortfolioWorkModel[]>[];
   workId = this.activatedRoute.snapshot.paramMap.get('id');
   selectedWork: PortfolioWorkModel = new PortfolioWorkModel();
   portfolioWorks = <PortfolioWorkModel[]>[];
 
-  constructor(private activatedRoute: ActivatedRoute, 
-    private dataService: DataService,
-    private location: Location) {}
+  constructor() {}
 
   ngOnInit() {
    this.initData();

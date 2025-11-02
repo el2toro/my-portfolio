@@ -1,9 +1,13 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @Component({
   selector: 'app-resume-awards-section',
   templateUrl: './resume-awards-section.component.html',
-  styleUrls: ['./resume-awards-section.component.scss']
+  styleUrls: ['./resume-awards-section.component.scss'],
+  standalone: true,
+  imports: [MatIconModule, MatProgressBarModule]
 })
 export class ResumeAwardsSectionComponent implements OnInit {
   @ViewChild('awardContainer') awardContainer: ElementRef | undefined;

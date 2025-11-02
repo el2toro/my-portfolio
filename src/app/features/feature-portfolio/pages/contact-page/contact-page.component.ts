@@ -1,14 +1,18 @@
 import { HttpStatusCode } from '@angular/common/http';
 import { Component, inject, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import emailjs from 'emailjs-com';
 import { environment } from 'environments/environment';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { PageHeadingComponent } from '../../components/page-heading/page-heading.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-contact-page',
   templateUrl: './contact-page.component.html',
-  styleUrls: ['./contact-page.component.scss']
+  styleUrls: ['./contact-page.component.scss'],
+  standalone: true,
+  imports: [PageHeadingComponent, MatIconModule, ReactiveFormsModule]
 })
 
 export class ContactPageComponent implements OnInit {

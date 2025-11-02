@@ -6,7 +6,8 @@ import { DataService } from '../../services/data.service';
 @Component({
   selector: 'app-portfolio-section',
   templateUrl: './portfolio-section.component.html',
-  styleUrls: ['./portfolio-section.component.scss']
+  styleUrls: ['./portfolio-section.component.scss'],
+  standalone: true
 })
 export class PortfolioSectionComponent implements OnInit {
   portfolioWorksFirstRow = <PortfolioWorkModel[]>[];

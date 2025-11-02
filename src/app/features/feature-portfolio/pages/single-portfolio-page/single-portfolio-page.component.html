@@ -89,13 +89,15 @@
         <h2>Related Work</h2>
 
         <div class="related-work-container">
-            <div class="related-work-item" (click)="onWorkItemClick(relatedWork.id)" *ngFor="let relatedWork of relatedWorks">
+           @for (relatedWork of relatedWorks; track $index) {
+             <div class="related-work-item" (click)="onWorkItemClick(relatedWork.id)">
                 <img src="{{relatedWork.image}}" alt="img" loading="lazy">
                 <div class="related-work-title">
                     <p>{{relatedWork.title}}</p>
                     <p>{{relatedWork.subtitle}}</p>
                 </div>
             </div>
+           }
         </div>
     </div>
 </div>

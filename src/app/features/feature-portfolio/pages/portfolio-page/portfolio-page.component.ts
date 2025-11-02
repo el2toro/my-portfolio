@@ -2,11 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { PortfolioWorkModel } from '../../models/portfolio-work.model';
 import { Router } from '@angular/router';
 import { DataService } from '../../services/data.service';
+import { PageHeadingComponent } from '../../components/page-heading/page-heading.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-portfolio-page',
   templateUrl: './portfolio-page.component.html',
-  styleUrls: ['./portfolio-page.component.scss']
+  styleUrls: ['./portfolio-page.component.scss'],
+  standalone: true,
+  imports: [PageHeadingComponent, MatIconModule]
 })
 export class PortfolioPageComponent implements OnInit {
 

@@ -1,5 +1,15 @@
-@import '@angular/material/theming';
-@include mat-core();
-$primary: mat-palette($mat-grey);
-$accent:  mat-palette($mat-light-blue, 600, 300, 600);
-$warn:    mat-palette($mat-deep-orange, 300, 500, 800);
+@use '@angular/material' as mat;
+@include mat.core();
+
+// Create the theme
+$my-theme: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: mat.$blue-palette,
+  ),
+));
+
+// Apply the theme to all Material components
+:root {
+  @include mat.all-component-themes($my-theme);
+}

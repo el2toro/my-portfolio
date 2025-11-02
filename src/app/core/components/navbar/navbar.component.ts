@@ -1,17 +1,22 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { AfterViewInit, Component, ElementRef, inject, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { DeviceDetectorService } from 'ngx-device-detector';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
+  standalone: true,
+  imports: [CommonModule, MatMenuModule, MatIconModule]
 })
 export class NavbarComponent implements OnInit, AfterViewInit {
+  private router = inject(Router);
   @ViewChild('pagesDropDown') pagesDropDown: ElementRef | undefined;
   @ViewChild('navbarItems') navbarItems: ElementRef | undefined;
 
-  constructor(private deviceDetectorService: DeviceDetectorService, private router: Router) { 
+  constructor() { 
     
   }
   ngAfterViewInit(): void {
@@ -47,5 +52,9 @@ export class NavbarComponent implements OnInit, AfterViewInit {
 
   goToHomePage(){
     this.router.navigate([''])
+  }
+
+  navigate(path: string){
+    this.router.navigate([path]);
   }
 }

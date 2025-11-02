@@ -1,16 +1,16 @@
 <div class="navbar">
   <div class="navbar-link"> 
     <div class="logo">
-      <a (click)="toggleActiveMenu($event)" [routerLink]="['']">
+      <a (click)="toggleActiveMenu($event)" (click)="navigate('')">
         <img src="assets/logo/logo.png" width="100px" height="100px">
       </a>
     </div>
 
     <div class="navbar-link-items" #navbarItems>
-      <button class="navbar-buttons" (click)="toggleActiveMenu($event)" [routerLink]="['']">HOME</button>
-      <button class="navbar-buttons" (click)="toggleActiveMenu($event)" [routerLink]="['/about']">ABOUT</button>
-      <button class="navbar-buttons" (click)="toggleActiveMenu($event)" [routerLink]="['/portfolio']">PORTFOLIO</button>
-      <button class="navbar-buttons" (click)="toggleActiveMenu($event)" [routerLink]="['/service']">SERVICE</button>
+      <button class="navbar-buttons" (click)="toggleActiveMenu($event)" (click)="navigate('')">HOME</button>
+      <button class="navbar-buttons" (click)="toggleActiveMenu($event)" (click)="navigate('/about')">ABOUT</button>
+      <button class="navbar-buttons" (click)="toggleActiveMenu($event)" (click)="navigate('/portfolio')">PORTFOLIO</button>
+      <button class="navbar-buttons" (click)="toggleActiveMenu($event)" (click)="navigate('/service')">SERVICE</button>
 
       <!-- <button class="navbar-buttons" (click)="toggleActiveMenu($event)" [routerLink]="['/pages']">PAGES</button> -->
     </div>
@@ -20,7 +20,7 @@
      <!-- <button class="mode-button" mat-icon-button>
       <img src="assets/moon.png" width="40px" height="40px">
      </button> -->
-     <button class="contact-button" (click)="toggleActiveMenu($event)" [routerLink]="['/contact']">CONTACT</button>
+     <button class="contact-button" (click)="toggleActiveMenu($event)" (click)="navigate('/contact')">CONTACT</button>
   </div>
 </div>
 
@@ -32,11 +32,11 @@
       <mat-icon svgIcon="close" *ngIf="menuTrigger.menuOpen"></mat-icon>
 
       <mat-menu #menu="matMenu">
-        <button mat-menu-item [routerLink]="['']">HOME</button>
-        <button mat-menu-item [routerLink]="['/about']">ABOUT</button>
-        <button mat-menu-item [routerLink]="['/portfolio']">PORTFOLIO</button>
-        <button mat-menu-item [routerLink]="['/service']">SERVICE</button>
-        <button mat-menu-item [routerLink]="['/contact']">CONTACT</button>
+        <button mat-menu-item (click)="navigate('')">HOME</button>
+        <button mat-menu-item (click)="navigate('/about')">ABOUT</button>
+        <button mat-menu-item (click)="navigate('/portfolio')">PORTFOLIO</button>
+        <button mat-menu-item (click)="navigate('/service')">SERVICE</button>
+        <button mat-menu-item (click)="navigate('/contact')">CONTACT</button>
         <!-- <button mat-menu-item [matMenuTriggerFor]="pages">PAGES</button> -->
       </mat-menu>
       

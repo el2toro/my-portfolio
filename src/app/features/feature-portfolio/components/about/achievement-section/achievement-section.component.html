@@ -3,7 +3,8 @@
   <h1>Discover My Awards</h1>
 
   <div class="achievement-container">
-    <div class="achievement-item" *ngFor="let achievement of achievements">
+    @for (achievement of achievements; track $index) {
+      <div class="achievement-item">
       <div class="item-description">
           <p>{{ achievement.year }}</p>
           <h4>{{ achievement.title }}</h4>
@@ -16,5 +17,6 @@
          <mat-icon svgIcon="spark-ornament"></mat-icon>
       </div>
     </div>
+    }
   </div>
 </div>

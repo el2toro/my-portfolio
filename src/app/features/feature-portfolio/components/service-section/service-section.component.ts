@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-service-section',
   templateUrl: './service-section.component.html',
-  styleUrls: ['./service-section.component.scss']
+  styleUrls: ['./service-section.component.scss'],
+  standalone: true,
+  imports: [MatIconModule]
 })
 export class ServiceSectionComponent implements OnInit {
 

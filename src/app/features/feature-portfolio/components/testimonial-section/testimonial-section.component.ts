@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { TestimonialModel } from '../../models/testimonial.model';
+import { MatIconModule } from '@angular/material/icon';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @Component({
   selector: 'app-testimonial-section',
   templateUrl: './testimonial-section.component.html',
-  styleUrls: ['./testimonial-section.component.scss']
+  styleUrls: ['./testimonial-section.component.scss'],
+  standalone: true,
+  imports: [MatIconModule, MatProgressBarModule]
 })
 export class TestimonialSectionComponent implements OnInit {
   testimonials = <TestimonialModel[]>[];
