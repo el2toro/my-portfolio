@@ -37,12 +37,12 @@ jobs:
       # 🏗️ Build the Angular app for production
       - name: Build Angular app
         run: |
-          npm run build -- --configuration production --base-href /el2toro/my-portfolio/
+          npm run build -- --configuration production
 
       - name: Upload artifact for GitHub Pages
         uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist/my-portfolio/browser 
+       #  with:
+        #   path: dist/my-portfolio/browser 
 
       # 🚀 Deploy to GitHub Pages
   deploy:
