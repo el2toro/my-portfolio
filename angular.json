@@ -18,7 +18,8 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": {
-              "base": "dist/my-portfolio"
+              "base": "dist/my-portfolio",
+              "browser": "my-portfolio"
             },
             "index": "src/index.html",
             "polyfills": [
