@@ -31,11 +31,11 @@ jobs:
       # 🏗️ Build the Angular app for production
       - name: Build Angular app
         run: |
-          npm run build -- --configuration production --output-path=./
+          npm run build -- --configuration production --output-path=browser
 
       # 🚀 Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          publish_dir: ./browser
